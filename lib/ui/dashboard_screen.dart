@@ -184,9 +184,10 @@ class _DashboardScreenState extends State<DashboardScreen>
             SliverToBoxAdapter(
               child: Container(
                 color: Colors.white,
-                padding: EdgeInsets.symmetric(
-                  vertical: 72,
-                  horizontal: size.width * 0.1,
+                padding: EdgeInsets.only(
+                  left: size.width * 0.1,
+                  right: size.width * 0.1,
+                  top: 72,
                 ),
                 child: Column(
                   children: [
@@ -211,13 +212,13 @@ class _DashboardScreenState extends State<DashboardScreen>
             ),
             SliverToBoxAdapter(
               child: Container(
-                color: Colors.white,
                 padding: EdgeInsets.symmetric(
                   horizontal: size.width * 0.1,
-                  vertical: 48,
+                  vertical: size.height * 0.2,
                 ),
                 child: Column(
                   children: [
+                    const SizedBox(height: 48),
                     const Text(
                       'Get In Touch',
                       style: TextStyle(
