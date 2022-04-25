@@ -11,19 +11,7 @@ class TextNavigation extends StatefulWidget {
 
 class _TextNavigationState extends State<TextNavigation>
     with TickerProviderStateMixin {
-  late AnimationController animationController;
-  late Animation borderColor;
-
   bool isHovered = false;
-
-  @override
-  void initState() {
-    animationController = AnimationController(vsync: this);
-    borderColor =
-        ColorTween(begin: Colors.transparent, end: const Color(0xffE5AB29))
-            .animate(animationController);
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {

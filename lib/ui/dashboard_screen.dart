@@ -5,6 +5,7 @@ import 'package:flutter/painting.dart';
 import 'package:portfolio/ui/experience_item.dart';
 import 'package:portfolio/ui/project_item.dart';
 import 'package:portfolio/utils/contants.dart';
+import 'package:portfolio/utils/sliding_button.dart';
 import 'package:portfolio/utils/text_navigation.dart';
 
 class DashboardScreen extends StatefulWidget {
@@ -239,25 +240,9 @@ class _DashboardScreenState extends State<DashboardScreen>
                       ),
                     ),
                     const SizedBox(height: 48),
-                    InkWell(
+                    SlidingButton(
+                      title: 'Say Hi!',
                       onTap: () {},
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 28,
-                          vertical: 16,
-                        ),
-                        decoration: BoxDecoration(
-                          color: Colors.transparent,
-                          border: Border.all(),
-                        ),
-                        child: const Text(
-                          'Say Hi!',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
                     ),
                     const SizedBox(height: 48),
                   ],
