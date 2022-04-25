@@ -9,16 +9,6 @@ var lorem =
 
 var experiences = [
   Experience(
-    company: 'PT. Amanah Karya Indonesia',
-    duration: 'Jan 2020 - Jun 2020',
-    position: 'Mobile Engineer',
-    tasks: [
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-    ],
-  ),
-  Experience(
     company: 'Badan Waqaf Alquran',
     duration: 'Jul 2020 - Present',
     position: 'Mobile Engineer',
@@ -32,6 +22,16 @@ var experiences = [
     company: 'Waqaftech',
     duration: 'Oct 2021 - Present',
     position: 'Mobile Engineer (Vendor)',
+    tasks: [
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    ],
+  ),
+  Experience(
+    company: 'PT. Amanah Karya Indonesia',
+    duration: 'Jan 2020 - Jun 2020',
+    position: 'Mobile Engineer',
     tasks: [
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
