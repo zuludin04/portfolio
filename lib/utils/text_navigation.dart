@@ -35,8 +35,7 @@ class _TextNavigationState extends State<TextNavigation>
           AnimatedContainer(
             duration: const Duration(milliseconds: 150),
             height: 3,
-            width: 50,
-            curve: Curves.easeInOut,
+            width: isHovered ? 50 : 0,
             decoration: BoxDecoration(
               color: isHovered ? const Color(0xffE5AB29) : Colors.transparent,
               borderRadius: BorderRadius.circular(3),

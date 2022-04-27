@@ -129,22 +129,9 @@ class _DashboardScreenState extends State<DashboardScreen>
                           ),
                         ),
                         const SizedBox(height: 72),
-                        InkWell(
+                        SlidingButton(
+                          title: 'Contact Me',
                           onTap: () {},
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 24,
-                              vertical: 12,
-                            ),
-                            decoration: BoxDecoration(
-                              color: Colors.black87,
-                              borderRadius: BorderRadius.circular(50),
-                            ),
-                            child: const Text(
-                              'Contact Me',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ),
                         ),
                         const SizedBox(height: 72),
                       ],
