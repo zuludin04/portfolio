@@ -21,7 +21,7 @@ class ExperienceItem extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  SelectableText(
                     experience.company,
                     style: const TextStyle(
                       fontSize: 16,
@@ -29,7 +29,7 @@ class ExperienceItem extends StatelessWidget {
                       fontFamily: 'Montserrat Regular',
                     ),
                   ),
-                  Text(
+                  SelectableText(
                     experience.duration,
                     style: const TextStyle(
                       fontFamily: 'Montserrat Regular',
@@ -43,7 +43,7 @@ class ExperienceItem extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  SelectableText(
                     experience.position,
                     style: const TextStyle(
                       fontSize: 20,
@@ -80,7 +80,7 @@ class ExperienceItem extends StatelessWidget {
         Expanded(
           child: Padding(
             padding: const EdgeInsets.only(bottom: 8.0),
-            child: Text(
+            child: SelectableText(
               task,
               style: const TextStyle(fontFamily: 'Montserrat Regular'),
             ),

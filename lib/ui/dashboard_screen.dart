@@ -5,6 +5,7 @@ import 'package:flutter/painting.dart';
 import 'package:portfolio/ui/experience_item.dart';
 import 'package:portfolio/ui/project_item.dart';
 import 'package:portfolio/utils/contants.dart';
+import 'package:portfolio/utils/section_title.dart';
 import 'package:portfolio/utils/sliding_button.dart';
 import 'package:portfolio/utils/text_navigation.dart';
 import 'package:sliver_tools/sliver_tools.dart';
@@ -149,16 +150,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                 ),
                 child: Column(
                   children: [
-                    const Text(
-                      'Experience',
-                      style: TextStyle(
-                        fontSize: 45,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Roboto Bold',
-                        color: Color(0xff04363D),
-                        letterSpacing: 2,
-                      ),
-                    ),
+                    const SectionTitle(title: 'Experience'),
                     const SizedBox(height: 36),
                     Column(
                       children: experiences
@@ -179,16 +171,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                 ),
                 child: Column(
                   children: const [
-                    Text(
-                      'Projects',
-                      style: TextStyle(
-                        fontSize: 45,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Roboto Bold',
-                        color: Color(0xff04363D),
-                        letterSpacing: 2,
-                      ),
-                    ),
+                    SectionTitle(title: 'Projects'),
                     SizedBox(height: 36),
                   ],
                 ),
@@ -232,18 +215,9 @@ class _DashboardScreenState extends State<DashboardScreen>
                 child: Column(
                   children: [
                     const SizedBox(height: 48),
-                    const Text(
-                      'Get In Touch',
-                      style: TextStyle(
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Roboto Bold',
-                        color: Color(0xff04363D),
-                        letterSpacing: 2,
-                      ),
-                    ),
+                    const SectionTitle(title: 'Get In Touch'),
                     const SizedBox(height: 24),
-                    const Text(
+                    const SelectableText(
                       'Although I\'m not currently looking for any new opportunities,\nmy inbox is always open. Whether you have a question or just want to say hi,\nI\'ll try my best to get back to you!',
                       textAlign: TextAlign.center,
                       style: TextStyle(
@@ -268,8 +242,8 @@ class _DashboardScreenState extends State<DashboardScreen>
                 color: const Color(0xff04363D),
                 padding: const EdgeInsets.all(8),
                 alignment: Alignment.center,
-                child: RichText(
-                  text: const TextSpan(
+                child: const SelectableText.rich(
+                  TextSpan(
                     text: 'Made by ',
                     style: TextStyle(
                       fontFamily: 'Montserrat Regular',
