@@ -7,6 +7,7 @@ import 'package:portfolio/ui/project_item.dart';
 import 'package:portfolio/utils/contants.dart';
 import 'package:portfolio/utils/sliding_button.dart';
 import 'package:portfolio/utils/text_navigation.dart';
+import 'package:sliver_tools/sliver_tools.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -190,8 +191,8 @@ class _DashboardScreenState extends State<DashboardScreen>
                   top: 72,
                 ),
                 child: Column(
-                  children: [
-                    const Text(
+                  children: const [
+                    Text(
                       'Projects',
                       style: TextStyle(
                         fontSize: 45,
@@ -201,13 +202,38 @@ class _DashboardScreenState extends State<DashboardScreen>
                         letterSpacing: 2,
                       ),
                     ),
-                    const SizedBox(height: 36),
-                    Column(
-                      children:
-                          projects.map((e) => ProjectItem(project: e)).toList(),
-                    ),
+                    SizedBox(height: 36),
                   ],
                 ),
+              ),
+            ),
+            SliverStack(
+              children: [
+                SliverPositioned.fill(
+                  child: Container(color: Colors.white),
+                ),
+                SliverPadding(
+                  padding: EdgeInsets.symmetric(horizontal: size.width * 0.1),
+                  sliver: SliverGrid(
+                    delegate: SliverChildBuilderDelegate(
+                      (context, index) => ProjectItem(project: projects[index]),
+                      childCount: projects.length,
+                    ),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,
+                      mainAxisSpacing: 25,
+                      crossAxisSpacing: 25,
+                      childAspectRatio: 1.16,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SliverToBoxAdapter(
+              child: Container(
+                color: Colors.white,
+                padding: const EdgeInsets.all(72),
               ),
             ),
             SliverToBoxAdapter(
