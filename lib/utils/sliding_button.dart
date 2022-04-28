@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 class SlidingButton extends StatefulWidget {
   final String title;
   final Function() onTap;
+  final double width;
 
   const SlidingButton({
     Key? key,
     required this.title,
     required this.onTap,
+    this.width = 125,
   }) : super(key: key);
 
   @override
@@ -31,11 +33,11 @@ class _SlidingButtonState extends State<SlidingButton> {
             AnimatedContainer(
               duration: const Duration(milliseconds: 250),
               height: 50,
-              width: isHovered ? 125 : 0,
+              width: isHovered ? widget.width : 0,
               color: Colors.black,
             ),
             Container(
-              width: 125,
+              width: widget.width,
               height: 50,
               alignment: Alignment.center,
               decoration: BoxDecoration(

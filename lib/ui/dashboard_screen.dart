@@ -2,6 +2,7 @@ import 'package:animated_background/animated_background.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 import 'package:portfolio/ui/experience_item.dart';
 import 'package:portfolio/ui/project_item.dart';
 import 'package:portfolio/utils/contants.dart';
@@ -71,7 +72,10 @@ class _DashboardScreenState extends State<DashboardScreen>
                           width: 60,
                           height: 60,
                         ),
-                        const TextNavigation(title: 'Contact'),
+                        TextNavigation(
+                          title: 'Contact',
+                          onTap: showContactDialog,
+                        ),
                       ],
                     ),
                   ),
@@ -132,7 +136,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                         const SizedBox(height: 72),
                         SlidingButton(
                           title: 'Contact Me',
-                          onTap: () {},
+                          onTap: showContactDialog,
                         ),
                         const SizedBox(height: 72),
                       ],
@@ -230,7 +234,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                     const SizedBox(height: 48),
                     SlidingButton(
                       title: 'Say Hi!',
-                      onTap: () {},
+                      onTap: showContactDialog,
                     ),
                     const SizedBox(height: 48),
                   ],
@@ -263,6 +267,49 @@ class _DashboardScreenState extends State<DashboardScreen>
           ],
         ),
       ),
+    );
+  }
+
+  void showContactDialog() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      barrierColor: Colors.white.withOpacity(0.9),
+      builder: (context) {
+        return AlertDialog(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          content: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(Icons.close, size: 42),
+                ),
+                const SizedBox(height: 40),
+                const Text(
+                  'Let\'s Chat.',
+                  style: TextStyle(
+                    fontSize: 32,
+                    letterSpacing: 2,
+                    fontFamily: 'Montserrat Regular',
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 36),
+                SlidingButton(
+                  title: 'zmauludin04@gmail.com',
+                  onTap: () {},
+                  width: 620,
+                ),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 }
