@@ -47,8 +47,9 @@ var projects = [
     image: 'assets/Mumtaaz.png',
     company: 'BWA',
     techs: [
-      Tech(icon: 'assets/dart.svg', name: 'Android'),
+      Tech(icon: 'assets/android.svg', name: 'Android'),
       Tech(icon: 'assets/dart.svg', name: 'Dart'),
+      Tech(icon: 'assets/flutter.svg', name: 'Flutter'),
     ],
   ),
   Project(
@@ -57,8 +58,9 @@ var projects = [
     image: 'assets/Mumtaaz.png',
     company: 'Waqaftech',
     techs: [
-      Tech(icon: 'assets/dart.svg', name: 'Android'),
+      Tech(icon: 'assets/android.svg', name: 'Android'),
       Tech(icon: 'assets/dart.svg', name: 'Dart'),
+      Tech(icon: 'assets/flutter.svg', name: 'Flutter'),
     ],
   ),
   Project(
@@ -67,8 +69,9 @@ var projects = [
     image: 'assets/Mumtaaz.png',
     company: 'Personal',
     techs: [
-      Tech(icon: 'assets/dart.svg', name: 'Android'),
+      Tech(icon: 'assets/android.svg', name: 'Android'),
       Tech(icon: 'assets/dart.svg', name: 'Dart'),
+      Tech(icon: 'assets/flutter.svg', name: 'Flutter'),
     ],
   ),
   Project(
@@ -77,8 +80,8 @@ var projects = [
     image: 'assets/Mumtaaz.png',
     company: 'Amanah',
     techs: [
-      Tech(icon: 'assets/dart.svg', name: 'Android'),
-      Tech(icon: 'assets/dart.svg', name: 'Java'),
+      Tech(icon: 'assets/android.svg', name: 'Android'),
+      Tech(icon: 'assets/java.svg', name: 'Java'),
     ],
   ),
   Project(
@@ -87,8 +90,9 @@ var projects = [
     image: 'assets/Mumtaaz.png',
     company: 'Waqaftech',
     techs: [
-      Tech(icon: 'assets/dart.svg', name: 'Android'),
+      Tech(icon: 'assets/android.svg', name: 'Android'),
       Tech(icon: 'assets/dart.svg', name: 'Dart'),
+      Tech(icon: 'assets/flutter.svg', name: 'Flutter'),
     ],
   ),
 ];
