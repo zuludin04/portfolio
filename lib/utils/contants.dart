@@ -46,6 +46,10 @@ var projects = [
     description: lorem,
     image: 'assets/Mumtaaz.png',
     company: 'BWA',
+    link: Link(
+        type: 1,
+        url:
+            'https://play.google.com/store/apps/details?id=id.bwa.bwa_wakif_app'),
     techs: [
       Tech(icon: 'assets/android.svg', name: 'Android'),
       Tech(icon: 'assets/dart.svg', name: 'Dart'),
@@ -57,6 +61,7 @@ var projects = [
     description: lorem,
     image: 'assets/pintar-kerja.png',
     company: 'Waqaftech',
+    link: Link(type: 2, url: ''),
     techs: [
       Tech(icon: 'assets/android.svg', name: 'Android'),
       Tech(icon: 'assets/dart.svg', name: 'Dart'),
@@ -68,6 +73,10 @@ var projects = [
     description: lorem,
     image: 'assets/Mumtaaz.png',
     company: 'Personal',
+    link: Link(
+        type: 1,
+        url:
+            'https://play.google.com/store/apps/details?id=id.bwa.bwa_wakif_app'),
     techs: [
       Tech(icon: 'assets/android.svg', name: 'Android'),
       Tech(icon: 'assets/dart.svg', name: 'Dart'),
@@ -79,6 +88,10 @@ var projects = [
     description: lorem,
     image: 'assets/bisaberbagi.jpg',
     company: 'Amanah',
+    link: Link(
+        type: 1,
+        url:
+            'https://play.google.com/store/apps/details?id=com.amanah.bisaberbagi'),
     techs: [
       Tech(icon: 'assets/android.svg', name: 'Android'),
       Tech(icon: 'assets/java.svg', name: 'Java'),
@@ -89,6 +102,7 @@ var projects = [
     description: lorem,
     image: 'assets/Mumtaaz.png',
     company: 'Waqaftech',
+    link: Link(type: 2, url: ''),
     techs: [
       Tech(icon: 'assets/android.svg', name: 'Android'),
       Tech(icon: 'assets/dart.svg', name: 'Dart'),
