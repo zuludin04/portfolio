@@ -5,33 +5,43 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:portfolio/data/project.dart';
 
-class ProjectItem extends StatelessWidget {
+class ProjectItem extends StatefulWidget {
   final Project project;
 
   const ProjectItem({Key? key, required this.project}) : super(key: key);
 
   @override
+  State<ProjectItem> createState() => _ProjectItemState();
+}
+
+class _ProjectItemState extends State<ProjectItem> {
+  bool isHovered = false;
+  
+  @override
   Widget build(BuildContext context) {
     return MouseRegion(
+      onEnter: (_) => hoverProject(true),
+      onExit: (_) => hoverProject(false),
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: () {
-          if (project.link.type == 1) {
-            html.window.open(project.link.url, 'new tab');
+          if (widget.project.link.type == 1) {
+            html.window.open(widget.project.link.url, 'new tab');
           } else {
             debugPrint('open detail app');
           }
         },
-        child: Container(
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 250),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),
             boxShadow: [
               BoxShadow(
                 offset: const Offset(1, 1),
-                blurRadius: 1,
-                spreadRadius: 1,
-                color: Colors.grey.shade300,
+                blurRadius: 0,
+                spreadRadius: 0,
+                color: isHovered ? Colors.green.shade300 : Colors.grey.shade100,
               ),
             ],
           ),
@@ -43,17 +53,21 @@ class ProjectItem extends StatelessWidget {
                   topLeft: Radius.circular(10),
                   topRight: Radius.circular(10),
                 ),
-                child: Image.asset(
-                  project.image,
-                  height: 250,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
+                child: AnimatedScale(
+                  duration: const Duration(milliseconds: 250),
+                  scale: isHovered ? 1.2 : 1,
+                  child: Image.asset(
+                    widget.project.image,
+                    height: 250,
+                    width: double.infinity,
+                    fit: BoxFit.fitWidth,
+                  ),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  project.name,
+                  widget.project.name,
                   style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -64,7 +78,7 @@ class ProjectItem extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: Text(
-                  project.description,
+                  widget.project.description,
                   style: const TextStyle(
                     fontFamily: 'Montserrat Regular',
                   ),
@@ -74,7 +88,7 @@ class ProjectItem extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: Row(
-                  children: project.techs
+                  children: widget.project.techs
                       .map(
                         (e) => Padding(
                           padding: const EdgeInsets.only(right: 16),
@@ -102,83 +116,16 @@ class ProjectItem extends StatelessWidget {
                       .toList(),
                 ),
               ),
-              // Row(
-              //   crossAxisAlignment: CrossAxisAlignment.start,
-              //   children: [
-              //     Card(
-              //       elevation: 5,
-              //       child: Image.asset(
-              //         project.image,
-              //         height: 217,
-              //       ),
-              //     ),
-              //     const SizedBox(width: 16),
-              //     Expanded(
-              //       child: SizedBox(
-              //         height: 217,
-              //         child: Column(
-              //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //           mainAxisSize: MainAxisSize.max,
-              //           children: [
-              //             Column(
-              //               crossAxisAlignment: CrossAxisAlignment.start,
-              //               children: [
-              //                 Text(
-              //                   project.name,
-              //                   style: const TextStyle(
-              //                     fontSize: 18,
-              //                     fontWeight: FontWeight.bold,
-              //                     fontFamily: 'Montserrat Regular',
-              //                   ),
-              //                 ),
-              //                 const SizedBox(height: 4),
-              //                 Text(
-              //                   project.description,
-              //                   style: const TextStyle(
-              //                     fontFamily: 'Montserrat Regular',
-              //                   ),
-              //                 ),
-              //               ],
-              //             ),
-              //             Row(
-              //               children: project.techs
-              //                   .map(
-              //                     (e) => Padding(
-              //                       padding: const EdgeInsets.only(right: 16),
-              //                       child: Row(
-              //                         crossAxisAlignment: CrossAxisAlignment.center,
-              //                         mainAxisAlignment: MainAxisAlignment.center,
-              //                         children: [
-              //                           SvgPicture.asset(
-              //                             e.icon,
-              //                             width: 18,
-              //                           ),
-              //                           const SizedBox(width: 8),
-              //                           Text(
-              //                             e.name,
-              //                             style: const TextStyle(
-              //                               fontSize: 16,
-              //                               fontWeight: FontWeight.w600,
-              //                               fontFamily: 'Montserrat Regular',
-              //                             ),
-              //                           ),
-              //                         ],
-              //                       ),
-              //                     ),
-              //                   )
-              //                   .toList(),
-              //             ),
-              //           ],
-              //         ),
-              //       ),
-              //     ),
-              //   ],
-              // ),
-              // const Divider(height: 64),
             ],
           ),
         ),
       ),
     );
+  }
+
+  void hoverProject(bool hover) {
+    setState(() {
+      isHovered = hover;
+    });
   }
 }
