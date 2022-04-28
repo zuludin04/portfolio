@@ -55,7 +55,7 @@ var projects = [
   Project(
     name: 'Pintar Kerja',
     description: lorem,
-    image: 'assets/Mumtaaz.png',
+    image: 'assets/pintar-kerja.png',
     company: 'Waqaftech',
     techs: [
       Tech(icon: 'assets/android.svg', name: 'Android'),
@@ -77,7 +77,7 @@ var projects = [
   Project(
     name: 'Bisa Berbagi',
     description: lorem,
-    image: 'assets/Mumtaaz.png',
+    image: 'assets/bisaberbagi.jpg',
     company: 'Amanah',
     techs: [
       Tech(icon: 'assets/android.svg', name: 'Android'),
