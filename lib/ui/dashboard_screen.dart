@@ -3,13 +3,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
-import 'package:portfolio/ui/experience_item.dart';
-import 'package:portfolio/ui/project_item.dart';
 import 'package:portfolio/utils/contants.dart';
-import 'package:portfolio/utils/section_title.dart';
-import 'package:portfolio/utils/sliding_button.dart';
-import 'package:portfolio/utils/text_navigation.dart';
 import 'package:sliver_tools/sliver_tools.dart';
+
+import 'widgets/experience_item.dart';
+import 'widgets/project_item.dart';
+import 'widgets/section_title.dart';
+import 'widgets/sliding_button.dart';
+import 'widgets/text_navigation.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
