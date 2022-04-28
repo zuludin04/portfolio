@@ -27,12 +27,14 @@ class ExperienceItem extends StatelessWidget {
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Montserrat Regular',
+                      color: Colors.white,
                     ),
                   ),
                   SelectableText(
                     experience.duration,
                     style: const TextStyle(
                       fontFamily: 'Montserrat Regular',
+                      color: Colors.white70,
                     ),
                   ),
                 ],
@@ -50,6 +52,7 @@ class ExperienceItem extends StatelessWidget {
                       fontFamily: 'Robotto Bold',
                       letterSpacing: 2,
                       fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -63,7 +66,7 @@ class ExperienceItem extends StatelessWidget {
             ),
           ],
         ),
-        const Divider(height: 36),
+        const Divider(height: 36, color: Colors.white30),
       ],
     );
   }
@@ -75,6 +78,7 @@ class ExperienceItem extends StatelessWidget {
         const Icon(
           Icons.play_arrow,
           size: 18,
+          color: Colors.white,
         ),
         const SizedBox(width: 8),
         Expanded(
@@ -82,7 +86,10 @@ class ExperienceItem extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 8.0),
             child: SelectableText(
               task,
-              style: const TextStyle(fontFamily: 'Montserrat Regular'),
+              style: const TextStyle(
+                fontFamily: 'Montserrat Regular',
+                color: Colors.white70,
+              ),
             ),
           ),
         ),

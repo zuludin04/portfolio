@@ -147,14 +147,17 @@ class _DashboardScreenState extends State<DashboardScreen>
             ),
             SliverToBoxAdapter(
               child: Container(
-                color: const Color(0xffFFD47D),
+                color: const Color(0xff04363D),
                 padding: EdgeInsets.symmetric(
                   vertical: 72,
                   horizontal: size.width * 0.18,
                 ),
                 child: Column(
                   children: [
-                    const SectionTitle(title: 'Experience'),
+                    const SectionTitle(
+                      title: 'Experience',
+                      color: Colors.white,
+                    ),
                     const SizedBox(height: 36),
                     Column(
                       children: experiences
