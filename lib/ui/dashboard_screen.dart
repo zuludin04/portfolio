@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import 'package:portfolio/ui/widgets/theme_switch.dart';
 import 'package:portfolio/utils/contants.dart';
 import 'package:sliver_tools/sliver_tools.dart';
 
@@ -73,9 +74,15 @@ class _DashboardScreenState extends State<DashboardScreen>
                           width: 60,
                           height: 60,
                         ),
-                        TextNavigation(
-                          title: 'Contact',
-                          onTap: showContactDialog,
+                        Row(
+                          children: [
+                            TextNavigation(
+                              title: 'Contact',
+                              onTap: showContactDialog,
+                            ),
+                            const SizedBox(width: 36),
+                            const ThemeSwitch(),
+                          ],
                         ),
                       ],
                     ),
