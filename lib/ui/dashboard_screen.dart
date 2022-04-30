@@ -72,16 +72,18 @@ class _DashboardScreenState extends State<DashboardScreen>
                         children: [
                           const ProfileImage(),
                           const SizedBox(height: 36),
-                          const SelectableText.rich(
+                          SelectableText.rich(
                             TextSpan(
                               text: 'Hi I\'m \n',
                               style: TextStyle(
                                 fontSize: 45,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Roboto Bold',
-                                color: Colors.black,
+                                color: controller.isDark.value
+                                    ? Colors.white
+                                    : Colors.black,
                               ),
-                              children: [
+                              children: const [
                                 TextSpan(
                                   text: 'Zulfikar Mauludin \n',
                                   style: TextStyle(color: Color(0xff128B91)),
@@ -98,10 +100,12 @@ class _DashboardScreenState extends State<DashboardScreen>
                             child: SelectableText(
                               about,
                               textAlign: TextAlign.center,
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontFamily: 'Montserrat Regular',
                                 fontSize: 16,
-                                color: Colors.black87,
+                                color: controller.isDark.value
+                                    ? Colors.white
+                                    : Colors.black87,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
@@ -198,13 +202,15 @@ class _DashboardScreenState extends State<DashboardScreen>
                       const SizedBox(height: 48),
                       const SectionTitle(title: 'Get In Touch'),
                       const SizedBox(height: 24),
-                      const SelectableText(
+                      SelectableText(
                         'Although I\'m not currently looking for any new opportunities,\nmy inbox is always open. Whether you have a question or just want to say hi,\nI\'ll try my best to get back to you!',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: 'Montserrat Regular',
                           fontSize: 16,
-                          color: Colors.black87,
+                          color: controller.isDark.value
+                              ? Colors.white
+                              : Colors.black87,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
