@@ -17,21 +17,22 @@ class AppbarNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(
-      () => Container(
-        padding: EdgeInsets.symmetric(
-          horizontal: sideSpacing,
-          vertical: 20,
-        ),
-        decoration: BoxDecoration(
-          color: controller.isDark.value ? Colors.black : Colors.transparent,
-          border: const Border(bottom: BorderSide(color: Colors.black12)),
-        ),
-        child: Row(
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: sideSpacing,
+        vertical: 20,
+      ),
+      decoration: const BoxDecoration(
+        border: Border(bottom: BorderSide(color: Colors.black12)),
+      ),
+      child: Obx(
+        () => Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Image.asset(
-              'assets/logo.png',
+              controller.isDark.value
+                  ? 'assets/logo_dark.png'
+                  : 'assets/logo.png',
               width: 60,
               height: 60,
             ),
@@ -40,6 +41,8 @@ class AppbarNavigation extends StatelessWidget {
                 TextNavigation(
                   title: 'Contact',
                   onTap: () => showContactDialog(context),
+                  titleColor:
+                      controller.isDark.value ? Colors.white : Colors.black,
                 ),
                 const SizedBox(width: 36),
                 ThemeSwitch(controller: controller),

@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class TextNavigation extends StatefulWidget {
   final String title;
   final Function() onTap;
+  final Color titleColor;
 
   const TextNavigation({
     Key? key,
     required this.title,
     required this.onTap,
+    required this.titleColor,
   }) : super(key: key);
 
   @override
@@ -30,8 +32,8 @@ class _TextNavigationState extends State<TextNavigation>
           children: [
             Text(
               widget.title,
-              style: const TextStyle(
-                color: Colors.black,
+              style: TextStyle(
+                color: widget.titleColor,
                 fontWeight: FontWeight.w700,
                 fontSize: 16,
                 fontFamily: 'Montserrat Regular',
