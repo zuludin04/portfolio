@@ -6,6 +6,7 @@ import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:portfolio/ui/controller/theme_controller.dart';
 import 'package:portfolio/ui/widgets/appbar_navigation.dart';
+import 'package:portfolio/ui/widgets/profile_image.dart';
 import 'package:portfolio/utils/contants.dart';
 import 'package:sliver_tools/sliver_tools.dart';
 
@@ -68,21 +69,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                     padding: EdgeInsets.only(top: size.height * 0.15),
                     child: Column(
                       children: [
-                        Container(
-                          width: 250,
-                          height: 250,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: const DecorationImage(
-                              image: AssetImage('assets/profile.jpg'),
-                              fit: BoxFit.cover,
-                            ),
-                            border: Border.all(
-                              color: Colors.cyan.shade400,
-                              width: 2,
-                            ),
-                          ),
-                        ),
+                        const ProfileImage(),
                         const SizedBox(height: 36),
                         const SelectableText.rich(
                           TextSpan(
