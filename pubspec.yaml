@@ -16,6 +16,7 @@ dependencies:
   animated_background: ^2.0.0
   flutter_svg: ^1.0.3
   sliver_tools: ^0.2.5
+  get: ^4.6.1
 
 dev_dependencies:
   flutter_test:

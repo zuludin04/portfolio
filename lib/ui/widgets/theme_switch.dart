@@ -1,9 +1,13 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:portfolio/ui/controller/theme_controller.dart';
 
 class ThemeSwitch extends StatefulWidget {
-  const ThemeSwitch({Key? key}) : super(key: key);
+  final ThemeController controller;
+
+  const ThemeSwitch({Key? key, required this.controller}) : super(key: key);
 
   @override
   State<ThemeSwitch> createState() => _ThemeSwitchState();
@@ -11,7 +15,6 @@ class ThemeSwitch extends StatefulWidget {
 
 class _ThemeSwitchState extends State<ThemeSwitch> {
   bool isHovered = false;
-  bool isDark = false;
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +24,7 @@ class _ThemeSwitchState extends State<ThemeSwitch> {
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: () {
-          setState(() {
-            isDark = !isDark;
-          });
+          widget.controller.changeTheme();
         },
         child: Stack(
           children: <Widget>[
@@ -67,12 +68,16 @@ class _ThemeSwitchState extends State<ThemeSwitch> {
   }
 
   Widget themeIcon() {
-    return Image.asset(
-      isDark ? 'assets/dark-mode.png' : 'assets/light-mode.png',
-      key: Key(isDark ? 'dark' : 'light'),
-      width: 40,
-      height: 40,
-      color: const Color(0xffffc107),
+    return Obx(
+      () => Image.asset(
+        widget.controller.isDark.value
+            ? 'assets/dark-mode.png'
+            : 'assets/light-mode.png',
+        key: Key(widget.controller.isDark.value ? 'dark' : 'light'),
+        width: 40,
+        height: 40,
+        color: const Color(0xffffc107),
+      ),
     );
   }
 

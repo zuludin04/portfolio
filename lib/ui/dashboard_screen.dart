@@ -3,7 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
-import 'package:portfolio/ui/widgets/theme_switch.dart';
+import 'package:get/get.dart';
+import 'package:portfolio/ui/controller/theme_controller.dart';
+import 'package:portfolio/ui/widgets/appbar_navigation.dart';
 import 'package:portfolio/utils/contants.dart';
 import 'package:sliver_tools/sliver_tools.dart';
 
@@ -11,7 +13,6 @@ import 'widgets/experience_item.dart';
 import 'widgets/project_item.dart';
 import 'widgets/section_title.dart';
 import 'widgets/sliding_button.dart';
-import 'widgets/text_navigation.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -22,6 +23,8 @@ class DashboardScreen extends StatefulWidget {
 
 class _DashboardScreenState extends State<DashboardScreen>
     with TickerProviderStateMixin {
+  final ThemeController controller = Get.put(ThemeController());
+
   ParticleOptions particleOptions = ParticleOptions(
     image: Image.asset('assets/particle.png'),
     baseColor: Colors.blue,
@@ -57,35 +60,9 @@ class _DashboardScreenState extends State<DashboardScreen>
             SliverToBoxAdapter(
               child: Stack(
                 children: [
-                  Container(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: size.width * 0.05,
-                      vertical: 20,
-                    ),
-                    decoration: const BoxDecoration(
-                        border: Border(
-                      bottom: BorderSide(color: Colors.black12),
-                    )),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Image.asset(
-                          'assets/logo.png',
-                          width: 60,
-                          height: 60,
-                        ),
-                        Row(
-                          children: [
-                            TextNavigation(
-                              title: 'Contact',
-                              onTap: showContactDialog,
-                            ),
-                            const SizedBox(width: 36),
-                            const ThemeSwitch(),
-                          ],
-                        ),
-                      ],
-                    ),
+                  AppbarNavigation(
+                    sideSpacing: size.width * 0.05,
+                    controller: controller,
                   ),
                   Padding(
                     padding: EdgeInsets.only(top: size.height * 0.15),
@@ -144,7 +121,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                         const SizedBox(height: 72),
                         SlidingButton(
                           title: 'Contact Me',
-                          onTap: showContactDialog,
+                          onTap: () => showContactDialog(context),
                         ),
                         const SizedBox(height: 72),
                       ],
@@ -245,7 +222,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                     const SizedBox(height: 48),
                     SlidingButton(
                       title: 'Say Hi!',
-                      onTap: showContactDialog,
+                      onTap: () => showContactDialog(context),
                     ),
                     const SizedBox(height: 48),
                   ],
@@ -278,49 +255,6 @@ class _DashboardScreenState extends State<DashboardScreen>
           ],
         ),
       ),
-    );
-  }
-
-  void showContactDialog() {
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      barrierColor: Colors.white.withOpacity(0.9),
-      builder: (context) {
-        return AlertDialog(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          content: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  icon: const Icon(Icons.close, size: 42),
-                ),
-                const SizedBox(height: 40),
-                const Text(
-                  'Let\'s Chat.',
-                  style: TextStyle(
-                    fontSize: 32,
-                    letterSpacing: 2,
-                    fontFamily: 'Montserrat Regular',
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 36),
-                SlidingButton(
-                  title: 'zmauludin04@gmail.com',
-                  onTap: () {},
-                  width: 620,
-                ),
-              ],
-            ),
-          ),
-        );
-      },
     );
   }
 }

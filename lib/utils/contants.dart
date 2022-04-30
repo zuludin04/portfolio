@@ -1,5 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:portfolio/data/experience.dart';
 import 'package:portfolio/data/project.dart';
+import 'package:portfolio/ui/widgets/sliding_button.dart';
 
 var about =
     "Hallo, saya Zulfikar Mauludin. Saya seorang front-end developer yang berfokus pada aplikasi mobile. Mulai terjun ke dunia developer pada tahun 2017, karena menurut saya membuat aplikasi itu seperti menyelesaikan puzzle dalam kehidupan sehari-hari. Saat ini saya sedang mengerjakan 2 aplikasi utama, yaitu aplikasi muslim dan juga online learning.";
@@ -110,3 +112,46 @@ var projects = [
     ],
   ),
 ];
+
+void showContactDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      barrierColor: Colors.white.withOpacity(0.9),
+      builder: (context) {
+        return AlertDialog(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          content: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(Icons.close, size: 42),
+                ),
+                const SizedBox(height: 40),
+                const Text(
+                  'Let\'s Chat.',
+                  style: TextStyle(
+                    fontSize: 32,
+                    letterSpacing: 2,
+                    fontFamily: 'Montserrat Regular',
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 36),
+                SlidingButton(
+                  title: 'zmauludin04@gmail.com',
+                  onTap: () {},
+                  width: 620,
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
