@@ -8,18 +8,14 @@ import 'package:portfolio/ui/widgets/sliding_button.dart';
 var about =
     "Hallo, saya Zulfikar Mauludin. Saya seorang front-end developer yang berfokus pada aplikasi mobile. Mulai terjun ke dunia developer pada tahun 2017, karena menurut saya membuat aplikasi itu seperti menyelesaikan puzzle dalam kehidupan sehari-hari. Saat ini saya sedang mengerjakan 2 aplikasi utama, yaitu aplikasi muslim dan juga online learning.";
 
-var lorem =
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.';
-
 var experiences = [
   Experience(
     company: 'Badan Waqaf Alquran',
     duration: 'Jul 2020 - Present',
     position: 'Mobile Engineer',
     tasks: [
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+      'Membuat aplikasi muslim yang dapat mudah diakses oleh orang banyak',
+      'Membangun aplikasi mobile dengan flutter dari awal beserta dengan arsitekturnya',
     ],
   ),
   Experience(
@@ -27,9 +23,9 @@ var experiences = [
     duration: 'Oct 2021 - Present',
     position: 'Mobile Engineer (Vendor)',
     tasks: [
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+      'Membangun aplikasi mobile dengan flutter dari awal beserta dengan arsitekturnya',
+      'Membuat aplikasi akademik mobile mulai dari Online Learning sampai LMS',
+      'Bertanggung jawab agar aplikasi dapat berjalan dengan baik',
     ],
   ),
   Experience(
@@ -37,9 +33,9 @@ var experiences = [
     duration: 'Jan 2020 - Jun 2020',
     position: 'Mobile Engineer',
     tasks: [
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+      'Bertanggung jawab agar fitur Replenishment berjalan dengan baik pada aplikasi Toyota (TMIIN)',
+      'Memastikan agar aplikasi BisaBerbagi bisa release dan semua fitur dapat berjalan dengan baik',
+      'Memperbaiki kode aplikasi BisaBerbagi agar lebih robust',
     ],
   ),
 ];
@@ -47,7 +43,7 @@ var experiences = [
 var projects = [
   Project(
     name: 'Mumtaaz',
-    description: lorem,
+    description: 'Aplikasi muslim untuk Wakif (user) BWA agar bisa berdonasi dengan mudah',
     image: 'assets/Mumtaaz.png',
     company: 'BWA',
     link: Link(
@@ -62,7 +58,7 @@ var projects = [
   ),
   Project(
     name: 'Pintar Kerja',
-    description: lorem,
+    description: 'Aplikasi online learning berbasis Flutter yang bisa dipakai oleh siapa saja',
     image: 'assets/pintar-kerja.png',
     company: 'Waqaftech',
     link: Link(type: 2, url: ''),
@@ -74,7 +70,7 @@ var projects = [
   ),
   Project(
     name: 'During',
-    description: lorem,
+    description: 'Aplikasi pencacatan pengeluaran dan pemasukan, agar dapat dengan mudah ditinjau',
     image: 'assets/Mumtaaz.png',
     company: 'Personal',
     link: Link(
@@ -89,9 +85,9 @@ var projects = [
   ),
   Project(
     name: 'Bisa Berbagi',
-    description: lorem,
+    description: 'Apliasi berbasis muslimah yang juga menampung salah satu produk PT. Amanah yaitu BerbagiLink',
     image: 'assets/bisaberbagi.jpg',
-    company: 'Amanah',
+    company: 'PT. Amanah Karya Indonesia',
     link: Link(
         type: 1,
         url:
@@ -103,7 +99,7 @@ var projects = [
   ),
   Project(
     name: 'Akademik Pintar Kerja',
-    description: lorem,
+    description: 'Aplikasi LMS yang bisa digunakan oleh sekolah dan juga murid untuk mempermudah proses belajar mengajar',
     image: 'assets/Mumtaaz.png',
     company: 'Waqaftech',
     link: Link(type: 2, url: ''),
