@@ -40,7 +40,7 @@ class AppbarNavigation extends StatelessWidget {
               children: [
                 TextNavigation(
                   title: 'Contact',
-                  onTap: () => showContactDialog(context),
+                  onTap: () => showContactDialog(context, controller),
                   titleColor:
                       controller.isDark.value ? Colors.white : Colors.black,
                 ),

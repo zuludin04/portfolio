@@ -113,7 +113,8 @@ class _DashboardScreenState extends State<DashboardScreen>
                           const SizedBox(height: 72),
                           SlidingButton(
                             title: 'Contact Me',
-                            onTap: () => showContactDialog(context),
+                            onTap: () => showContactDialog(context, controller),
+                            controller: controller,
                           ),
                           const SizedBox(height: 72),
                         ],
@@ -147,16 +148,21 @@ class _DashboardScreenState extends State<DashboardScreen>
               ),
               SliverToBoxAdapter(
                 child: Container(
-                  color: Colors.white,
+                  color: controller.isDark.value ? Colors.black : Colors.white,
                   padding: EdgeInsets.only(
                     left: size.width * 0.1,
                     right: size.width * 0.1,
                     top: 72,
                   ),
                   child: Column(
-                    children: const [
-                      SectionTitle(title: 'Projects'),
-                      SizedBox(height: 36),
+                    children: [
+                      SectionTitle(
+                        title: 'Projects',
+                        color: controller.isDark.value
+                            ? Colors.white
+                            : const Color(0xff04363D),
+                      ),
+                      const SizedBox(height: 36),
                     ],
                   ),
                 ),
@@ -164,7 +170,10 @@ class _DashboardScreenState extends State<DashboardScreen>
               SliverStack(
                 children: [
                   SliverPositioned.fill(
-                    child: Container(color: Colors.white),
+                    child: Container(
+                        color: controller.isDark.value
+                            ? Colors.black
+                            : Colors.white),
                   ),
                   SliverPadding(
                     padding: EdgeInsets.symmetric(horizontal: size.width * 0.1),
@@ -187,7 +196,7 @@ class _DashboardScreenState extends State<DashboardScreen>
               ),
               SliverToBoxAdapter(
                 child: Container(
-                  color: Colors.white,
+                  color: controller.isDark.value ? Colors.black : Colors.white,
                   padding: const EdgeInsets.all(72),
                 ),
               ),
@@ -200,7 +209,12 @@ class _DashboardScreenState extends State<DashboardScreen>
                   child: Column(
                     children: [
                       const SizedBox(height: 48),
-                      const SectionTitle(title: 'Get In Touch'),
+                      SectionTitle(
+                        title: 'Get In Touch',
+                        color: controller.isDark.value
+                            ? Colors.white
+                            : const Color(0xff04363D),
+                      ),
                       const SizedBox(height: 24),
                       SelectableText(
                         'Although I\'m not currently looking for any new opportunities,\nmy inbox is always open. Whether you have a question or just want to say hi,\nI\'ll try my best to get back to you!',
@@ -217,7 +231,8 @@ class _DashboardScreenState extends State<DashboardScreen>
                       const SizedBox(height: 48),
                       SlidingButton(
                         title: 'Say Hi!',
-                        onTap: () => showContactDialog(context),
+                        onTap: () => showContactDialog(context, controller),
+                        controller: controller,
                       ),
                       const SizedBox(height: 48),
                     ],
