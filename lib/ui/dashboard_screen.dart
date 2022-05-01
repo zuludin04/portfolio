@@ -179,8 +179,10 @@ class _DashboardScreenState extends State<DashboardScreen>
                     padding: EdgeInsets.symmetric(horizontal: size.width * 0.1),
                     sliver: SliverGrid(
                       delegate: SliverChildBuilderDelegate(
-                        (context, index) =>
-                            ProjectItem(project: projects[index]),
+                        (context, index) => ProjectItem(
+                          project: projects[index],
+                          controller: controller,
+                        ),
                         childCount: projects.length,
                       ),
                       gridDelegate:
