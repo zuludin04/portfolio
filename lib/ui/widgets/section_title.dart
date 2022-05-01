@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/utils/responsive_widget.dart';
 
 class SectionTitle extends StatelessWidget {
   final String title;
@@ -12,10 +13,18 @@ class SectionTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return ResponsiveWidget(
+      largeScreen: titleSection(45),
+      mediumScreen: titleSection(40),
+      smallScreen: titleSection(35),
+    );
+  }
+
+  Widget titleSection(double fontSize) {
     return SelectableText(
       title,
       style: TextStyle(
-        fontSize: 45,
+        fontSize: fontSize,
         fontWeight: FontWeight.bold,
         fontFamily: 'Roboto Bold',
         color: color,

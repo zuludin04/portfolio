@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/data/experience.dart';
+import 'package:portfolio/utils/responsive_widget.dart';
 
 class ExperienceItem extends StatelessWidget {
   final Experience experience;
@@ -11,6 +12,14 @@ class ExperienceItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return ResponsiveWidget(
+      largeScreen: largeItem(),
+      mediumScreen: largeItem(),
+      smallScreen: smallItem(),
+    );
+  }
+
+  Widget largeItem() {
     return Column(
       children: [
         Row(
@@ -65,6 +74,52 @@ class ExperienceItem extends StatelessWidget {
               ),
             ),
           ],
+        ),
+        const Divider(height: 36, color: Colors.white30),
+      ],
+    );
+  }
+
+  Widget smallItem() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Expanded(
+              child: SelectableText(
+                experience.company,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Montserrat Regular',
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            SelectableText(
+              experience.duration,
+              style: const TextStyle(
+                fontFamily: 'Montserrat Regular',
+                color: Colors.white70,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 16),
+        SelectableText(
+          experience.position,
+          style: const TextStyle(
+            fontSize: 20,
+            fontFamily: 'Robotto Bold',
+            letterSpacing: 2,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+        const SizedBox(height: 16),
+        Column(
+          children: experience.tasks.map((e) => _experienceTask(e)).toList(),
         ),
         const Divider(height: 36, color: Colors.white30),
       ],

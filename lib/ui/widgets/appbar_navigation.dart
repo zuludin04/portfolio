@@ -4,6 +4,7 @@ import 'package:portfolio/ui/controller/theme_controller.dart';
 import 'package:portfolio/ui/widgets/text_navigation.dart';
 import 'package:portfolio/ui/widgets/theme_switch.dart';
 import 'package:portfolio/utils/contants.dart';
+import 'package:portfolio/utils/responsive_widget.dart';
 
 class AppbarNavigation extends StatelessWidget {
   final ThemeController controller;
@@ -17,6 +18,14 @@ class AppbarNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return ResponsiveWidget(
+      largeScreen: appbarContainer(context, 60),
+      mediumScreen: appbarContainer(context, 50),
+      smallScreen: appbarContainer(context, 40),
+    );
+  }
+
+  Widget appbarContainer(BuildContext context, double logoSize) {
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: sideSpacing,
@@ -33,8 +42,8 @@ class AppbarNavigation extends StatelessWidget {
               controller.isDark.value
                   ? 'assets/logo_dark.png'
                   : 'assets/logo.png',
-              width: 60,
-              height: 60,
+              width: logoSize,
+              height: logoSize,
             ),
             Row(
               children: [

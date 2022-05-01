@@ -6,6 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:portfolio/data/project.dart';
 import 'package:portfolio/ui/controller/theme_controller.dart';
+import 'package:portfolio/utils/responsive_widget.dart';
 
 class ProjectItem extends StatefulWidget {
   final Project project;
@@ -41,6 +42,11 @@ class _ProjectItemState extends State<ProjectItem> {
         child: Obx(
           () => AnimatedContainer(
             duration: const Duration(milliseconds: 250),
+            margin: EdgeInsets.symmetric(
+                vertical: ResponsiveWidget.isMediumScreen(context) ||
+                        ResponsiveWidget.isSmallScreen(context)
+                    ? 16
+                    : 0),
             decoration: BoxDecoration(
               color:
                   widget.controller.isDark.value ? Colors.black : Colors.white,
@@ -58,12 +64,7 @@ class _ProjectItemState extends State<ProjectItem> {
                   child: AnimatedScale(
                     duration: const Duration(milliseconds: 250),
                     scale: isHovered ? 1.2 : 1,
-                    child: Image.asset(
-                      widget.project.image,
-                      height: 250,
-                      width: double.infinity,
-                      fit: BoxFit.fitWidth,
-                    ),
+                    child: projectImage(),
                   ),
                 ),
                 Padding(
@@ -99,38 +100,21 @@ class _ProjectItemState extends State<ProjectItem> {
                       : Colors.black12,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Row(
-                    children: widget.project.techs
-                        .map(
-                          (e) => Padding(
-                            padding: const EdgeInsets.only(right: 16),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                SvgPicture.asset(
-                                  e.icon,
-                                  width: 18,
-                                ),
-                                const SizedBox(width: 8),
-                                Text(
-                                  e.name,
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                    fontFamily: 'Montserrat Regular',
-                                    color: widget.controller.isDark.value
-                                        ? Colors.white
-                                        : Colors.black,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        )
-                        .toList(),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 8.0,
+                    vertical: ResponsiveWidget.isMediumScreen(context) ||
+                            ResponsiveWidget.isSmallScreen(context)
+                        ? 16
+                        : 0,
                   ),
+                  child: ResponsiveWidget.isMediumScreen(context) ||
+                          ResponsiveWidget.isSmallScreen(context)
+                      ? Row(
+                          children: [
+                            Expanded(child: Wrap(children: techStacks())),
+                          ],
+                        )
+                      : Row(children: techStacks()),
                 ),
               ],
             ),
@@ -138,6 +122,56 @@ class _ProjectItemState extends State<ProjectItem> {
         ),
       ),
     );
+  }
+
+  Widget projectImage() {
+    if (ResponsiveWidget.isSmallScreen(context) ||
+        ResponsiveWidget.isMediumScreen(context)) {
+      return Image.asset(
+        widget.project.image,
+        width: double.infinity,
+        height: 250,
+        fit: BoxFit.fitWidth,
+      );
+    } else {
+      return Image.asset(
+        widget.project.image,
+        width: double.infinity,
+        fit: BoxFit.fitWidth,
+      );
+    }
+  }
+
+  List<Widget> techStacks() {
+    return widget.project.techs
+        .map(
+          (e) => Padding(
+            padding: const EdgeInsets.only(right: 16),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SvgPicture.asset(
+                  e.icon,
+                  width: 18,
+                ),
+                const SizedBox(width: 8),
+                Text(
+                  e.name,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    fontFamily: 'Montserrat Regular',
+                    color: widget.controller.isDark.value
+                        ? Colors.white
+                        : Colors.black,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        )
+        .toList();
   }
 
   void hoverProject(bool hover) {

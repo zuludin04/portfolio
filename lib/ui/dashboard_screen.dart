@@ -8,6 +8,7 @@ import 'package:portfolio/ui/controller/theme_controller.dart';
 import 'package:portfolio/ui/widgets/appbar_navigation.dart';
 import 'package:portfolio/ui/widgets/profile_image.dart';
 import 'package:portfolio/utils/contants.dart';
+import 'package:portfolio/utils/responsive_widget.dart';
 import 'package:sliver_tools/sliver_tools.dart';
 
 import 'widgets/experience_item.dart';
@@ -76,7 +77,12 @@ class _DashboardScreenState extends State<DashboardScreen>
                             TextSpan(
                               text: 'Hi I\'m \n',
                               style: TextStyle(
-                                fontSize: 45,
+                                fontSize: ResponsiveWidget.isLargeScreen(
+                                        context)
+                                    ? 45
+                                    : ResponsiveWidget.isMediumScreen(context)
+                                        ? 40
+                                        : 35,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Roboto Bold',
                                 color: controller.isDark.value
@@ -96,7 +102,12 @@ class _DashboardScreenState extends State<DashboardScreen>
                           const SizedBox(height: 36),
                           Padding(
                             padding: EdgeInsets.symmetric(
-                                horizontal: size.width * 0.3),
+                                horizontal: ResponsiveWidget.isLargeScreen(
+                                        context)
+                                    ? size.width * 0.3
+                                    : ResponsiveWidget.isMediumScreen(context)
+                                        ? size.width * 0.2
+                                        : size.width * 0.1),
                             child: SelectableText(
                               about,
                               textAlign: TextAlign.center,
@@ -128,7 +139,11 @@ class _DashboardScreenState extends State<DashboardScreen>
                   color: const Color(0xff04363D),
                   padding: EdgeInsets.symmetric(
                     vertical: 72,
-                    horizontal: size.width * 0.18,
+                    horizontal: ResponsiveWidget.isLargeScreen(context)
+                        ? size.width * 0.18
+                        : ResponsiveWidget.isMediumScreen(context)
+                            ? size.width * 0.15
+                            : size.width * 0.12,
                   ),
                   child: Column(
                     children: [
@@ -177,22 +192,33 @@ class _DashboardScreenState extends State<DashboardScreen>
                   ),
                   SliverPadding(
                     padding: EdgeInsets.symmetric(horizontal: size.width * 0.1),
-                    sliver: SliverGrid(
-                      delegate: SliverChildBuilderDelegate(
-                        (context, index) => ProjectItem(
-                          project: projects[index],
-                          controller: controller,
-                        ),
-                        childCount: projects.length,
-                      ),
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                        mainAxisSpacing: 25,
-                        crossAxisSpacing: 25,
-                        childAspectRatio: 1.16,
-                      ),
-                    ),
+                    sliver: ResponsiveWidget.isSmallScreen(context) ||
+                            ResponsiveWidget.isMediumScreen(context)
+                        ? SliverList(
+                            delegate: SliverChildBuilderDelegate(
+                              (context, index) => ProjectItem(
+                                project: projects[index],
+                                controller: controller,
+                              ),
+                              childCount: projects.length,
+                            ),
+                          )
+                        : SliverGrid(
+                            delegate: SliverChildBuilderDelegate(
+                              (context, index) => ProjectItem(
+                                project: projects[index],
+                                controller: controller,
+                              ),
+                              childCount: projects.length,
+                            ),
+                            gridDelegate:
+                                const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 3,
+                              mainAxisSpacing: 25,
+                              crossAxisSpacing: 25,
+                              childAspectRatio: 1.16,
+                            ),
+                          ),
                   ),
                 ],
               ),
@@ -205,7 +231,11 @@ class _DashboardScreenState extends State<DashboardScreen>
               SliverToBoxAdapter(
                 child: Container(
                   padding: EdgeInsets.symmetric(
-                    horizontal: size.width * 0.1,
+                    horizontal: ResponsiveWidget.isLargeScreen(context)
+                        ? size.width * 0.3
+                        : ResponsiveWidget.isMediumScreen(context)
+                            ? size.width * 0.2
+                            : size.width * 0.1,
                     vertical: size.height * 0.2,
                   ),
                   child: Column(
