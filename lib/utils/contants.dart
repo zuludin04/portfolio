@@ -71,7 +71,7 @@ var projects = [
   Project(
     name: 'During',
     description: 'Aplikasi pencacatan pengeluaran dan pemasukan, agar dapat dengan mudah ditinjau',
-    image: 'assets/Mumtaaz.png',
+    image: 'assets/during.png',
     company: 'Personal',
     link: Link(
         type: 1,
@@ -97,18 +97,18 @@ var projects = [
       Tech(icon: 'assets/java.svg', name: 'Java'),
     ],
   ),
-  Project(
-    name: 'Akademik Pintar Kerja',
-    description: 'Aplikasi LMS yang bisa digunakan oleh sekolah dan juga murid untuk mempermudah proses belajar mengajar',
-    image: 'assets/Mumtaaz.png',
-    company: 'Waqaftech',
-    link: Link(type: 2, url: ''),
-    techs: [
-      Tech(icon: 'assets/android.svg', name: 'Android'),
-      Tech(icon: 'assets/dart.svg', name: 'Dart'),
-      Tech(icon: 'assets/flutter.svg', name: 'Flutter'),
-    ],
-  ),
+  // Project(
+  //   name: 'Akademik Pintar Kerja',
+  //   description: 'Aplikasi LMS yang bisa digunakan oleh sekolah dan juga murid untuk mempermudah proses belajar mengajar',
+  //   image: 'assets/Mumtaaz.png',
+  //   company: 'Waqaftech',
+  //   link: Link(type: 2, url: ''),
+  //   techs: [
+  //     Tech(icon: 'assets/android.svg', name: 'Android'),
+  //     Tech(icon: 'assets/dart.svg', name: 'Dart'),
+  //     Tech(icon: 'assets/flutter.svg', name: 'Flutter'),
+  //   ],
+  // ),
 ];
 
 void showContactDialog(BuildContext context, ThemeController controller) {
