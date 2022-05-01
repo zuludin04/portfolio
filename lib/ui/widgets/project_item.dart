@@ -48,8 +48,9 @@ class _ProjectItemState extends State<ProjectItem> {
                     ? 16
                     : 0),
             decoration: BoxDecoration(
-              color:
-                  widget.controller.isDark.value ? Colors.black : Colors.white,
+              color: widget.controller.isDark.value
+                  ? const Color(0xff111111)
+                  : Colors.white,
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: Colors.cyan, width: 0.2),
             ),

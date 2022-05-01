@@ -51,7 +51,8 @@ class _DashboardScreenState extends State<DashboardScreen>
 
     return Obx(
       () => Scaffold(
-        backgroundColor: controller.isDark.value ? Colors.black : Colors.white,
+        backgroundColor:
+            controller.isDark.value ? const Color(0xff111111) : Colors.white,
         body: AnimatedBackground(
           vsync: this,
           behaviour: RandomParticleBehaviour(
@@ -135,35 +136,41 @@ class _DashboardScreenState extends State<DashboardScreen>
                 ),
               ),
               SliverToBoxAdapter(
-                child: Container(
-                  color: const Color(0xff04363D),
-                  padding: EdgeInsets.symmetric(
-                    vertical: 72,
-                    horizontal: ResponsiveWidget.isLargeScreen(context)
-                        ? size.width * 0.18
-                        : ResponsiveWidget.isMediumScreen(context)
-                            ? size.width * 0.15
-                            : size.width * 0.12,
-                  ),
-                  child: Column(
-                    children: [
-                      const SectionTitle(
-                        title: 'Experience',
-                        color: Colors.white,
-                      ),
-                      const SizedBox(height: 36),
-                      Column(
-                        children: experiences
-                            .map((e) => ExperienceItem(experience: e))
-                            .toList(),
-                      ),
-                    ],
+                child: Obx(
+                  () => Container(
+                    color: controller.isDark.value
+                        ? const Color(0xff333333)
+                        : const Color(0xff04363D),
+                    padding: EdgeInsets.symmetric(
+                      vertical: 72,
+                      horizontal: ResponsiveWidget.isLargeScreen(context)
+                          ? size.width * 0.18
+                          : ResponsiveWidget.isMediumScreen(context)
+                              ? size.width * 0.15
+                              : size.width * 0.12,
+                    ),
+                    child: Column(
+                      children: [
+                        const SectionTitle(
+                          title: 'Experience',
+                          color: Colors.white,
+                        ),
+                        const SizedBox(height: 36),
+                        Column(
+                          children: experiences
+                              .map((e) => ExperienceItem(experience: e))
+                              .toList(),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
               SliverToBoxAdapter(
                 child: Container(
-                  color: controller.isDark.value ? Colors.black : Colors.white,
+                  color: controller.isDark.value
+                      ? const Color(0xff111111)
+                      : Colors.white,
                   padding: EdgeInsets.only(
                     left: size.width * 0.1,
                     right: size.width * 0.1,
@@ -187,7 +194,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                   SliverPositioned.fill(
                     child: Container(
                         color: controller.isDark.value
-                            ? Colors.black
+                            ? const Color(0xff111111)
                             : Colors.white),
                   ),
                   SliverPadding(
@@ -224,7 +231,9 @@ class _DashboardScreenState extends State<DashboardScreen>
               ),
               SliverToBoxAdapter(
                 child: Container(
-                  color: controller.isDark.value ? Colors.black : Colors.white,
+                  color: controller.isDark.value
+                      ? const Color(0xff111111)
+                      : Colors.white,
                   padding: const EdgeInsets.all(72),
                 ),
               ),
