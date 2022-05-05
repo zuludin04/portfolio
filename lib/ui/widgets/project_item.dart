@@ -1,6 +1,3 @@
-// ignore: avoid_web_libraries_in_flutter
-import 'dart:html' as html;
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -34,15 +31,13 @@ class _ProjectItemState extends State<ProjectItem> {
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: () {
-          if (widget.project.link.type == 1) {
-            html.window.open(widget.project.link.url, 'new tab');
-          } else {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => const ProjectDetailScreen()),
-            );
-          }
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) =>
+                  ProjectDetailScreen(project: widget.project),
+            ),
+          );
         },
         child: Obx(
           () => AnimatedContainer(

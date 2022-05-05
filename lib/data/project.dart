@@ -3,16 +3,20 @@ class Project {
   String description;
   String image;
   String company;
-  Link link;
+  String status;
+  String link;
   List<Tech> techs;
+  List<String> screenshots;
 
   Project({
     required this.name,
     required this.description,
     required this.image,
     required this.company,
+    required this.status,
     required this.link,
     required this.techs,
+    required this.screenshots,
   });
 }
 
@@ -21,11 +25,4 @@ class Tech {
   String name;
 
   Tech({required this.icon, required this.name});
-}
-
-class Link {
-  int type;
-  String url;
-
-  Link({required this.type, required this.url});
 }

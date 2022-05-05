@@ -47,15 +47,14 @@ var projects = [
         'Aplikasi muslim untuk Wakif (user) BWA agar bisa berdonasi dengan mudah',
     image: 'assets/Mumtaaz.png',
     company: 'BWA',
-    link: Link(
-        type: 1,
-        url:
-            'https://play.google.com/store/apps/details?id=id.bwa.bwa_wakif_app'),
+    status: 'Released',
+    link: 'https://play.google.com/store/apps/details?id=id.bwa.bwa_wakif_app',
     techs: [
       Tech(icon: 'assets/android.svg', name: 'Android'),
       Tech(icon: 'assets/dart.svg', name: 'Dart'),
       Tech(icon: 'assets/flutter.svg', name: 'Flutter'),
     ],
+    screenshots: [],
   ),
   Project(
     name: 'Pintar Kerja',
@@ -63,12 +62,14 @@ var projects = [
         'Aplikasi online learning berbasis Flutter yang bisa dipakai oleh siapa saja',
     image: 'assets/pintar-kerja.png',
     company: 'Waqaftech',
-    link: Link(type: 2, url: ''),
+    link: '',
+    status: 'Not Released',
     techs: [
       Tech(icon: 'assets/android.svg', name: 'Android'),
       Tech(icon: 'assets/dart.svg', name: 'Dart'),
       Tech(icon: 'assets/flutter.svg', name: 'Flutter'),
     ],
+    screenshots: [],
   ),
   Project(
     name: 'During',
@@ -76,15 +77,14 @@ var projects = [
         'Aplikasi pencacatan pengeluaran dan pemasukan, agar dapat dengan mudah ditinjau',
     image: 'assets/during.png',
     company: 'Personal',
-    link: Link(
-        type: 1,
-        url:
-            'https://play.google.com/store/apps/details?id=id.bwa.bwa_wakif_app'),
+    status: 'Released',
+    link: 'https://play.google.com/store/apps/details?id=id.bwa.bwa_wakif_app',
     techs: [
       Tech(icon: 'assets/android.svg', name: 'Android'),
       Tech(icon: 'assets/dart.svg', name: 'Dart'),
       Tech(icon: 'assets/flutter.svg', name: 'Flutter'),
     ],
+    screenshots: [],
   ),
   Project(
     name: 'Bisa Berbagi',
@@ -92,27 +92,15 @@ var projects = [
         'Apliasi berbasis muslimah yang juga menampung salah satu produk PT. Amanah yaitu BerbagiLink',
     image: 'assets/bisaberbagi.jpg',
     company: 'PT. Amanah Karya Indonesia',
-    link: Link(
-        type: 1,
-        url:
-            'https://play.google.com/store/apps/details?id=com.amanah.bisaberbagi'),
+    status: 'Released',
+    link:
+        'https://play.google.com/store/apps/details?id=com.amanah.bisaberbagi',
     techs: [
       Tech(icon: 'assets/android.svg', name: 'Android'),
       Tech(icon: 'assets/java.svg', name: 'Java'),
     ],
+    screenshots: [],
   ),
-  // Project(
-  //   name: 'Akademik Pintar Kerja',
-  //   description: 'Aplikasi LMS yang bisa digunakan oleh sekolah dan juga murid untuk mempermudah proses belajar mengajar',
-  //   image: 'assets/Mumtaaz.png',
-  //   company: 'Waqaftech',
-  //   link: Link(type: 2, url: ''),
-  //   techs: [
-  //     Tech(icon: 'assets/android.svg', name: 'Android'),
-  //     Tech(icon: 'assets/dart.svg', name: 'Dart'),
-  //     Tech(icon: 'assets/flutter.svg', name: 'Flutter'),
-  //   ],
-  // ),
 ];
 
 void showContactDialog(BuildContext context, ThemeController controller) {
