@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
+import 'package:portfolio/data/email_service.dart';
 import 'package:portfolio/ui/controller/theme_controller.dart';
 import 'package:portfolio/ui/widgets/appbar_navigation.dart';
 import 'package:portfolio/ui/widgets/contact_field.dart';
@@ -270,7 +271,13 @@ class _DashboardScreenState extends State<DashboardScreen>
                       const SizedBox(height: 48),
                       SlidingButton(
                         title: 'Say Hi!',
-                        onTap: () {},
+                        onTap: () async {
+                          await EmailService.sendContactMessage(email, message);
+                          setState(() {
+                            email = '';
+                            message = '';
+                          });
+                        },
                         controller: controller,
                       ),
                       const SizedBox(height: 48),

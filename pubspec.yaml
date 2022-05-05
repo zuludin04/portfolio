@@ -17,6 +17,7 @@ dependencies:
   flutter_svg: ^1.0.3
   sliver_tools: ^0.2.5
   get: ^4.6.1
+  dio: ^4.0.6
 
 dev_dependencies:
   flutter_test:
