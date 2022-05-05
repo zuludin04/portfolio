@@ -1,3 +1,6 @@
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:html' as html;
+
 import 'package:animated_background/animated_background.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -237,6 +240,18 @@ class _DashboardScreenState extends State<DashboardScreen>
                       ? const Color(0xff111111)
                       : Colors.white,
                   padding: const EdgeInsets.all(72),
+                  child: Center(
+                    child: SlidingButton(
+                      title: 'More',
+                      onTap: () {
+                        html.window.open(
+                          'https://github.com/zuludin04',
+                          'new tab',
+                        );
+                      },
+                      controller: controller,
+                    ),
+                  ),
                 ),
               ),
               SliverToBoxAdapter(
