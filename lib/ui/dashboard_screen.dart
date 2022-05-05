@@ -28,6 +28,7 @@ class DashboardScreen extends StatefulWidget {
 class _DashboardScreenState extends State<DashboardScreen>
     with TickerProviderStateMixin {
   final ThemeController controller = Get.put(ThemeController());
+  final formKey = GlobalKey<FormState>();
 
   ParticleOptions particleOptions = ParticleOptions(
     image: Image.asset('assets/particle.png'),
@@ -49,6 +50,8 @@ class _DashboardScreenState extends State<DashboardScreen>
 
   var email = '';
   var message = '';
+
+  bool inputFailed = false;
 
   @override
   Widget build(BuildContext context) {
@@ -246,42 +249,57 @@ class _DashboardScreenState extends State<DashboardScreen>
                             : size.width * 0.1,
                     vertical: size.height * 0.2,
                   ),
-                  child: Column(
-                    children: [
-                      const SizedBox(height: 48),
-                      SectionTitle(
-                        title: 'Get In Touch',
-                        color: controller.isDark.value
-                            ? Colors.white
-                            : const Color(0xff04363D),
-                      ),
-                      const SizedBox(height: 24),
-                      ContactField(
-                        label: 'Email',
-                        expand: false,
-                        onChanged: (text) => email = text,
-                        controller: controller,
-                      ),
-                      ContactField(
-                        label: 'Message',
-                        expand: true,
-                        onChanged: (text) => message = text,
-                        controller: controller,
-                      ),
-                      const SizedBox(height: 48),
-                      SlidingButton(
-                        title: 'Say Hi!',
-                        onTap: () async {
-                          await EmailService.sendContactMessage(email, message);
-                          setState(() {
-                            email = '';
-                            message = '';
-                          });
-                        },
-                        controller: controller,
-                      ),
-                      const SizedBox(height: 48),
-                    ],
+                  child: Form(
+                    key: formKey,
+                    autovalidateMode: inputFailed
+                        ? AutovalidateMode.onUserInteraction
+                        : AutovalidateMode.disabled,
+                    child: Column(
+                      children: [
+                        const SizedBox(height: 48),
+                        SectionTitle(
+                          title: 'Get In Touch',
+                          color: controller.isDark.value
+                              ? Colors.white
+                              : const Color(0xff04363D),
+                        ),
+                        const SizedBox(height: 24),
+                        ContactField(
+                          label: 'Email',
+                          expand: false,
+                          onChanged: (text) => email = text,
+                          controller: controller,
+                          validator: emailValidator,
+                        ),
+                        ContactField(
+                          label: 'Message',
+                          expand: true,
+                          onChanged: (text) => message = text,
+                          controller: controller,
+                          validator: messageValidator,
+                        ),
+                        const SizedBox(height: 48),
+                        SlidingButton(
+                          title: 'Say Hi!',
+                          onTap: () async {
+                            if (formKey.currentState!.validate()) {
+                              await EmailService.sendContactMessage(
+                                  email, message);
+                              setState(() {
+                                email = '';
+                                message = '';
+                              });
+                            } else {
+                              setState(() {
+                                inputFailed = true;
+                              });
+                            }
+                          },
+                          controller: controller,
+                        ),
+                        const SizedBox(height: 48),
+                      ],
+                    ),
                   ),
                 ),
               ),

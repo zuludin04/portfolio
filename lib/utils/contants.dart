@@ -43,7 +43,8 @@ var experiences = [
 var projects = [
   Project(
     name: 'Mumtaaz',
-    description: 'Aplikasi muslim untuk Wakif (user) BWA agar bisa berdonasi dengan mudah',
+    description:
+        'Aplikasi muslim untuk Wakif (user) BWA agar bisa berdonasi dengan mudah',
     image: 'assets/Mumtaaz.png',
     company: 'BWA',
     link: Link(
@@ -58,7 +59,8 @@ var projects = [
   ),
   Project(
     name: 'Pintar Kerja',
-    description: 'Aplikasi online learning berbasis Flutter yang bisa dipakai oleh siapa saja',
+    description:
+        'Aplikasi online learning berbasis Flutter yang bisa dipakai oleh siapa saja',
     image: 'assets/pintar-kerja.png',
     company: 'Waqaftech',
     link: Link(type: 2, url: ''),
@@ -70,7 +72,8 @@ var projects = [
   ),
   Project(
     name: 'During',
-    description: 'Aplikasi pencacatan pengeluaran dan pemasukan, agar dapat dengan mudah ditinjau',
+    description:
+        'Aplikasi pencacatan pengeluaran dan pemasukan, agar dapat dengan mudah ditinjau',
     image: 'assets/during.png',
     company: 'Personal',
     link: Link(
@@ -85,7 +88,8 @@ var projects = [
   ),
   Project(
     name: 'Bisa Berbagi',
-    description: 'Apliasi berbasis muslimah yang juga menampung salah satu produk PT. Amanah yaitu BerbagiLink',
+    description:
+        'Apliasi berbasis muslimah yang juga menampung salah satu produk PT. Amanah yaitu BerbagiLink',
     image: 'assets/bisaberbagi.jpg',
     company: 'PT. Amanah Karya Indonesia',
     link: Link(
@@ -164,4 +168,24 @@ void showContactDialog(BuildContext context, ThemeController controller) {
       );
     },
   );
+}
+
+String? emailValidator(String? value) {
+  String pattern =
+      r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
+  RegExp regExp = RegExp(pattern);
+  if (value!.isEmpty) {
+    return "Masukkan Email";
+  } else if (!regExp.hasMatch(value)) {
+    return "Format Email Tidak Valid";
+  } else {
+    return null;
+  }
+}
+
+String? messageValidator(String? value) {
+  if (value!.isEmpty) {
+    return "Pesan tidak boleh kosong";
+  }
+  return null;
 }

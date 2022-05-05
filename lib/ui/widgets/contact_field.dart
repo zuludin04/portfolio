@@ -7,6 +7,7 @@ class ContactField extends StatelessWidget {
   final bool expand;
   final Function(String) onChanged;
   final ThemeController controller;
+  final String? Function(String?) validator;
 
   const ContactField({
     Key? key,
@@ -14,6 +15,7 @@ class ContactField extends StatelessWidget {
     required this.expand,
     required this.onChanged,
     required this.controller,
+    required this.validator,
   }) : super(key: key);
 
   @override
@@ -58,6 +60,7 @@ class ContactField extends StatelessWidget {
           maxLines: expand ? 7 : 1,
           minLines: expand ? 5 : 1,
           onChanged: onChanged,
+          validator: validator,
         ),
       ),
     );
