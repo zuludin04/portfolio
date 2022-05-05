@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:portfolio/ui/controller/theme_controller.dart';
-import 'package:portfolio/ui/widgets/text_navigation.dart';
 import 'package:portfolio/ui/widgets/theme_switch.dart';
-import 'package:portfolio/utils/contants.dart';
 import 'package:portfolio/utils/responsive_widget.dart';
 
 class AppbarNavigation extends StatelessWidget {
@@ -47,12 +45,12 @@ class AppbarNavigation extends StatelessWidget {
             ),
             Row(
               children: [
-                TextNavigation(
-                  title: 'Contact',
-                  onTap: () => showContactDialog(context, controller),
-                  titleColor:
-                      controller.isDark.value ? Colors.white : Colors.black,
-                ),
+                // TextNavigation(
+                //   title: 'Contact',
+                //   onTap: () => showContactDialog(context, controller),
+                //   titleColor:
+                //       controller.isDark.value ? Colors.white : Colors.black,
+                // ),
                 const SizedBox(width: 36),
                 ThemeSwitch(controller: controller),
               ],

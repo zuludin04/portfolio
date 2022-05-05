@@ -6,6 +6,7 @@ import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:portfolio/ui/controller/theme_controller.dart';
 import 'package:portfolio/ui/widgets/appbar_navigation.dart';
+import 'package:portfolio/ui/widgets/contact_field.dart';
 import 'package:portfolio/ui/widgets/profile_image.dart';
 import 'package:portfolio/utils/contants.dart';
 import 'package:portfolio/utils/responsive_widget.dart';
@@ -44,6 +45,9 @@ class _DashboardScreenState extends State<DashboardScreen>
   var particlePaint = Paint()
     ..style = PaintingStyle.stroke
     ..strokeWidth = 1.0;
+
+  var email = '';
+  var message = '';
 
   @override
   Widget build(BuildContext context) {
@@ -122,13 +126,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                               ),
                             ),
                           ),
-                          const SizedBox(height: 72),
-                          SlidingButton(
-                            title: 'Contact Me',
-                            onTap: () => showContactDialog(context, controller),
-                            controller: controller,
-                          ),
-                          const SizedBox(height: 72),
+                          const SizedBox(height: 180),
                         ],
                       ),
                     ),
@@ -257,22 +255,22 @@ class _DashboardScreenState extends State<DashboardScreen>
                             : const Color(0xff04363D),
                       ),
                       const SizedBox(height: 24),
-                      SelectableText(
-                        'Although I\'m not currently looking for any new opportunities,\nmy inbox is always open. Whether you have a question or just want to say hi,\nI\'ll try my best to get back to you!',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontFamily: 'Montserrat Regular',
-                          fontSize: 16,
-                          color: controller.isDark.value
-                              ? Colors.white
-                              : Colors.black87,
-                          fontWeight: FontWeight.w600,
-                        ),
+                      ContactField(
+                        label: 'Email',
+                        expand: false,
+                        onChanged: (text) => email = text,
+                        controller: controller,
+                      ),
+                      ContactField(
+                        label: 'Message',
+                        expand: true,
+                        onChanged: (text) => message = text,
+                        controller: controller,
                       ),
                       const SizedBox(height: 48),
                       SlidingButton(
                         title: 'Say Hi!',
-                        onTap: () => showContactDialog(context, controller),
+                        onTap: () {},
                         controller: controller,
                       ),
                       const SizedBox(height: 48),
