@@ -77,7 +77,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                       controller: controller,
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: size.height * 0.15),
+                      padding: EdgeInsets.only(top: size.height * 0.2),
                       child: Column(
                         children: [
                           const ProfileImage(),
@@ -130,7 +130,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                               ),
                             ),
                           ),
-                          const SizedBox(height: 180),
+                          SizedBox(height: size.height * 0.2),
                         ],
                       ),
                     ),
