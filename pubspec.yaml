@@ -1,7 +1,7 @@
 name: portfolio
 description: A new Flutter project.
 
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
@@ -26,7 +26,6 @@ dev_dependencies:
   flutter_lints: ^1.0.0
 
 flutter:
-
   uses-material-design: true
 
   assets:
@@ -34,6 +33,11 @@ flutter:
     - assets/icon/
     - assets/other/
     - assets/project/
+    - assets/screenshot/
+    - assets/screenshot/bisaberbagi/
+    - assets/screenshot/during/
+    - assets/screenshot/mumtaaz/
+    - assets/screenshot/pintarkerja/
 
   fonts:
     - family: Roboto Bold
@@ -42,4 +46,3 @@ flutter:
     - family: Montserrat Regular
       fonts:
         - asset: fonts/Montserrat-Regular.ttf
-

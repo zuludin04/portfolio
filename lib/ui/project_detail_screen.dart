@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:portfolio/data/project.dart';
 import 'package:portfolio/ui/controller/theme_controller.dart';
 import 'package:portfolio/ui/widgets/project_information.dart';
+import 'package:portfolio/ui/widgets/project_screenshot.dart';
 import 'package:portfolio/ui/widgets/section_title.dart';
 import 'package:portfolio/utils/responsive_widget.dart';
 
@@ -25,6 +26,16 @@ class ProjectDetailScreen extends StatelessWidget {
         body: CustomScrollView(
           slivers: [
             SliverAppBar(
+              backgroundColor: controller.isDark.value
+                  ? const Color(0xff111111)
+                  : Colors.white,
+              leading: IconButton(
+                onPressed: () => Navigator.pop(context),
+                icon: Icon(
+                  Icons.arrow_back,
+                  color: controller.isDark.value ? Colors.white : Colors.black,
+                ),
+              ),
               expandedHeight: size.height * 0.7,
               floating: false,
               pinned: true,
@@ -119,7 +130,12 @@ class ProjectDetailScreen extends StatelessWidget {
                           ? Colors.white
                           : const Color(0xff04363D),
                     ),
-                    const SizedBox(height: 72)
+                    Wrap(
+                      children: project.screenshots
+                          .map((e) => ProjectScreenshot(assets: e))
+                          .toList(),
+                    ),
+                    const SizedBox(height: 72),
                   ],
                 ),
               ),
