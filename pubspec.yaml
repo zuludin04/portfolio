@@ -31,6 +31,9 @@ flutter:
 
   assets:
     - assets/
+    - assets/icon/
+    - assets/other/
+    - assets/project/
 
   fonts:
     - family: Roboto Bold

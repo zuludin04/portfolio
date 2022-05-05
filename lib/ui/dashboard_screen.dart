@@ -34,7 +34,7 @@ class _DashboardScreenState extends State<DashboardScreen>
   final formKey = GlobalKey<FormState>();
 
   ParticleOptions particleOptions = ParticleOptions(
-    image: Image.asset('assets/particle.png'),
+    image: Image.asset('assets/other/particle.png'),
     baseColor: Colors.blue,
     spawnOpacity: 0.0,
     opacityChangeRate: 0.25,

@@ -71,8 +71,8 @@ class _ThemeSwitchState extends State<ThemeSwitch> {
     return Obx(
       () => Image.asset(
         widget.controller.isDark.value
-            ? 'assets/dark-mode.png'
-            : 'assets/light-mode.png',
+            ? 'assets/other/dark-mode.png'
+            : 'assets/other/light-mode.png',
         key: Key(widget.controller.isDark.value ? 'dark' : 'light'),
         width: 40,
         height: 40,

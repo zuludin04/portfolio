@@ -38,8 +38,8 @@ class AppbarNavigation extends StatelessWidget {
           children: [
             Image.asset(
               controller.isDark.value
-                  ? 'assets/logo_dark.png'
-                  : 'assets/logo.png',
+                  ? 'assets/icon/logo_dark.png'
+                  : 'assets/icon/logo.png',
               width: logoSize,
               height: logoSize,
             ),

@@ -44,7 +44,7 @@ class ProjectInformation extends StatelessWidget {
         onTap: () {
           html.window.open(url, 'new tab');
         },
-        child: Image.asset('assets/google_play.png', width: 200),
+        child: Image.asset('assets/icon/google_play.png', width: 200),
       );
     } else {
       return Text(
