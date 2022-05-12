@@ -8,6 +8,7 @@ class SlidingButton extends StatefulWidget {
   final Function() onTap;
   final double width;
   final ThemeController controller;
+  final bool sendingEmail;
 
   const SlidingButton({
     Key? key,
@@ -15,6 +16,7 @@ class SlidingButton extends StatefulWidget {
     required this.onTap,
     required this.controller,
     this.width = 125,
+    this.sendingEmail = false,
   }) : super(key: key);
 
   @override
@@ -54,15 +56,17 @@ class _SlidingButtonState extends State<SlidingButton> {
                           ? Colors.white
                           : Colors.black),
                 ),
-                child: AnimatedDefaultTextStyle(
-                  child: Text(widget.title),
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: textColor(),
-                  ),
-                  duration: const Duration(milliseconds: 250),
-                ),
+                child: widget.sendingEmail
+                    ? const CircularProgressIndicator(color: Color(0xff04363D))
+                    : AnimatedDefaultTextStyle(
+                        child: Text(widget.title),
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: textColor(),
+                        ),
+                        duration: const Duration(milliseconds: 250),
+                      ),
               ),
             ],
           ),

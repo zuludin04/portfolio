@@ -55,6 +55,7 @@ class _DashboardScreenState extends State<DashboardScreen>
   var message = '';
 
   bool inputFailed = false;
+  bool sendingEmail = false;
 
   @override
   Widget build(BuildContext context) {
@@ -296,10 +297,30 @@ class _DashboardScreenState extends State<DashboardScreen>
                         const SizedBox(height: 48),
                         SlidingButton(
                           title: 'Say Hi!',
+                          sendingEmail: sendingEmail,
                           onTap: () async {
+                            setState(() {
+                              sendingEmail = true;
+                            });
                             if (formKey.currentState!.validate()) {
                               await EmailService.sendContactMessage(
-                                  email, message);
+                                      email, message)
+                                  .then((value) {
+                                setState(() {
+                                  sendingEmail = false;
+                                });
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                    content: Text(
+                                      "Pesan berhasil dikirim",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                    backgroundColor: Colors.lightGreen,
+                                    behavior: SnackBarBehavior.floating,
+                                    elevation: 0,
+                                  ),
+                                );
+                              });
                               setState(() {
                                 email = '';
                                 message = '';
