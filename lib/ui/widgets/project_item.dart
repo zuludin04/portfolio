@@ -31,13 +31,7 @@ class _ProjectItemState extends State<ProjectItem> {
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) =>
-                  ProjectDetailScreen(project: widget.project),
-            ),
-          );
+          Get.toNamed("detail_project", arguments: widget.project);
         },
         child: Obx(
           () => AnimatedContainer(

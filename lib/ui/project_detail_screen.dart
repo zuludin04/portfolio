@@ -9,12 +9,9 @@ import 'package:portfolio/utils/responsive_widget.dart';
 
 class ProjectDetailScreen extends StatelessWidget {
   final ThemeController controller = Get.find();
-  final Project project;
+  final Project project = Get.arguments;
 
-  ProjectDetailScreen({
-    Key? key,
-    required this.project,
-  }) : super(key: key);
+  ProjectDetailScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
