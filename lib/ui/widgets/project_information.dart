@@ -40,7 +40,7 @@ class ProjectInformation extends StatelessWidget {
 
   Widget infoWidget(BuildContext context) {
     if (info == 'Released') {
-      return GestureDetector(
+      return InkWell(
         onTap: () {
           html.window.open(url, 'new tab');
         },
