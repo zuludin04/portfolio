@@ -97,13 +97,20 @@ var projects = [
     image: 'assets/project/during.png',
     company: 'Personal',
     status: 'Released',
-    link: 'https://play.google.com/store/apps/details?id=id.bwa.bwa_wakif_app',
+    link: 'https://play.google.com/store/apps/details?id=com.app.zuludin.during.during',
     techs: [
       Tech(icon: 'assets/icon/android.svg', name: 'Android'),
       Tech(icon: 'assets/icon/dart.svg', name: 'Dart'),
       Tech(icon: 'assets/icon/flutter.svg', name: 'Flutter'),
     ],
-    screenshots: [],
+    screenshots: [
+      'assets/screenshot/during/during_sc_1.webp',
+      'assets/screenshot/during/during_sc_2.webp',
+      'assets/screenshot/during/during_sc_3.webp',
+      'assets/screenshot/during/during_sc_4.webp',
+      'assets/screenshot/during/during_sc_5.webp',
+      'assets/screenshot/during/during_sc_6.webp',
+    ],
   ),
   Project(
     name: 'Bisa Berbagi',
