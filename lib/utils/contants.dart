@@ -14,18 +14,20 @@ var experiences = [
     duration: 'Jul 2020 - Present',
     position: 'Mobile Engineer',
     tasks: [
-      'Membuat aplikasi muslim yang dapat mudah diakses oleh orang banyak',
-      'Membangun aplikasi mobile dengan flutter dari awal beserta dengan arsitekturnya',
+      'Build mobile application architecture from scratch using Flutter',
+      'Create Islamic theme application for every Muslim in the world',
+      'Implement community feature so user can read Al-Quran in unison',
+      'Working with a UI designer to create an application that everyone can easily access',
     ],
   ),
   Experience(
     company: 'Waqaftech',
-    duration: 'Oct 2021 - Present',
-    position: 'Mobile Engineer (Vendor)',
+    duration: 'Oct 2021 - Juni 2022',
+    position: 'Mobile Engineer',
     tasks: [
-      'Membangun aplikasi mobile dengan flutter dari awal beserta dengan arsitekturnya',
-      'Membuat aplikasi akademik mobile mulai dari Online Learning sampai LMS',
-      'Bertanggung jawab agar aplikasi dapat berjalan dengan baik',
+      'Build mobile application architecture from scratch using Flutter',
+      'Create an online learning application complete with features such as video streaming, progress tracking, payments, and courses',
+      'Developed LMS mobile application for student and teacher',
     ],
   ),
   Experience(
@@ -33,9 +35,10 @@ var experiences = [
     duration: 'Jan 2020 - Jun 2020',
     position: 'Mobile Engineer',
     tasks: [
-      'Bertanggung jawab agar fitur Replenishment berjalan dengan baik pada aplikasi Toyota (TMIIN)',
-      'Memastikan agar aplikasi BisaBerbagi bisa release dan semua fitur dapat berjalan dengan baik',
-      'Memperbaiki kode aplikasi BisaBerbagi agar lebih robust',
+      'Responsible for implementing Replenishment feature in TMIIN company application',
+      'Release and maintenance of Islamic mobile application called BisaBerbagi',
+      'Convert berbagi.link site into mobile application',
+      'Fixing the existing code to be more robust, maintainable, and testable',
     ],
   ),
 ];
@@ -97,7 +100,8 @@ var projects = [
     image: 'assets/project/during.png',
     company: 'Personal',
     status: 'Released',
-    link: 'https://play.google.com/store/apps/details?id=com.app.zuludin.during.during',
+    link:
+        'https://play.google.com/store/apps/details?id=com.app.zuludin.during.during',
     techs: [
       Tech(icon: 'assets/icon/android.svg', name: 'Android'),
       Tech(icon: 'assets/icon/dart.svg', name: 'Dart'),
