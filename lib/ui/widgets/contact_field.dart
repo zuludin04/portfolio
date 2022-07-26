@@ -8,6 +8,7 @@ class ContactField extends StatelessWidget {
   final Function(String) onChanged;
   final ThemeController controller;
   final String? Function(String?) validator;
+  final String initialValue;
 
   const ContactField({
     Key? key,
@@ -16,6 +17,7 @@ class ContactField extends StatelessWidget {
     required this.onChanged,
     required this.controller,
     required this.validator,
+    required this.initialValue,
   }) : super(key: key);
 
   @override
@@ -29,6 +31,7 @@ class ContactField extends StatelessWidget {
                 ? Colors.white
                 : const Color(0xff04363D),
           ),
+          initialValue: initialValue,
           decoration: InputDecoration(
             labelText: label,
             labelStyle: TextStyle(

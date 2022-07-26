@@ -2,10 +2,7 @@
 import 'dart:html' as html;
 
 import 'package:animated_background/animated_background.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:portfolio/data/email_service.dart';
 import 'package:portfolio/ui/controller/theme_controller.dart';
@@ -283,6 +280,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                         ContactField(
                           label: 'Email',
                           expand: false,
+                          initialValue: email,
                           onChanged: (text) => email = text,
                           controller: controller,
                           validator: emailValidator,
@@ -290,6 +288,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                         ContactField(
                           label: 'Message',
                           expand: true,
+                          initialValue: message,
                           onChanged: (text) => message = text,
                           controller: controller,
                           validator: messageValidator,
@@ -299,10 +298,10 @@ class _DashboardScreenState extends State<DashboardScreen>
                           title: 'Say Hi!',
                           sendingEmail: sendingEmail,
                           onTap: () async {
-                            setState(() {
-                              sendingEmail = true;
-                            });
                             if (formKey.currentState!.validate()) {
+                              setState(() {
+                                sendingEmail = true;
+                              });
                               await EmailService.sendContactMessage(
                                       email, message)
                                   .then((value) {
