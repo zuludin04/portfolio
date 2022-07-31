@@ -6,7 +6,7 @@ import 'package:portfolio/ui/controller/theme_controller.dart';
 import 'package:portfolio/ui/widgets/sliding_button.dart';
 
 var about =
-    "Hallo, saya Zulfikar Mauludin. Saya seorang front-end developer yang berfokus pada aplikasi mobile. Mulai terjun ke dunia developer pada tahun 2017, karena menurut saya membuat aplikasi itu seperti menyelesaikan puzzle dalam kehidupan sehari-hari. Saat ini saya sedang mengerjakan 2 aplikasi utama, yaitu aplikasi muslim dan juga online learning.";
+    "I'm a software develepor and focused especially on mobile development.\nProficient using both Native (Java/Kotlin) and Flutter as my framework to build an application.";
 
 var experiences = [
   Experience(

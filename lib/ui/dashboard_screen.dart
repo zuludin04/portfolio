@@ -104,7 +104,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                                   text: 'Zulfikar Mauludin \n',
                                   style: TextStyle(color: Color(0xff128B91)),
                                 ),
-                                TextSpan(text: 'I Love Learning \nNew Tech'),
+                                TextSpan(text: 'I am a Mobile Developer'),
                               ],
                             ),
                             textAlign: TextAlign.center,
