@@ -140,6 +140,31 @@ var projects = [
       'assets/screenshot/bisaberbagi/bisaberbagi_sc_8.webp',
     ],
   ),
+  Project(
+    name: 'Alita WMS',
+    description:
+        'Aplikasi untuk inventory barang dan tracking pengiriman barang di Alita',
+    image: 'assets/project/alita.png',
+    company: 'PT Fhadira Inovasi Teknologi',
+    status: 'Released',
+    link: '',
+    techs: [
+      Tech(icon: 'assets/icon/android.svg', name: 'Android'),
+      Tech(icon: 'assets/icon/dart.svg', name: 'Dart'),
+      Tech(icon: 'assets/icon/flutter.svg', name: 'Flutter'),
+    ],
+    screenshots: [
+      'assets/screenshot/alita/alita_sc_1.png',
+      'assets/screenshot/alita/alita_sc_2.png',
+      'assets/screenshot/alita/alita_sc_3.png',
+      'assets/screenshot/alita/alita_sc_4.png',
+      'assets/screenshot/alita/alita_sc_5.png',
+      'assets/screenshot/alita/alita_sc_6.png',
+      'assets/screenshot/alita/alita_sc_7.png',
+      'assets/screenshot/alita/alita_sc_8.png',
+      'assets/screenshot/alita/alita_sc_9.png',
+    ],
+  ),
 ];
 
 void showContactDialog(BuildContext context, ThemeController controller) {

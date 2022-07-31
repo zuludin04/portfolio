@@ -40,6 +40,7 @@ flutter:
     - assets/screenshot/during/
     - assets/screenshot/mumtaaz/
     - assets/screenshot/pintarkerja/
+    - assets/screenshot/alita/
 
   fonts:
     - family: Roboto Bold
