@@ -47,7 +47,7 @@ var projects = [
   Project(
     name: 'Mumtaaz',
     description:
-        'Aplikasi muslim untuk Wakif (user) BWA agar bisa berdonasi dengan mudah',
+        'Muslim application for BWA\'s Wakif (user), so they can easily donating',
     image: 'assets/project/Mumtaaz.png',
     company: 'BWA',
     status: 'Released',
@@ -81,7 +81,7 @@ var projects = [
   Project(
     name: 'Pintar Kerja',
     description:
-        'Aplikasi online learning berbasis Flutter yang bisa dipakai oleh siapa saja',
+        'Online learning application created by Flutter, that easy to use for everybody',
     image: 'assets/project/pintar-kerja.png',
     company: 'Waqaftech',
     link: '',
@@ -95,8 +95,7 @@ var projects = [
   ),
   Project(
     name: 'During',
-    description:
-        'Aplikasi pencacatan pengeluaran dan pemasukan, agar dapat dengan mudah ditinjau',
+    description: 'Save your daily expense with this user friendly application',
     image: 'assets/project/during.png',
     company: 'Personal',
     status: 'Released',
@@ -119,7 +118,7 @@ var projects = [
   Project(
     name: 'Bisa Berbagi',
     description:
-        'Apliasi berbasis muslimah yang juga menampung salah satu produk PT. Amanah yaitu BerbagiLink',
+        'An application from Amanah Corporation for every muslim in the world',
     image: 'assets/project/bisaberbagi.jpg',
     company: 'PT. Amanah Karya Indonesia',
     status: 'Released',
@@ -142,8 +141,7 @@ var projects = [
   ),
   Project(
     name: 'Alita WMS',
-    description:
-        'Aplikasi untuk inventory barang dan tracking pengiriman barang di Alita',
+    description: 'Manage warehouse inventory and tracking item delivery status',
     image: 'assets/project/alita.png',
     company: 'PT Fhadira Inovasi Teknologi',
     status: 'Released',
