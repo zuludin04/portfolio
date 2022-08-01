@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:portfolio/ui/controller/theme_controller.dart';
 import 'package:portfolio/ui/widgets/text_navigation.dart';
-import 'package:portfolio/ui/widgets/theme_switch.dart';
-import 'package:portfolio/utils/contants.dart';
 import 'package:portfolio/utils/responsive_widget.dart';
 
 class AppbarNavigation extends StatelessWidget {

@@ -1,9 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:portfolio/data/experience.dart';
 import 'package:portfolio/data/project.dart';
-import 'package:portfolio/ui/controller/theme_controller.dart';
-import 'package:portfolio/ui/widgets/sliding_button.dart';
 
 var about =
     "I'm a software develepor and focused especially on mobile development.\nProficient using both Native (Java/Kotlin) and Flutter as my framework to build an application.";
@@ -164,61 +160,6 @@ var projects = [
     ],
   ),
 ];
-
-void showContactDialog(BuildContext context, ThemeController controller) {
-  showDialog(
-    context: context,
-    barrierDismissible: false,
-    barrierColor: controller.isDark.value
-        ? Colors.black.withOpacity(0.8)
-        : Colors.white.withOpacity(0.9),
-    builder: (context) {
-      return AlertDialog(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        content: Obx(
-          () => Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  icon: Icon(
-                    Icons.close,
-                    size: 42,
-                    color:
-                        controller.isDark.value ? Colors.white : Colors.black,
-                  ),
-                ),
-                const SizedBox(height: 40),
-                Text(
-                  'Let\'s Chat.',
-                  style: TextStyle(
-                    color:
-                        controller.isDark.value ? Colors.white : Colors.black,
-                    fontSize: 32,
-                    letterSpacing: 2,
-                    fontFamily: 'Montserrat Regular',
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 36),
-                SlidingButton(
-                  title: 'zmauludin04@gmail.com',
-                  onTap: () {},
-                  width: 620,
-                  controller: controller,
-                ),
-              ],
-            ),
-          ),
-        ),
-      );
-    },
-  );
-}
 
 String? emailValidator(String? value) {
   String pattern =
