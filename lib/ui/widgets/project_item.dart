@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:portfolio/data/project.dart';
 import 'package:portfolio/ui/controller/theme_controller.dart';
-import 'package:portfolio/ui/project_detail_screen.dart';
 import 'package:portfolio/utils/responsive_widget.dart';
 
 class ProjectItem extends StatefulWidget {
