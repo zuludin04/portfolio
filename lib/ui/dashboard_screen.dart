@@ -54,6 +54,13 @@ class _DashboardScreenState extends State<DashboardScreen>
   bool inputFailed = false;
   bool sendingEmail = false;
 
+  final List<GlobalKey> sectionKeys = [
+    GlobalKey(),
+    GlobalKey(),
+    GlobalKey(),
+    GlobalKey(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -71,11 +78,19 @@ class _DashboardScreenState extends State<DashboardScreen>
           child: CustomScrollView(
             slivers: [
               SliverToBoxAdapter(
+                key: sectionKeys[0],
                 child: Stack(
                   children: [
                     AppbarNavigation(
                       sideSpacing: size.width * 0.05,
                       controller: controller,
+                      goToSection: (index) {
+                        Scrollable.ensureVisible(
+                          sectionKeys[index].currentContext!,
+                          duration: const Duration(milliseconds: 300),
+                          curve: Curves.easeInOut,
+                        );
+                      },
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: size.height * 0.2),
@@ -139,6 +154,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                 ),
               ),
               SliverToBoxAdapter(
+                key: sectionKeys[1],
                 child: Obx(
                   () => Container(
                     color: controller.isDark.value
@@ -170,6 +186,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                 ),
               ),
               SliverToBoxAdapter(
+                key: sectionKeys[2],
                 child: Container(
                   color: controller.isDark.value
                       ? const Color(0xff111111)
@@ -253,6 +270,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                 ),
               ),
               SliverToBoxAdapter(
+                key: sectionKeys[3],
                 child: Container(
                   padding: EdgeInsets.symmetric(
                     horizontal: ResponsiveWidget.isLargeScreen(context)

@@ -7,11 +7,13 @@ import 'package:portfolio/utils/responsive_widget.dart';
 class AppbarNavigation extends StatelessWidget {
   final ThemeController controller;
   final double sideSpacing;
+  final Function(int index) goToSection;
 
   const AppbarNavigation({
     Key? key,
     required this.sideSpacing,
     required this.controller,
+    required this.goToSection,
   }) : super(key: key);
 
   @override
@@ -47,28 +49,28 @@ class AppbarNavigation extends StatelessWidget {
               children: [
                 TextNavigation(
                   title: 'Home',
-                  onTap: () {},
+                  onTap: () => goToSection(0),
                   titleColor:
                       controller.isDark.value ? Colors.white : Colors.black,
                 ),
                 const SizedBox(width: 32),
                 TextNavigation(
                   title: 'Experience',
-                  onTap: () {},
+                  onTap: () => goToSection(1),
                   titleColor:
                       controller.isDark.value ? Colors.white : Colors.black,
                 ),
                 const SizedBox(width: 32),
                 TextNavigation(
                   title: 'Projects',
-                  onTap: () {},
+                  onTap: () => goToSection(2),
                   titleColor:
                       controller.isDark.value ? Colors.white : Colors.black,
                 ),
                 const SizedBox(width: 32),
                 TextNavigation(
                   title: 'Contact',
-                  onTap: () {},
+                  onTap: () => goToSection(3),
                   titleColor:
                       controller.isDark.value ? Colors.white : Colors.black,
                 ),
