@@ -27,8 +27,7 @@ class DashboardScreen extends StatefulWidget {
 
 class _DashboardScreenState extends State<DashboardScreen>
     with TickerProviderStateMixin {
-  final NavigationController navigationController =
-      Get.put(NavigationController());
+  final NavigationController controller = Get.put(NavigationController());
   final formKey = GlobalKey<FormState>();
 
   ParticleOptions particleOptions = ParticleOptions(
