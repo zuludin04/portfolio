@@ -67,6 +67,39 @@ class _DashboardScreenState extends State<DashboardScreen>
 
     return Scaffold(
       backgroundColor: const Color(0xff111111),
+      appBar: ResponsiveWidget.isSmallScreen(context)
+          ? AppBar(
+              title: Image.asset(
+                'assets/icon/logo_dark.png',
+                width: 40,
+                height: 40,
+              ),
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+            )
+          : null,
+      endDrawer: Drawer(
+        child: Container(
+          color: Colors.blueGrey.shade900,
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                Image.asset(
+                  'assets/icon/logo_dark.png',
+                  width: 60,
+                  height: 60,
+                ),
+                const SizedBox(height: 32),
+                _drawerNavItem('Home', 0),
+                _drawerNavItem('Experience', 1),
+                _drawerNavItem('Projects', 2),
+                _drawerNavItem('Contact', 3),
+              ],
+            ),
+          ),
+        ),
+      ),
       body: AnimatedBackground(
         vsync: this,
         behaviour: RandomParticleBehaviour(
@@ -75,16 +108,17 @@ class _DashboardScreenState extends State<DashboardScreen>
         ),
         child: Column(
           children: [
-            AppbarNavigation(
-              sideSpacing: size.width * 0.05,
-              goToSection: (index) {
-                Scrollable.ensureVisible(
-                  sectionKeys[index].currentContext!,
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeInOut,
-                );
-              },
-            ),
+            if (!ResponsiveWidget.isSmallScreen(context))
+              AppbarNavigation(
+                sideSpacing: size.width * 0.05,
+                goToSection: (index) {
+                  Scrollable.ensureVisible(
+                    sectionKeys[index].currentContext!,
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeInOut,
+                  );
+                },
+              ),
             Expanded(
               child: CustomScrollView(
                 slivers: [
@@ -355,6 +389,35 @@ class _DashboardScreenState extends State<DashboardScreen>
           ],
         ),
       ),
+    );
+  }
+
+  Widget _drawerNavItem(String title, int index) {
+    return Column(
+      children: [
+        ListTile(
+          title: Text(
+            title,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w700,
+              fontSize: 16,
+              fontFamily: 'Montserrat Regular',
+              letterSpacing: 2,
+            ),
+          ),
+          onTap: () {
+            Navigator.pop(context);
+            Scrollable.ensureVisible(
+              sectionKeys[index].currentContext!,
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeInOut,
+            );
+          },
+        ),
+        const Divider(color: Colors.white),
+      ],
     );
   }
 }

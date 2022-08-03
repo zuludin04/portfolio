@@ -55,14 +55,12 @@ class AppbarNavigation extends StatelessWidget {
               TextNavigation(
                 title: 'Projects',
                 onTap: () => goToSection(2),
-                // index: 2,
                 titleColor: Colors.white,
               ),
               const SizedBox(width: 32),
               TextNavigation(
                 title: 'Contact',
                 onTap: () => goToSection(3),
-                // index: 3,
                 titleColor: Colors.white,
               ),
             ],
