@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:portfolio/data/project.dart';
-import 'package:portfolio/ui/controller/theme_controller.dart';
 import 'package:portfolio/ui/widgets/project_information.dart';
 import 'package:portfolio/ui/widgets/project_screenshot.dart';
 import 'package:portfolio/ui/widgets/section_title.dart';
 import 'package:portfolio/utils/responsive_widget.dart';
 
 class ProjectDetailScreen extends StatelessWidget {
-  final ThemeController controller = Get.find();
   final Project project = Get.arguments;
 
   ProjectDetailScreen({Key? key}) : super(key: key);
@@ -18,19 +16,16 @@ class ProjectDetailScreen extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Obx(
       () => Scaffold(
-        backgroundColor:
-            controller.isDark.value ? const Color(0xff111111) : Colors.white,
+        backgroundColor: const Color(0xff111111),
         body: CustomScrollView(
           slivers: [
             SliverAppBar(
-              backgroundColor: controller.isDark.value
-                  ? const Color(0xff111111)
-                  : Colors.white,
+              backgroundColor: const Color(0xff111111),
               leading: IconButton(
                 onPressed: () => Navigator.pop(context),
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_back,
-                  color: controller.isDark.value ? Colors.white : Colors.black,
+                  color: Colors.white,
                 ),
               ),
               expandedHeight: size.height * 0.7,
@@ -58,19 +53,15 @@ class ProjectDetailScreen extends StatelessWidget {
                   children: [
                     SectionTitle(
                       title: project.name,
-                      color: controller.isDark.value
-                          ? Colors.white
-                          : const Color(0xff04363D),
+                      color: Colors.white,
                     ),
                     SelectableText(
                       project.description,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontFamily: 'Montserrat Regular',
                         fontSize: 18,
                         letterSpacing: 1,
-                        color: controller.isDark.value
-                            ? Colors.white
-                            : Colors.black,
+                        color: Colors.white,
                       ),
                     ),
                     const SizedBox(height: 24),
@@ -78,32 +69,28 @@ class ProjectDetailScreen extends StatelessWidget {
                       title: 'Platform',
                       info: 'Android',
                       url: project.link,
-                      color:
-                          controller.isDark.value ? Colors.white : Colors.black,
+                      color: Colors.white,
                     ),
                     const SizedBox(height: 32),
                     ProjectInformation(
                       title: 'Technology',
                       info: project.techs[1].name,
                       url: project.link,
-                      color:
-                          controller.isDark.value ? Colors.white : Colors.black,
+                      color: Colors.white,
                     ),
                     const SizedBox(height: 32),
                     ProjectInformation(
                       title: 'Company',
                       info: project.company,
                       url: project.link,
-                      color:
-                          controller.isDark.value ? Colors.white : Colors.black,
+                      color: Colors.white,
                     ),
                     const SizedBox(height: 32),
                     ProjectInformation(
                       title: 'Status',
                       info: project.status,
                       url: project.link,
-                      color:
-                          controller.isDark.value ? Colors.white : Colors.black,
+                      color: Colors.white,
                     ),
                   ],
                 ),
@@ -121,11 +108,9 @@ class ProjectDetailScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SectionTitle(
+                    const SectionTitle(
                       title: 'Screenshot',
-                      color: controller.isDark.value
-                          ? Colors.white
-                          : const Color(0xff04363D),
+                      color: Colors.white,
                     ),
                     Wrap(
                       children: project.screenshots

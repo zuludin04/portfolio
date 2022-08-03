@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:portfolio/ui/controller/navigation_controller.dart';
 
 class TextNavigation extends StatefulWidget {
   final String title;
   final Function() onTap;
   final Color titleColor;
-  final int index;
 
   const TextNavigation({
     Key? key,
     required this.title,
     required this.onTap,
     required this.titleColor,
-    required this.index,
   }) : super(key: key);
 
   @override
@@ -45,22 +41,14 @@ class _TextNavigationState extends State<TextNavigation>
               ),
             ),
             const SizedBox(height: 5),
-            GetBuilder<NavigationController>(
-              builder: (controller) {
-                return AnimatedContainer(
-                  duration: const Duration(milliseconds: 150),
-                  height: 3,
-                  width: isHovered || controller.selectedNav == widget.index
-                      ? 50
-                      : 0,
-                  decoration: BoxDecoration(
-                    color: isHovered || controller.selectedNav == widget.index
-                        ? const Color(0xffE5AB29)
-                        : Colors.transparent,
-                    borderRadius: BorderRadius.circular(3),
-                  ),
-                );
-              },
+            AnimatedContainer(
+              duration: const Duration(milliseconds: 150),
+              height: 3,
+              width: isHovered ? 50 : 0,
+              decoration: BoxDecoration(
+                color: isHovered ? const Color(0xffE5AB29) : Colors.transparent,
+                borderRadius: BorderRadius.circular(3),
+              ),
             ),
           ],
         ),

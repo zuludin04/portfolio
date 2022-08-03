@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:portfolio/data/email_service.dart';
 import 'package:portfolio/ui/controller/navigation_controller.dart';
-import 'package:portfolio/ui/controller/theme_controller.dart';
 import 'package:portfolio/ui/widgets/appbar_navigation.dart';
 import 'package:portfolio/ui/widgets/contact_field.dart';
 import 'package:portfolio/ui/widgets/profile_image.dart';
@@ -28,7 +27,6 @@ class DashboardScreen extends StatefulWidget {
 
 class _DashboardScreenState extends State<DashboardScreen>
     with TickerProviderStateMixin {
-  final ThemeController controller = Get.put(ThemeController());
   final NavigationController navigationController =
       Get.put(NavigationController());
   final formKey = GlobalKey<FormState>();
@@ -68,328 +66,294 @@ class _DashboardScreenState extends State<DashboardScreen>
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
 
-    return Obx(
-      () => Scaffold(
-        backgroundColor:
-            controller.isDark.value ? const Color(0xff111111) : Colors.white,
-        body: AnimatedBackground(
-          vsync: this,
-          behaviour: RandomParticleBehaviour(
-            options: particleOptions,
-            paint: particlePaint,
-          ),
-          child: Column(
-            children: [
-              AppbarNavigation(
-                sideSpacing: size.width * 0.05,
-                // controller: navigationController,
-                goToSection: (index) {
-                  navigationController.changeNav(index);
-                  Scrollable.ensureVisible(
-                    sectionKeys[index].currentContext!,
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeInOut,
-                  );
-                },
-              ),
-              Expanded(
-                child: CustomScrollView(
-                  slivers: [
-                    SliverToBoxAdapter(
-                      key: sectionKeys[0],
-                      child: Padding(
-                        padding: EdgeInsets.only(top: size.height * 0.2),
-                        child: Column(
-                          children: [
-                            const ProfileImage(),
-                            const SizedBox(height: 36),
-                            SelectableText.rich(
-                              TextSpan(
-                                text: 'Hi I\'m \n',
-                                style: TextStyle(
-                                  fontSize: ResponsiveWidget.isLargeScreen(
-                                          context)
-                                      ? 45
-                                      : ResponsiveWidget.isMediumScreen(context)
-                                          ? 40
-                                          : 35,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Roboto Bold',
-                                  color: controller.isDark.value
-                                      ? Colors.white
-                                      : Colors.black,
-                                ),
-                                children: const [
-                                  TextSpan(
-                                    text: 'Zulfikar Mauludin \n',
-                                    style: TextStyle(color: Color(0xff128B91)),
-                                  ),
-                                  TextSpan(text: 'I am a Mobile Developer'),
-                                ],
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                            const SizedBox(height: 36),
-                            Padding(
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: ResponsiveWidget.isLargeScreen(
-                                          context)
-                                      ? size.width * 0.3
-                                      : ResponsiveWidget.isMediumScreen(context)
-                                          ? size.width * 0.2
-                                          : size.width * 0.1),
-                              child: SelectableText(
-                                about,
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontFamily: 'Montserrat Regular',
-                                  fontSize: 16,
-                                  color: controller.isDark.value
-                                      ? Colors.white
-                                      : Colors.black87,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            ),
-                            SizedBox(height: size.height * 0.2),
-                          ],
-                        ),
-                      ),
-                    ),
-                    SliverToBoxAdapter(
-                      key: sectionKeys[1],
-                      child: Obx(
-                        () => Container(
-                          color: controller.isDark.value
-                              ? const Color(0xff333333)
-                              : const Color(0xff04363D),
-                          padding: EdgeInsets.symmetric(
-                            vertical: 72,
-                            horizontal: ResponsiveWidget.isLargeScreen(context)
-                                ? size.width * 0.18
-                                : ResponsiveWidget.isMediumScreen(context)
-                                    ? size.width * 0.15
-                                    : size.width * 0.12,
-                          ),
-                          child: Column(
-                            children: [
-                              const SectionTitle(
-                                title: 'Experience',
+    return Scaffold(
+      backgroundColor: const Color(0xff111111),
+      body: AnimatedBackground(
+        vsync: this,
+        behaviour: RandomParticleBehaviour(
+          options: particleOptions,
+          paint: particlePaint,
+        ),
+        child: Column(
+          children: [
+            AppbarNavigation(
+              sideSpacing: size.width * 0.05,
+              goToSection: (index) {
+                Scrollable.ensureVisible(
+                  sectionKeys[index].currentContext!,
+                  duration: const Duration(milliseconds: 300),
+                  curve: Curves.easeInOut,
+                );
+              },
+            ),
+            Expanded(
+              child: CustomScrollView(
+                slivers: [
+                  SliverToBoxAdapter(
+                    key: sectionKeys[0],
+                    child: Padding(
+                      padding: EdgeInsets.only(top: size.height * 0.2),
+                      child: Column(
+                        children: [
+                          const ProfileImage(),
+                          const SizedBox(height: 36),
+                          SelectableText.rich(
+                            TextSpan(
+                              text: 'Hi I\'m \n',
+                              style: TextStyle(
+                                fontSize: ResponsiveWidget.isLargeScreen(
+                                        context)
+                                    ? 45
+                                    : ResponsiveWidget.isMediumScreen(context)
+                                        ? 40
+                                        : 35,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Roboto Bold',
                                 color: Colors.white,
                               ),
-                              const SizedBox(height: 36),
-                              Column(
-                                children: experiences
-                                    .map((e) => ExperienceItem(experience: e))
-                                    .toList(),
-                              ),
-                            ],
+                              children: const [
+                                TextSpan(
+                                  text: 'Zulfikar Mauludin \n',
+                                  style: TextStyle(color: Color(0xff128B91)),
+                                ),
+                                TextSpan(text: 'I am a Mobile Developer'),
+                              ],
+                            ),
+                            textAlign: TextAlign.center,
                           ),
+                          const SizedBox(height: 36),
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: ResponsiveWidget.isLargeScreen(
+                                        context)
+                                    ? size.width * 0.3
+                                    : ResponsiveWidget.isMediumScreen(context)
+                                        ? size.width * 0.2
+                                        : size.width * 0.1),
+                            child: SelectableText(
+                              about,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                fontFamily: 'Montserrat Regular',
+                                fontSize: 16,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: size.height * 0.2),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SliverToBoxAdapter(
+                    key: sectionKeys[1],
+                    child: Container(
+                      color: const Color(0xff333333),
+                      padding: EdgeInsets.symmetric(
+                        vertical: 72,
+                        horizontal: ResponsiveWidget.isLargeScreen(context)
+                            ? size.width * 0.18
+                            : ResponsiveWidget.isMediumScreen(context)
+                                ? size.width * 0.15
+                                : size.width * 0.12,
+                      ),
+                      child: Column(
+                        children: [
+                          const SectionTitle(
+                            title: 'Experience',
+                            color: Colors.white,
+                          ),
+                          const SizedBox(height: 36),
+                          Column(
+                            children: experiences
+                                .map((e) => ExperienceItem(experience: e))
+                                .toList(),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SliverToBoxAdapter(
+                    key: sectionKeys[2],
+                    child: Container(
+                      color: const Color(0xff111111),
+                      padding: EdgeInsets.only(
+                        left: size.width * 0.1,
+                        right: size.width * 0.1,
+                        top: 72,
+                      ),
+                      child: Column(
+                        children: const [
+                          SectionTitle(
+                            title: 'Projects',
+                            color: Colors.white,
+                          ),
+                          SizedBox(height: 36),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SliverStack(
+                    children: [
+                      SliverPositioned.fill(
+                        child: Container(color: const Color(0xff111111)),
+                      ),
+                      SliverPadding(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: size.width * 0.1),
+                        sliver: ResponsiveWidget.isSmallScreen(context) ||
+                                ResponsiveWidget.isMediumScreen(context)
+                            ? SliverList(
+                                delegate: SliverChildBuilderDelegate(
+                                  (context, index) =>
+                                      ProjectItem(project: projects[index]),
+                                  childCount: projects.length,
+                                ),
+                              )
+                            : SliverGrid(
+                                delegate: SliverChildBuilderDelegate(
+                                  (context, index) =>
+                                      ProjectItem(project: projects[index]),
+                                  childCount: projects.length,
+                                ),
+                                gridDelegate:
+                                    const SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 3,
+                                  mainAxisSpacing: 25,
+                                  crossAxisSpacing: 25,
+                                  childAspectRatio: 1.16,
+                                ),
+                              ),
+                      ),
+                    ],
+                  ),
+                  SliverToBoxAdapter(
+                    child: Container(
+                      color: const Color(0xff111111),
+                      padding: const EdgeInsets.all(72),
+                      child: Center(
+                        child: SlidingButton(
+                          title: 'More',
+                          onTap: () {
+                            html.window.open(
+                              'https://github.com/zuludin04',
+                              'new tab',
+                            );
+                          },
                         ),
                       ),
                     ),
-                    SliverToBoxAdapter(
-                      key: sectionKeys[2],
-                      child: Container(
-                        color: controller.isDark.value
-                            ? const Color(0xff111111)
-                            : Colors.white,
-                        padding: EdgeInsets.only(
-                          left: size.width * 0.1,
-                          right: size.width * 0.1,
-                          top: 72,
-                        ),
+                  ),
+                  SliverToBoxAdapter(
+                    key: sectionKeys[3],
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: ResponsiveWidget.isLargeScreen(context)
+                            ? size.width * 0.3
+                            : ResponsiveWidget.isMediumScreen(context)
+                                ? size.width * 0.2
+                                : size.width * 0.1,
+                        vertical: size.height * 0.2,
+                      ),
+                      child: Form(
+                        key: formKey,
+                        autovalidateMode: inputFailed
+                            ? AutovalidateMode.onUserInteraction
+                            : AutovalidateMode.disabled,
                         child: Column(
                           children: [
-                            SectionTitle(
-                              title: 'Projects',
-                              color: controller.isDark.value
-                                  ? Colors.white
-                                  : const Color(0xff04363D),
+                            const SizedBox(height: 48),
+                            const SectionTitle(
+                              title: 'Get In Touch',
+                              color: Colors.white,
                             ),
-                            const SizedBox(height: 36),
+                            const SizedBox(height: 24),
+                            ContactField(
+                              label: 'Email',
+                              expand: false,
+                              initialValue: email,
+                              onChanged: (text) => email = text,
+                              validator: emailValidator,
+                            ),
+                            ContactField(
+                              label: 'Message',
+                              expand: true,
+                              initialValue: message,
+                              onChanged: (text) => message = text,
+                              validator: messageValidator,
+                            ),
+                            const SizedBox(height: 48),
+                            SlidingButton(
+                              title: 'Say Hi!',
+                              sendingEmail: sendingEmail,
+                              onTap: () async {
+                                if (formKey.currentState!.validate()) {
+                                  setState(() {
+                                    sendingEmail = true;
+                                  });
+                                  await EmailService.sendContactMessage(
+                                          email, message)
+                                      .then((value) {
+                                    setState(() {
+                                      sendingEmail = false;
+                                    });
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(
+                                        content: Text(
+                                          "Pesan berhasil dikirim",
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                        backgroundColor: Colors.lightGreen,
+                                        behavior: SnackBarBehavior.floating,
+                                        elevation: 0,
+                                      ),
+                                    );
+                                  });
+                                  setState(() {
+                                    email = '';
+                                    message = '';
+                                  });
+                                } else {
+                                  setState(() {
+                                    inputFailed = true;
+                                  });
+                                }
+                              },
+                            ),
+                            const SizedBox(height: 48),
                           ],
                         ),
                       ),
                     ),
-                    SliverStack(
-                      children: [
-                        SliverPositioned.fill(
-                          child: Container(
-                              color: controller.isDark.value
-                                  ? const Color(0xff111111)
-                                  : Colors.white),
-                        ),
-                        SliverPadding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: size.width * 0.1),
-                          sliver: ResponsiveWidget.isSmallScreen(context) ||
-                                  ResponsiveWidget.isMediumScreen(context)
-                              ? SliverList(
-                                  delegate: SliverChildBuilderDelegate(
-                                    (context, index) => ProjectItem(
-                                      project: projects[index],
-                                      controller: controller,
-                                    ),
-                                    childCount: projects.length,
-                                  ),
-                                )
-                              : SliverGrid(
-                                  delegate: SliverChildBuilderDelegate(
-                                    (context, index) => ProjectItem(
-                                      project: projects[index],
-                                      controller: controller,
-                                    ),
-                                    childCount: projects.length,
-                                  ),
-                                  gridDelegate:
-                                      const SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 3,
-                                    mainAxisSpacing: 25,
-                                    crossAxisSpacing: 25,
-                                    childAspectRatio: 1.16,
-                                  ),
-                                ),
-                        ),
-                      ],
-                    ),
-                    SliverToBoxAdapter(
-                      child: Container(
-                        color: controller.isDark.value
-                            ? const Color(0xff111111)
-                            : Colors.white,
-                        padding: const EdgeInsets.all(72),
-                        child: Center(
-                          child: SlidingButton(
-                            title: 'More',
-                            onTap: () {
-                              html.window.open(
-                                'https://github.com/zuludin04',
-                                'new tab',
-                              );
-                            },
-                            controller: controller,
+                  ),
+                  SliverToBoxAdapter(
+                    child: Container(
+                      color: const Color(0xff04363D),
+                      padding: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      child: const SelectableText.rich(
+                        TextSpan(
+                          text: 'Made by ',
+                          style: TextStyle(
+                            fontFamily: 'Montserrat Regular',
+                            color: Colors.white,
+                            letterSpacing: 2,
                           ),
-                        ),
-                      ),
-                    ),
-                    SliverToBoxAdapter(
-                      key: sectionKeys[3],
-                      child: Container(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: ResponsiveWidget.isLargeScreen(context)
-                              ? size.width * 0.3
-                              : ResponsiveWidget.isMediumScreen(context)
-                                  ? size.width * 0.2
-                                  : size.width * 0.1,
-                          vertical: size.height * 0.2,
-                        ),
-                        child: Form(
-                          key: formKey,
-                          autovalidateMode: inputFailed
-                              ? AutovalidateMode.onUserInteraction
-                              : AutovalidateMode.disabled,
-                          child: Column(
-                            children: [
-                              const SizedBox(height: 48),
-                              SectionTitle(
-                                title: 'Get In Touch',
-                                color: controller.isDark.value
-                                    ? Colors.white
-                                    : const Color(0xff04363D),
-                              ),
-                              const SizedBox(height: 24),
-                              ContactField(
-                                label: 'Email',
-                                expand: false,
-                                initialValue: email,
-                                onChanged: (text) => email = text,
-                                controller: controller,
-                                validator: emailValidator,
-                              ),
-                              ContactField(
-                                label: 'Message',
-                                expand: true,
-                                initialValue: message,
-                                onChanged: (text) => message = text,
-                                controller: controller,
-                                validator: messageValidator,
-                              ),
-                              const SizedBox(height: 48),
-                              SlidingButton(
-                                title: 'Say Hi!',
-                                sendingEmail: sendingEmail,
-                                onTap: () async {
-                                  if (formKey.currentState!.validate()) {
-                                    setState(() {
-                                      sendingEmail = true;
-                                    });
-                                    await EmailService.sendContactMessage(
-                                            email, message)
-                                        .then((value) {
-                                      setState(() {
-                                        sendingEmail = false;
-                                      });
-                                      ScaffoldMessenger.of(context)
-                                          .showSnackBar(
-                                        const SnackBar(
-                                          content: Text(
-                                            "Pesan berhasil dikirim",
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          ),
-                                          backgroundColor: Colors.lightGreen,
-                                          behavior: SnackBarBehavior.floating,
-                                          elevation: 0,
-                                        ),
-                                      );
-                                    });
-                                    setState(() {
-                                      email = '';
-                                      message = '';
-                                    });
-                                  } else {
-                                    setState(() {
-                                      inputFailed = true;
-                                    });
-                                  }
-                                },
-                                controller: controller,
-                              ),
-                              const SizedBox(height: 48),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    SliverToBoxAdapter(
-                      child: Container(
-                        color: const Color(0xff04363D),
-                        padding: const EdgeInsets.all(8),
-                        alignment: Alignment.center,
-                        child: const SelectableText.rich(
-                          TextSpan(
-                            text: 'Made by ',
-                            style: TextStyle(
-                              fontFamily: 'Montserrat Regular',
-                              color: Colors.white,
-                              letterSpacing: 2,
+                          children: [
+                            TextSpan(
+                              text: 'Zulfikar Mauludin',
+                              style: TextStyle(fontWeight: FontWeight.bold),
                             ),
-                            children: [
-                              TextSpan(
-                                text: 'Zulfikar Mauludin',
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
+                          ],
                         ),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

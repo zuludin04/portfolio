@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:portfolio/ui/controller/theme_controller.dart';
 
 class ContactField extends StatelessWidget {
   final String label;
   final bool expand;
   final Function(String) onChanged;
-  final ThemeController controller;
   final String? Function(String?) validator;
   final String initialValue;
 
@@ -15,7 +12,6 @@ class ContactField extends StatelessWidget {
     required this.label,
     required this.expand,
     required this.onChanged,
-    required this.controller,
     required this.validator,
     required this.initialValue,
   }) : super(key: key);
@@ -24,47 +20,30 @@ class ContactField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 12),
-      child: Obx(
-        () => TextFormField(
-          style: TextStyle(
-            color: controller.isDark.value
-                ? Colors.white
-                : const Color(0xff04363D),
+      child: TextFormField(
+        style: const TextStyle(color: Colors.white),
+        initialValue: initialValue,
+        decoration: InputDecoration(
+          labelText: label,
+          labelStyle: const TextStyle(color: Colors.white60),
+          filled: true,
+          fillColor: Colors.white12,
+          hoverColor: Colors.white12,
+          alignLabelWithHint: true,
+          enabledBorder: const UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.white),
           ),
-          initialValue: initialValue,
-          decoration: InputDecoration(
-            labelText: label,
-            labelStyle: TextStyle(
-              color: controller.isDark.value
-                  ? Colors.white60
-                  : const Color(0xff04363D),
-            ),
-            filled: true,
-            fillColor:
-                controller.isDark.value ? Colors.white12 : Colors.black12,
-            hoverColor:
-                controller.isDark.value ? Colors.white12 : Colors.black12,
-            alignLabelWithHint: true,
-            enabledBorder: UnderlineInputBorder(
-              borderSide: BorderSide(
-                color: controller.isDark.value
-                    ? Colors.white
-                    : const Color(0xff04363D),
-              ),
-            ),
-            focusedBorder: const UnderlineInputBorder(
-              borderSide: BorderSide(color: Color(0xff04363D)),
-            ),
+          focusedBorder: const UnderlineInputBorder(
+            borderSide: BorderSide(color: Color(0xff04363D)),
           ),
-          cursorColor:
-              controller.isDark.value ? Colors.white : const Color(0xff04363D),
-          keyboardType:
-              expand ? TextInputType.multiline : TextInputType.emailAddress,
-          maxLines: expand ? 7 : 1,
-          minLines: expand ? 5 : 1,
-          onChanged: onChanged,
-          validator: validator,
         ),
+        cursorColor: Colors.white,
+        keyboardType:
+            expand ? TextInputType.multiline : TextInputType.emailAddress,
+        maxLines: expand ? 7 : 1,
+        minLines: expand ? 5 : 1,
+        onChanged: onChanged,
+        validator: validator,
       ),
     );
   }
