@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/ui/widgets/text_navigation.dart';
 import 'package:portfolio/utils/responsive_widget.dart';
 
-class AppbarNavigation extends StatelessWidget {
+class AppbarNavigation extends StatefulWidget {
   final double sideSpacing;
   final Function(int index) goToSection;
 
@@ -11,6 +11,13 @@ class AppbarNavigation extends StatelessWidget {
     required this.sideSpacing,
     required this.goToSection,
   }) : super(key: key);
+
+  @override
+  State<AppbarNavigation> createState() => _AppbarNavigationState();
+}
+
+class _AppbarNavigationState extends State<AppbarNavigation> {
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +31,7 @@ class AppbarNavigation extends StatelessWidget {
   Widget appbarContainer(double logoSize) {
     return Container(
       padding: EdgeInsets.symmetric(
-        horizontal: sideSpacing,
+        horizontal: widget.sideSpacing,
         vertical: 20,
       ),
       decoration: const BoxDecoration(
@@ -42,26 +49,54 @@ class AppbarNavigation extends StatelessWidget {
             children: [
               TextNavigation(
                 title: 'Home',
-                onTap: () => goToSection(0),
+                onTap: (index) {
+                  widget.goToSection(0);
+                  setState(() {
+                    selectedIndex = index;
+                  });
+                },
                 titleColor: Colors.white,
+                index: 0,
+                selected: selectedIndex == 0,
               ),
               const SizedBox(width: 32),
               TextNavigation(
                 title: 'Experience',
-                onTap: () => goToSection(1),
+                onTap: (index) {
+                  widget.goToSection(1);
+                  setState(() {
+                    selectedIndex = index;
+                  });
+                },
                 titleColor: Colors.white,
+                index: 1,
+                selected: selectedIndex == 1,
               ),
               const SizedBox(width: 32),
               TextNavigation(
                 title: 'Projects',
-                onTap: () => goToSection(2),
+                onTap: (index) {
+                  widget.goToSection(2);
+                  setState(() {
+                    selectedIndex = index;
+                  });
+                },
                 titleColor: Colors.white,
+                index: 2,
+                selected: selectedIndex == 2,
               ),
               const SizedBox(width: 32),
               TextNavigation(
                 title: 'Contact',
-                onTap: () => goToSection(3),
+                onTap: (index) {
+                  widget.goToSection(3);
+                  setState(() {
+                    selectedIndex = index;
+                  });
+                },
                 titleColor: Colors.white,
+                index: 3,
+                selected: selectedIndex == 3,
               ),
             ],
           ),

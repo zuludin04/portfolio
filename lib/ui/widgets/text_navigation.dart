@@ -2,14 +2,18 @@ import 'package:flutter/material.dart';
 
 class TextNavigation extends StatefulWidget {
   final String title;
-  final Function() onTap;
+  final Function(int index) onTap;
   final Color titleColor;
+  final bool selected;
+  final int index;
 
   const TextNavigation({
     Key? key,
     required this.title,
     required this.onTap,
     required this.titleColor,
+    required this.selected,
+    required this.index,
   }) : super(key: key);
 
   @override
@@ -27,7 +31,7 @@ class _TextNavigationState extends State<TextNavigation>
       onExit: (_) => onHover(false),
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onTap: widget.onTap,
+        onTap: () => widget.onTap(widget.index),
         child: Column(
           children: [
             Text(
@@ -41,19 +45,34 @@ class _TextNavigationState extends State<TextNavigation>
               ),
             ),
             const SizedBox(height: 5),
-            AnimatedContainer(
-              duration: const Duration(milliseconds: 150),
-              height: 3,
-              width: isHovered ? 50 : 0,
-              decoration: BoxDecoration(
-                color: isHovered ? const Color(0xffE5AB29) : Colors.transparent,
-                borderRadius: BorderRadius.circular(3),
-              ),
-            ),
+            _selectedIndicator(),
           ],
         ),
       ),
     );
+  }
+
+  Widget _selectedIndicator() {
+    if (widget.selected) {
+      return Container(
+        height: 3,
+        width: 50,
+        decoration: BoxDecoration(
+          color: const Color(0xffE5AB29),
+          borderRadius: BorderRadius.circular(3),
+        ),
+      );
+    } else {
+      return AnimatedContainer(
+        duration: const Duration(milliseconds: 150),
+        height: 3,
+        width: isHovered ? 50 : 0,
+        decoration: BoxDecoration(
+          color: isHovered ? const Color(0xffE5AB29) : Colors.transparent,
+          borderRadius: BorderRadius.circular(3),
+        ),
+      );
+    }
   }
 
   void onHover(bool hover) {
