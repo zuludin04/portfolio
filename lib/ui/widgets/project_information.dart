@@ -38,12 +38,23 @@ class ProjectInformation extends StatelessWidget {
 
   Widget infoWidget(BuildContext context) {
     if (info == 'Released') {
-      return InkWell(
-        onTap: () {
-          html.window.open(url, 'new tab');
-        },
-        child: Image.asset('assets/icon/google_play.png', width: 200),
-      );
+      if (url == '') {
+        return Text(
+          info,
+          style: TextStyle(
+            color: color,
+            fontSize: 14,
+            fontFamily: 'Montserrat Regular',
+          ),
+        );
+      } else {
+        return InkWell(
+          onTap: () {
+            html.window.open(url, 'new tab');
+          },
+          child: Image.asset('assets/icon/google_play.png', width: 200),
+        );
+      }
     } else {
       return Text(
         info,
