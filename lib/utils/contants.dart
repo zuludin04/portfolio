@@ -2,7 +2,7 @@ import 'package:portfolio/data/experience.dart';
 import 'package:portfolio/data/project.dart';
 
 var about =
-    "I'm a software develepor and focused especially on mobile development.\nProficient using both Native (Java/Kotlin) and Flutter as my framework to build an application.";
+    "I have been a Mobile Developer for almost 5 years. I've built many application from Muslim to Online Learning application. I also build my own application called During, a money tracking application that have been published in Google Play Store.\nI can build Android application both using Native Language (Java/Kotlin) and Flutter (Dart).";
 
 var experiences = [
   Experience(
