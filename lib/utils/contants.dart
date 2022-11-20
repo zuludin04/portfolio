@@ -75,13 +75,13 @@ var projects = [
     ],
   ),
   Project(
-    name: 'Pintar Kerja',
+    name: 'Nyarios',
     description:
-        'Online learning application created with Flutter, that easy to use for everybody',
-    image: 'assets/project/pintar-kerja.png',
-    company: 'Waqaftech',
+        'Real-time chatting app using Flutter and Firebase as database',
+    image: 'assets/project/nyarios.png',
+    company: 'Personal',
     link: '',
-    status: 'Not Released',
+    status: 'Released',
     techs: [
       Tech(icon: 'assets/icon/android.svg', name: 'Android'),
       Tech(icon: 'assets/icon/dart.svg', name: 'Dart'),
