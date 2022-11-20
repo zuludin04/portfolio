@@ -39,8 +39,8 @@ flutter:
     - assets/screenshot/bisaberbagi/
     - assets/screenshot/during/
     - assets/screenshot/mumtaaz/
-    - assets/screenshot/pintarkerja/
     - assets/screenshot/alita/
+    - assets/screenshot/nyarios/
 
   fonts:
     - family: Roboto Bold

@@ -87,7 +87,15 @@ var projects = [
       Tech(icon: 'assets/icon/dart.svg', name: 'Dart'),
       Tech(icon: 'assets/icon/flutter.svg', name: 'Flutter'),
     ],
-    screenshots: [],
+    screenshots: [
+      'assets/screenshot/nyarios/nyarios_sc_1.webp',
+      'assets/screenshot/nyarios/nyarios_sc_2.webp',
+      'assets/screenshot/nyarios/nyarios_sc_3.webp',
+      'assets/screenshot/nyarios/nyarios_sc_4.webp',
+      'assets/screenshot/nyarios/nyarios_sc_5.webp',
+      'assets/screenshot/nyarios/nyarios_sc_6.webp',
+      'assets/screenshot/nyarios/nyarios_sc_7.webp',
+    ],
   ),
   Project(
     name: 'During',
