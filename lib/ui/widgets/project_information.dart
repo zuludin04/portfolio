@@ -48,11 +48,17 @@ class ProjectInformation extends StatelessWidget {
           ),
         );
       } else {
+        var isGithub = url.contains('github');
+
         return InkWell(
           onTap: () {
             html.window.open(url, 'new tab');
           },
-          child: Image.asset('assets/icon/google_play.png', width: 200),
+          child: Image.asset(
+            isGithub ? 'assets/icon/github.png' : 'assets/icon/google_play.png',
+            width: isGithub ? 50 : 200,
+            color: isGithub ? Colors.white : null,
+          ),
         );
       }
     } else {

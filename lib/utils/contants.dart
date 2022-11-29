@@ -80,7 +80,7 @@ var projects = [
         'Real-time chatting app using Flutter and Firebase as database',
     image: 'assets/project/nyarios.png',
     company: 'Personal',
-    link: '',
+    link: 'https://github.com/zuludin04/nyarios/raw/main/download/nyarios.apk',
     status: 'Released',
     techs: [
       Tech(icon: 'assets/icon/android.svg', name: 'Android'),

@@ -86,7 +86,7 @@ class ProjectDetailScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 32),
                   ProjectInformation(
-                    title: 'Status',
+                    title: 'Download',
                     info: project.status,
                     url: project.link,
                     color: Colors.white,
