@@ -2,39 +2,46 @@ import 'package:portfolio/data/experience.dart';
 import 'package:portfolio/data/project.dart';
 
 var about =
-    "I have been a Mobile Developer for almost 5 years. I've built many application from Muslim to Online Learning application. I also build my own application called During, a money tracking application that have been published in Google Play Store.\nI can build Android application both using Native Language (Java/Kotlin) and Flutter (Dart).";
+    "Mobile engineer with 5 years of experience building mobile applications with android native language or Flutter. Managed to build mobile version of shorten link website with thousands visits daily; deployed applications to Google Play Store with more than thousands of download";
 
 var experiences = [
   Experience(
-    company: 'Badan Waqaf Alquran',
-    duration: 'Jul 2020 - Present',
+    company: 'Badan Waqf Alquran',
+    duration: 'July 2020 - Present',
+    position: 'Lead Mobile Engineer',
+    tasks: [
+      'Deployed a mobile application to contain company’s donation campaign, for more than 10K existing users',
+      'Strengthened employee attendance application, to reduce bug and increase user experience',
+      'Increased user engagement by developing community feature, so user can create or join community to recite Al-Quran together',
+    ],
+  ),
+  Experience(
+    company: 'Mobile Engineer',
+    duration: 'July 2022 - December 2022',
     position: 'Mobile Engineer',
     tasks: [
-      'Build mobile application architecture from scratch using Flutter',
-      'Create Islamic theme application for every Muslim in the world',
-      'Implement community feature so user can read Al-Quran in unison',
-      'Working with a UI designer to create an application that everyone can easily access',
+      'Released warehouse management application, to increase 100 more employees productivity and cut down paperwork by 90%',
+      'Coordinated with backend engineer to create warehouse management system',
+      'Built an employee on-site application and removed bug that always occur when taking a picture',
     ],
   ),
   Experience(
     company: 'Waqaftech',
-    duration: 'Oct 2021 - Juni 2022',
-    position: 'Mobile Engineer',
+    duration: 'October 2021 - July 2022',
+    position: 'Lead Mobile Engineer',
     tasks: [
-      'Build mobile application architecture from scratch using Flutter',
-      'Create an online learning application complete with features such as video streaming, progress tracking, payments, and courses',
-      'Developed LMS mobile application for student and teacher',
+      'Coordinated with 6 developers to create an learning management system and deployed for more than 20 schools',
+      'Collaborated with product designer to develop application design and system',
     ],
   ),
   Experience(
     company: 'PT. Amanah Karya Indonesia',
-    duration: 'Jan 2020 - Jun 2020',
+    duration: 'January 2020 - June 2020',
     position: 'Mobile Engineer',
     tasks: [
-      'Responsible for implementing Replenishment feature in TMIIN company application',
-      'Release and maintenance of Islamic mobile application called BisaBerbagi',
-      'Convert berbagi.link site into mobile application',
-      'Fixing the existing code to be more robust, maintainable, and testable',
+      'Designed new features for existing application to help employee sort and scan 1K incoming items',
+      'Analyzed existing project with more than 10K lines of code to be more robust and follow clean architecture principle',
+      'Released a mobile application to Play Store that was download for more than 1K times',
     ],
   ),
 ];
