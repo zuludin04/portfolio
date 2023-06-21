@@ -129,7 +129,6 @@ class _DashboardScreenState extends State<DashboardScreen>
                       child: Column(
                         children: [
                           const ProfileImage(),
-                          const SizedBox(height: 36),
                           SelectableText.rich(
                             TextSpan(
                               text: 'Hi I\'m \n',
