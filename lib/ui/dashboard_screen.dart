@@ -3,11 +3,13 @@ import 'dart:html' as html;
 
 import 'package:animated_background/animated_background.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:portfolio/data/email_service.dart';
 import 'package:portfolio/ui/controller/navigation_controller.dart';
 import 'package:portfolio/ui/widgets/appbar_navigation.dart';
 import 'package:portfolio/ui/widgets/contact_field.dart';
+import 'package:portfolio/ui/widgets/icon_fa_clickable.dart';
 import 'package:portfolio/ui/widgets/profile_image.dart';
 import 'package:portfolio/utils/contants.dart';
 import 'package:portfolio/utils/responsive_widget.dart';
@@ -354,6 +356,43 @@ class _DashboardScreenState extends State<DashboardScreen>
                               },
                             ),
                             const SizedBox(height: 48),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Container(
+                                  width: 30,
+                                  height: 1,
+                                  color: Colors.white,
+                                ),
+                                const SizedBox(width: 12),
+                                IconFaClickable(
+                                  icon: FontAwesomeIcons.github,
+                                  onTap: () {
+                                    html.window.open(
+                                      'https://github.com/zuludin04',
+                                      'new tab',
+                                    );
+                                  },
+                                ),
+                                const SizedBox(width: 24),
+                                IconFaClickable(
+                                  icon: FontAwesomeIcons.linkedinIn,
+                                  onTap: () {
+                                    html.window.open(
+                                      'https://www.linkedin.com/in/zulfikar-mauludin-5982b3151',
+                                      'new tab',
+                                    );
+                                  },
+                                ),
+                                const SizedBox(width: 12),
+                                Container(
+                                  width: 30,
+                                  height: 1,
+                                  color: Colors.white,
+                                ),
+                              ],
+                            ),
                           ],
                         ),
                       ),
