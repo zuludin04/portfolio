@@ -5,7 +5,7 @@ class ContactField extends StatelessWidget {
   final bool expand;
   final Function(String) onChanged;
   final String? Function(String?) validator;
-  final String initialValue;
+  final TextEditingController controller;
 
   const ContactField({
     Key? key,
@@ -13,7 +13,7 @@ class ContactField extends StatelessWidget {
     required this.expand,
     required this.onChanged,
     required this.validator,
-    required this.initialValue,
+    required this.controller,
   }) : super(key: key);
 
   @override
@@ -21,8 +21,8 @@ class ContactField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 12),
       child: TextFormField(
+        controller: controller,
         style: const TextStyle(color: Colors.white),
-        initialValue: initialValue,
         decoration: InputDecoration(
           labelText: label,
           labelStyle: const TextStyle(color: Colors.white60),

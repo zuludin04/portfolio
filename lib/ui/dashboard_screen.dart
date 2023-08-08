@@ -28,6 +28,8 @@ class DashboardScreen extends StatefulWidget {
 class _DashboardScreenState extends State<DashboardScreen>
     with TickerProviderStateMixin {
   final NavigationController controller = Get.put(NavigationController());
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController messageController = TextEditingController();
   final formKey = GlobalKey<FormState>();
 
   ParticleOptions particleOptions = ParticleOptions(
@@ -60,6 +62,13 @@ class _DashboardScreenState extends State<DashboardScreen>
     GlobalKey(),
     GlobalKey(),
   ];
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    messageController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -303,16 +312,16 @@ class _DashboardScreenState extends State<DashboardScreen>
                             ),
                             const SizedBox(height: 24),
                             ContactField(
+                              controller: emailController,
                               label: 'Email',
                               expand: false,
-                              initialValue: email,
                               onChanged: (text) => email = text,
                               validator: emailValidator,
                             ),
                             ContactField(
+                              controller: messageController,
                               label: 'Message',
                               expand: true,
-                              initialValue: message,
                               onChanged: (text) => message = text,
                               validator: messageValidator,
                             ),
@@ -342,6 +351,8 @@ class _DashboardScreenState extends State<DashboardScreen>
                                         elevation: 0,
                                       ),
                                     );
+                                    messageController.clear();
+                                    emailController.clear();
                                   });
                                   setState(() {
                                     email = '';
