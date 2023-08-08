@@ -106,14 +106,15 @@ class _ProjectItemState extends State<ProjectItem> {
       return Image.asset(
         widget.project.image,
         width: double.infinity,
-        height: 250,
-        fit: BoxFit.fitWidth,
+        height: 200,
+        fit: BoxFit.fill,
       );
     } else {
       return Image.asset(
         widget.project.image,
         width: double.infinity,
-        fit: BoxFit.fitWidth,
+        fit: BoxFit.fill,
+        height: 200,
       );
     }
   }

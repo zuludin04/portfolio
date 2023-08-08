@@ -16,7 +16,7 @@ var experiences = [
     ],
   ),
   Experience(
-    company: 'Mobile Engineer',
+    company: 'PT Fhadira Inovasi Teknologi',
     duration: 'July 2022 - December 2022',
     position: 'Mobile Engineer',
     tasks: [
@@ -35,7 +35,7 @@ var experiences = [
     ],
   ),
   Experience(
-    company: 'PT. Amanah Karya Indonesia',
+    company: 'PT Amanah Karya Indonesia',
     duration: 'January 2020 - June 2020',
     position: 'Mobile Engineer',
     tasks: [
