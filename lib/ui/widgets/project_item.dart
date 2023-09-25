@@ -26,74 +26,64 @@ class _ProjectItemState extends State<ProjectItem> {
         onTap: () => Get.toNamed("detail_project", arguments: widget.project),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 250),
-          margin: EdgeInsets.symmetric(
-              vertical: ResponsiveWidget.isMediumScreen(context) ||
-                      ResponsiveWidget.isSmallScreen(context)
-                  ? 16
-                  : 0),
+          margin: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: const Color(0xff111111),
             borderRadius: BorderRadius.circular(10),
             border: Border.all(color: Colors.cyan, width: 0.2),
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ClipRRect(
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(10),
-                  topRight: Radius.circular(10),
-                ),
-                child: AnimatedScale(
-                  duration: const Duration(milliseconds: 250),
-                  scale: isHovered ? 1.2 : 1,
-                  child: projectImage(),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  widget.project.name,
-                  style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'Montserrat Regular',
-                    color: Colors.white,
+          child: IntrinsicHeight(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: AnimatedScale(
+                    duration: const Duration(milliseconds: 250),
+                    scale: isHovered ? 1.2 : 1,
+                    child: projectImage(),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: Text(
-                  widget.project.description,
-                  style: const TextStyle(
-                    fontFamily: 'Montserrat Regular',
-                    color: Colors.white,
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                widget.project.name,
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Montserrat Regular',
+                                  color: Colors.white,
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                widget.project.description,
+                                style: const TextStyle(
+                                  fontFamily: 'Montserrat Regular',
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: techStacks(),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ),
-              const Divider(
-                height: 32,
-                color: Colors.white12,
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 8.0,
-                  vertical: ResponsiveWidget.isMediumScreen(context) ||
-                          ResponsiveWidget.isSmallScreen(context)
-                      ? 16
-                      : 0,
-                ),
-                child: ResponsiveWidget.isMediumScreen(context) ||
-                        ResponsiveWidget.isSmallScreen(context)
-                    ? Row(
-                        children: [
-                          Expanded(child: Wrap(children: techStacks())),
-                        ],
-                      )
-                    : Row(children: techStacks()),
-              ),
-            ],
+                )
+              ],
+            ),
           ),
         ),
       ),
@@ -105,16 +95,14 @@ class _ProjectItemState extends State<ProjectItem> {
         ResponsiveWidget.isMediumScreen(context)) {
       return Image.asset(
         widget.project.image,
-        width: double.infinity,
-        height: 200,
+        width: 200,
         fit: BoxFit.fill,
       );
     } else {
       return Image.asset(
         widget.project.image,
-        width: double.infinity,
         fit: BoxFit.fill,
-        height: 200,
+        width: 400,
       );
     }
   }
@@ -125,8 +113,8 @@ class _ProjectItemState extends State<ProjectItem> {
           (e) => Padding(
             padding: const EdgeInsets.only(right: 16),
             child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SvgPicture.asset(
                   e.icon,

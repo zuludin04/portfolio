@@ -245,29 +245,13 @@ class _DashboardScreenState extends State<DashboardScreen>
                       SliverPadding(
                         padding:
                             EdgeInsets.symmetric(horizontal: size.width * 0.1),
-                        sliver: ResponsiveWidget.isSmallScreen(context) ||
-                                ResponsiveWidget.isMediumScreen(context)
-                            ? SliverList(
-                                delegate: SliverChildBuilderDelegate(
-                                  (context, index) =>
-                                      ProjectItem(project: projects[index]),
-                                  childCount: projects.length,
-                                ),
-                              )
-                            : SliverGrid(
-                                delegate: SliverChildBuilderDelegate(
-                                  (context, index) =>
-                                      ProjectItem(project: projects[index]),
-                                  childCount: projects.length,
-                                ),
-                                gridDelegate:
-                                    const SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 3,
-                                  mainAxisSpacing: 25,
-                                  crossAxisSpacing: 25,
-                                  childAspectRatio: 1.16,
-                                ),
-                              ),
+                        sliver: SliverList(
+                          delegate: SliverChildBuilderDelegate(
+                            (context, index) =>
+                                ProjectItem(project: projects[index]),
+                            childCount: projects.length,
+                          ),
+                        ),
                       ),
                     ],
                   ),
