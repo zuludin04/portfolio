@@ -15,7 +15,6 @@ import 'package:portfolio/utils/contants.dart';
 import 'package:portfolio/utils/responsive_widget.dart';
 import 'package:sliver_tools/sliver_tools.dart';
 
-import 'widgets/experience_item.dart';
 import 'widgets/project_item.dart';
 import 'widgets/section_title.dart';
 import 'widgets/sliding_button.dart';
@@ -62,7 +61,6 @@ class _DashboardScreenState extends State<DashboardScreen>
     GlobalKey(),
     GlobalKey(),
     GlobalKey(),
-    GlobalKey(),
   ];
 
   @override
@@ -103,9 +101,8 @@ class _DashboardScreenState extends State<DashboardScreen>
                 ),
                 const SizedBox(height: 32),
                 _drawerNavItem('Home', 0),
-                _drawerNavItem('Experience', 1),
-                _drawerNavItem('Projects', 2),
-                _drawerNavItem('Contact', 3),
+                _drawerNavItem('Projects', 1),
+                _drawerNavItem('Contact', 2),
               ],
             ),
           ),
@@ -192,34 +189,6 @@ class _DashboardScreenState extends State<DashboardScreen>
                   SliverToBoxAdapter(
                     key: sectionKeys[1],
                     child: Container(
-                      color: const Color(0xff333333),
-                      padding: EdgeInsets.symmetric(
-                        vertical: 72,
-                        horizontal: ResponsiveWidget.isLargeScreen(context)
-                            ? size.width * 0.18
-                            : ResponsiveWidget.isMediumScreen(context)
-                                ? size.width * 0.15
-                                : size.width * 0.12,
-                      ),
-                      child: Column(
-                        children: [
-                          const SectionTitle(
-                            title: 'Experience',
-                            color: Colors.white,
-                          ),
-                          const SizedBox(height: 36),
-                          Column(
-                            children: experiences
-                                .map((e) => ExperienceItem(experience: e))
-                                .toList(),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SliverToBoxAdapter(
-                    key: sectionKeys[2],
-                    child: Container(
                       color: const Color(0xff111111),
                       padding: EdgeInsets.only(
                         left: size.width * 0.1,
@@ -273,7 +242,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                     ),
                   ),
                   SliverToBoxAdapter(
-                    key: sectionKeys[3],
+                    key: sectionKeys[2],
                     child: Container(
                       padding: EdgeInsets.symmetric(
                         horizontal: ResponsiveWidget.isLargeScreen(context)

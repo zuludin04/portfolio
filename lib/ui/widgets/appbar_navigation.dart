@@ -61,7 +61,7 @@ class _AppbarNavigationState extends State<AppbarNavigation> {
               ),
               const SizedBox(width: 32),
               TextNavigation(
-                title: 'Experience',
+                title: 'Projects',
                 onTap: (index) {
                   widget.goToSection(1);
                   setState(() {
@@ -74,7 +74,7 @@ class _AppbarNavigationState extends State<AppbarNavigation> {
               ),
               const SizedBox(width: 32),
               TextNavigation(
-                title: 'Projects',
+                title: 'Contact',
                 onTap: (index) {
                   widget.goToSection(2);
                   setState(() {
@@ -84,19 +84,6 @@ class _AppbarNavigationState extends State<AppbarNavigation> {
                 titleColor: Colors.white,
                 index: 2,
                 selected: selectedIndex == 2,
-              ),
-              const SizedBox(width: 32),
-              TextNavigation(
-                title: 'Contact',
-                onTap: (index) {
-                  widget.goToSection(3);
-                  setState(() {
-                    selectedIndex = index;
-                  });
-                },
-                titleColor: Colors.white,
-                index: 3,
-                selected: selectedIndex == 3,
               ),
             ],
           ),
