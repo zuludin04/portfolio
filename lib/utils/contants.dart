@@ -91,6 +91,7 @@ var projects = [
     status: 'Released',
     techs: [
       Tech(icon: 'assets/icon/android.svg', name: 'Android'),
+      Tech(icon: 'assets/icon/apple.svg', name: 'Apple'),
       Tech(icon: 'assets/icon/dart.svg', name: 'Dart'),
       Tech(icon: 'assets/icon/flutter.svg', name: 'Flutter'),
     ],
@@ -115,6 +116,7 @@ var projects = [
         'https://play.google.com/store/apps/details?id=com.app.zuludin.during.during',
     techs: [
       Tech(icon: 'assets/icon/android.svg', name: 'Android'),
+      Tech(icon: 'assets/icon/apple.svg', name: 'Apple'),
       Tech(icon: 'assets/icon/dart.svg', name: 'Dart'),
       Tech(icon: 'assets/icon/flutter.svg', name: 'Flutter'),
     ],
