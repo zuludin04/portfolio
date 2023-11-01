@@ -42,6 +42,8 @@ flutter:
     - assets/screenshot/mumtaaz/
     - assets/screenshot/alita/
     - assets/screenshot/nyarios/
+    - assets/screenshot/hallaw/
+    - assets/screenshot/agtran/
 
   fonts:
     - family: Roboto Bold

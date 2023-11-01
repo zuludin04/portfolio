@@ -178,6 +178,52 @@ var projects = [
       'assets/screenshot/alita/alita_sc_9.png',
     ],
   ),
+  Project(
+    name: 'Hallaw - Legal Partner',
+    description:
+        'Online legal aid application that is ready to assist you in getting quick and easy access to the legal services you need.',
+    image: 'assets/project/hallaw.jpg',
+    company: 'BWA',
+    status: 'Released',
+    link:
+        'https://play.google.com/store/apps/details?id=com.hallaw.hallaw_client_app&hl=en-ID',
+    techs: [
+      Tech(icon: 'assets/icon/android.svg', name: 'Android'),
+      Tech(icon: 'assets/icon/apple.svg', name: 'Apple'),
+      Tech(icon: 'assets/icon/dart.svg', name: 'Dart'),
+      Tech(icon: 'assets/icon/flutter.svg', name: 'Flutter'),
+    ],
+    screenshots: [
+      'assets/screenshot/hallaw/hallaw_sc_1.webp',
+      'assets/screenshot/hallaw/hallaw_sc_2.webp',
+      'assets/screenshot/hallaw/hallaw_sc_3.webp',
+      'assets/screenshot/hallaw/hallaw_sc_4.webp',
+      'assets/screenshot/hallaw/hallaw_sc_5.webp',
+      'assets/screenshot/hallaw/hallaw_sc_6.webp',
+    ],
+  ),
+  Project(
+    name: 'Xcess by Agtran',
+    description:
+        'Xcess is a car rental management app for the partners of Agtran. Managing reservation, fleet and promotion easily inside the app.',
+    image: 'assets/project/agtran.jpg',
+    company: 'BWA',
+    status: 'Released',
+    link: 'https://play.google.com/store/apps/details?id=com.agtran.xcess',
+    techs: [
+      Tech(icon: 'assets/icon/android.svg', name: 'Android'),
+      Tech(icon: 'assets/icon/apple.svg', name: 'Apple'),
+      Tech(icon: 'assets/icon/dart.svg', name: 'Dart'),
+      Tech(icon: 'assets/icon/flutter.svg', name: 'Flutter'),
+    ],
+    screenshots: [
+      'assets/screenshot/agtran/agtran_sc_1.webp',
+      'assets/screenshot/agtran/agtran_sc_2.webp',
+      'assets/screenshot/agtran/agtran_sc_3.webp',
+      'assets/screenshot/agtran/agtran_sc_4.webp',
+      'assets/screenshot/agtran/agtran_sc_5.webp',
+    ],
+  ),
 ];
 
 String? emailValidator(String? value) {
