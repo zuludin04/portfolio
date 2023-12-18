@@ -32,7 +32,7 @@ class _ProfileImageState extends State<ProfileImage> {
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         image: const DecorationImage(
-          image: AssetImage('assets/profile.jpg'),
+          image: AssetImage('assets/profile.png'),
           fit: BoxFit.cover,
         ),
         border: Border.all(
