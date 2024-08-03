@@ -15,7 +15,7 @@ const ProjectCard = ({ img, name, description, onClick }) => {
       >
         <div
           className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 h-48 mob:h-auto"
-          style={{ height: "600px" }}
+          style={{ height: "250px" }}
         >
           <img
             alt={name}
@@ -23,8 +23,8 @@ const ProjectCard = ({ img, name, description, onClick }) => {
             src={img}
           />
         </div>
-        <h1 className="mt-5 text-3xl font-medium">{name}</h1>
-        <h2 className="text-xl opacity-50">{description}</h2>
+        <h1 className="mt-5 text-2xl font-medium">{name}</h1>
+        <h2 className="text-lg opacity-60 line-clamp-2">{description}</h2>
       </div>
     </motion.div>
   );

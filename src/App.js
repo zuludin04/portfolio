@@ -20,7 +20,7 @@ function App() {
     }
 
     const filtered = data.projects.filter((pro) =>
-      pro.description.includes("Design")
+      activeProjects == 1 ? pro.frontend == 1 : pro.backend == 1
     );
     setFiltered(filtered);
   }, [activeProjects]);
