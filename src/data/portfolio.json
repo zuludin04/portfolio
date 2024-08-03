@@ -115,5 +115,19 @@
     "languages": ["Javascript", "HTML5", "CSS", "Python", "Go"],
     "frameworks": ["React", "Typescript", "NodeJs"],
     "others": ["Figma", "AdobeXD", "AWS"]
-  }
+  },
+  "projectTabs": [
+    {
+      "id": 1,
+      "name": "All"
+    },
+    {
+      "id": 2,
+      "name": "Frontend"
+    },
+    {
+      "id": 3,
+      "name": "Backend"
+    }
+  ]
 }

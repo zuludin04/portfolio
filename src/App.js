@@ -1,12 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
-import ProjectCard from "./components/ProjectCard";
 import Socials from "./components/Socials";
 import data from "./data/portfolio.json";
 import Contact from "./components/Contact";
-import Button from "./components/Button";
-import { motion, AnimatePresence } from "framer-motion";
+import Projects from "./components/Projects";
 
 function App() {
   const projectRef = useRef();
@@ -14,8 +12,6 @@ function App() {
 
   const [filtered, setFiltered] = useState([]);
   const [activeProjects, setActiveProjects] = useState(0);
-
-  const tabs = ["All", "Frontend", "Backend"];
 
   useEffect(() => {
     if (activeProjects === 0) {
@@ -73,29 +69,11 @@ function App() {
         </div>
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={projectRef}>
-          <h1 className="text-2xl text-bold">Project.</h1>
-
-          <div className={`flex flex-wrap mob:flex-nowrap link`}>
-            {tabs.map((social, index) => (
-              <Button key={index} onClick={() => setActiveProjects(index)}>
-                {social}
-              </Button>
-            ))}
-          </div>
-
-          <motion.div className="mt-5 laptop:mt-10 grid grid-cols-1 laptop:grid-cols-3 gap-4">
-            <AnimatePresence>
-              {filtered.map((project) => (
-                <ProjectCard
-                  key={project.id}
-                  img={project.imageSrc}
-                  name={project.title}
-                  description={project.description}
-                  onClick={() => window.open(project.url)}
-                />
-              ))}
-            </AnimatePresence>
-          </motion.div>
+          <Projects
+            setActiveProjects={setActiveProjects}
+            filtered={filtered}
+            activeProjects={activeProjects}
+          />
         </div>
 
         <div ref={contactRef}>
