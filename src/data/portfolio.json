@@ -11,21 +11,15 @@
   "socials": [
     {
       "id": "1",
-      "title": "Github",
-      "link": "https://github.com/chetanverma16"
+      "title": "GitHub",
+      "link": "https://github.com/zuludin04"
     },
     {
       "id": "2",
       "title": "LinkedIn",
-      "link": "https://www.linkedin.com/in/chetanverma7/"
+      "link": "https://www.linkedin.com/in/zulfikar-mauludin-5982b3151/"
     },
-    {
-      "id": "3",
-      "title": "Twitter",
-      "link": "https://twitter.com/realchetanverma"
-    },
-    { "id": "4", "title": "Blog", "link": "https://blog.chetanverma.com/" },
-    { "id": "5", "title": "Email", "link": "mailto:hello@chetanverma.com" }
+    { "id": "3", "title": "Email", "link": "mailto:zmauludin04@gmail.com" }
   ],
   "projects": [
     {
