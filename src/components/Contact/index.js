@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../Button";
 import Socials from "../Socials";
 
-const Footer = () => {
+const Contact = () => {
   return (
     <div>
       <div className="mt-5 laptop:mt-40 p-2 laptop:p-0">
@@ -26,4 +26,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Contact;

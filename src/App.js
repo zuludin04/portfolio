@@ -4,12 +4,13 @@ import Header from "./components/Header";
 import ProjectCard from "./components/ProjectCard";
 import Socials from "./components/Socials";
 import data from "./data/portfolio.json";
-import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 import Button from "./components/Button";
 import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
   const projectRef = useRef();
+  const contactRef = useRef();
 
   const [filtered, setFiltered] = useState([]);
   const [activeProjects, setActiveProjects] = useState(0);
@@ -36,13 +37,24 @@ function App() {
     });
   };
 
+  const handleContactScroll = () => {
+    window.scrollTo({
+      top: contactRef.current.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="relative">
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
 
       <div className="container mx-auto mb-10">
-        <Header handleWorkScroll={handleProjectScroll} />
+        <Header
+          handleProjectScroll={handleProjectScroll}
+          handleContactScroll={handleContactScroll}
+        />
 
         <div className="laptop:mt-20 mt-10">
           <div className="mt-5">
@@ -86,7 +98,9 @@ function App() {
           </motion.div>
         </div>
 
-        <Footer />
+        <div ref={contactRef}>
+          <Contact />
+        </div>
       </div>
     </div>
   );

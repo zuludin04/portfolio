@@ -1,19 +1,10 @@
-import { Popover } from "@headlessui/react";
-import React, { useEffect, useState } from "react";
+import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
+import React from "react";
 import Button from "../Button";
-import data from "../../data/portfolio.json";
 import menu from "../../assets/menu-white.svg";
 import cancel from "../../assets/cancel-white.svg";
 
-const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
-  const [mounted, setMounted] = useState(false);
-
-  const { name, showBlog, showResume } = data;
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
+const Header = ({ handleProjectScroll, handleContactScroll }) => {
   return (
     <>
       <Popover className="block tablet:hidden mt-5">
@@ -24,59 +15,24 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 onClick={() => {}}
                 className="font-medium p-2 laptop:p-0 link"
               >
-                {name}.
+                zuludin
               </h1>
 
               <div className="flex items-center">
-                <Popover.Button>
+                <PopoverButton>
                   <img className="h-5" src={!open ? menu : cancel}></img>
-                </Popover.Button>
+                </PopoverButton>
               </div>
             </div>
-            <Popover.Panel
+            <PopoverPanel
               className={`absolute right-0 z-10 w-11/12 p-4 shadow-md rounded-md`}
             >
-              {!isBlog ? (
-                <div className="grid grid-cols-1">
-                  <Button onClick={handleWorkScroll}>Work</Button>
-                  <Button onClick={handleAboutScroll}>About</Button>
-                  {showBlog && <Button onClick={() => {}}>Blog</Button>}
-                  {showResume && (
-                    <Button
-                      onClick={() =>
-                        window.open("mailto:hello@chetanverma.com")
-                      }
-                    >
-                      Resume
-                    </Button>
-                  )}
-
-                  <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
-                  >
-                    Contact
-                  </Button>
-                </div>
-              ) : (
-                <div className="grid grid-cols-1">
-                  <Button onClick={() => {}} classes="first:ml-1">
-                    Home
-                  </Button>
-                  {showBlog && <Button onClick={() => {}}>Blog</Button>}
-                  {showResume && (
-                    <Button onClick={() => {}} classes="first:ml-1">
-                      Resume
-                    </Button>
-                  )}
-
-                  <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
-                  >
-                    Contact
-                  </Button>
-                </div>
-              )}
-            </Popover.Panel>
+              <div className="grid grid-cols-1">
+                <Button onClick={handleProjectScroll}>Project</Button>
+                <Button onClick={() => {}}>Resume</Button>
+                <Button onClick={handleContactScroll}>Contact</Button>
+              </div>
+            </PopoverPanel>
           </>
         )}
       </Popover>
@@ -87,38 +43,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           onClick={() => {}}
           className="font-medium cursor-pointer mob:p-2 laptop:p-0"
         >
-          {name}.
+          zuludin
         </h1>
-        {!isBlog ? (
-          <div className="flex">
-            <Button onClick={handleWorkScroll}>Work</Button>
-            <Button onClick={handleAboutScroll}>About</Button>
-            {showBlog && <Button onClick={() => {}}>Blog</Button>}
-            {showResume && (
-              <Button onClick={() => {}} classes="first:ml-1">
-                Resume
-              </Button>
-            )}
-
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
-              Contact
-            </Button>
-          </div>
-        ) : (
-          <div className="flex">
-            <Button onClick={() => {}}>Home</Button>
-            {showBlog && <Button onClick={() => {}}>Blog</Button>}
-            {showResume && (
-              <Button onClick={() => {}} classes="first:ml-1">
-                Resume
-              </Button>
-            )}
-
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
-              Contact
-            </Button>
-          </div>
-        )}
+        <div className="flex">
+          <Button onClick={handleProjectScroll}>Project</Button>
+          <Button onClick={() => {}}>Resume</Button>
+          <Button onClick={handleContactScroll}>Contact</Button>
+        </div>
       </div>
     </>
   );
