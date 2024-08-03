@@ -16,11 +16,7 @@ body {
   width: 100vw;
   opacity: 0.5;
   filter: blur(40px);
-  background: radial-gradient(
-    circle,
-    rgba(248, 107, 223, 1) 0%,
-    rgba(107, 107, 248, 0.8) 100%
-  );
+  background: radial-gradient(circle, #bec661 0%, #5a7eebdb 100%);
 }
 .gradient-circle-bottom {
   position: absolute;
@@ -31,11 +27,7 @@ body {
   width: 100vw;
   opacity: 0.5;
   filter: blur(40px);
-  background: radial-gradient(
-    circle,
-    rgba(248, 107, 223, 1) 0%,
-    rgba(107, 107, 248, 0.8) 100%
-  );
+  background: radial-gradient(circle, #bec661 0%, #5a7eebdb 100%);
 }
 
 .gradient-shadow:hover::before {
@@ -54,11 +46,6 @@ body {
   border-radius: inherit;
 }
 
-/* 
-* Prevents issues when the parent creates a 
-* stacking context. (For example, using the transform
-* property )
-*/
 .gradient-shadow:hover::after {
   content: "";
   z-index: -1;
