@@ -47,7 +47,15 @@ const Header = ({ handleProjectScroll, handleContactScroll }) => {
         </h1>
         <div className="flex">
           <Button onClick={handleProjectScroll}>Project</Button>
-          <Button onClick={() => {}}>Resume</Button>
+          <Button
+            onClick={() =>
+              window.open(
+                "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/Zulfikar%20Mauludin%20-%20Software%20Engineer%20(1).pdf"
+              )
+            }
+          >
+            Resume
+          </Button>
           <Button onClick={handleContactScroll}>Contact</Button>
         </div>
       </div>
