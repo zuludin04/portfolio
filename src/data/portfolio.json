@@ -18,7 +18,7 @@
       "title": "Hallaw - Legal Partner",
       "description": "Online legal aid application that is ready to assist you in getting quick and easy access to the legal services you need",
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/hallaw.jpg",
-      "url": "http://chetanverma.com/",
+      "url": "https://play.google.com/store/apps/details?id=com.hallaw.hallaw_client_app&hl=en-ID",
       "backend": 0,
       "frontend": 1
     },
@@ -27,7 +27,7 @@
       "title": "Xcess by Agtran",
       "description": "Xcess is a car rental management app for the partners of Agtran",
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/agtran.jpg",
-      "url": "http://chetanverma.com/",
+      "url": "https://play.google.com/store/apps/details?id=com.agtran.xcess",
       "backend": 0,
       "frontend": 1
     },
@@ -36,7 +36,7 @@
       "title": "MCode - Cogindo",
       "description": "MCode is a hands-on application for Cogindo employee to easily track a document",
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/mcode.png",
-      "url": "http://chetanverma.com/",
+      "url": "",
       "backend": 1,
       "frontend": 1
     },
@@ -45,7 +45,7 @@
       "title": "Bisa Berbagi",
       "description": "An application by Amanah Corporation for every Muslim in the world",
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/bisaberbagi.jpg",
-      "url": "http://chetanverma.com/",
+      "url": "",
       "backend": 0,
       "frontend": 1
     },
@@ -54,7 +54,7 @@
       "title": "Mumtaaz",
       "description": "Muslim application for BWA's Wakif (user), so they can donate with ease",
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/Mumtaaz.png",
-      "url": "http://chetanverma.com/",
+      "url": "https://play.google.com/store/apps/details?id=id.bwa.bwa_wakif_app",
       "backend": 0,
       "frontend": 1
     },
@@ -63,7 +63,7 @@
       "title": "EzzHalal E-Commerce",
       "description": "Buy and sell goods for all Muslims in the world with a trusted halal certificate",
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/ezzhalal.png",
-      "url": "http://chetanverma.com/",
+      "url": "",
       "backend": 1,
       "frontend": 1
     },
@@ -72,7 +72,7 @@
       "title": "Alita WMS",
       "description": "Managed Alita Praya Mitra warehouse inventory and track item delivery status",
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/alita.png",
-      "url": "http://chetanverma.com/",
+      "url": "",
       "backend": 0,
       "frontend": 1
     },
@@ -81,7 +81,7 @@
       "title": "Nyarios",
       "description": "Real-time chatting app using Flutter and Firebase as database",
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/nyarios.png",
-      "url": "http://chetanverma.com/",
+      "url": "https://github.com/zuludin04/nyarios",
       "backend": 0,
       "frontend": 1
     },
@@ -90,7 +90,7 @@
       "title": "During",
       "description": "Save your daily transactions with this user-friendly application",
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/during.png",
-      "url": "http://chetanverma.com/",
+      "url": "https://github.com/zuludin04/during",
       "backend": 0,
       "frontend": 1
     },
@@ -99,7 +99,7 @@
       "title": "Forum API",
       "description": "Implementing clean architecture to create online forum using Node.js",
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/forum.png",
-      "url": "http://chetanverma.com/",
+      "url": "https://github.com/zuludin04/forum-api",
       "backend": 1,
       "frontend": 0
     },
@@ -108,7 +108,7 @@
       "title": "OpenMusic API",
       "description": "Online library to store your favourite music online",
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/openmusic.png",
-      "url": "http://chetanverma.com/",
+      "url": "https://github.com/zuludin04/openmusic",
       "backend": 1,
       "frontend": 0
     }

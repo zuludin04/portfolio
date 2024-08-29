@@ -31,7 +31,11 @@ const Projects = ({ activeProjects, setActiveProjects, filtered }) => {
               img={project.imageSrc}
               name={project.title}
               description={project.description}
-              onClick={() => {}}
+              onClick={() => {
+                if (project.url != "") {
+                  window.open(project.url);
+                }
+              }}
             />
           ))}
         </AnimatePresence>

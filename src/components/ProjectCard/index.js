@@ -8,6 +8,7 @@ const ProjectCard = ({ img, name, description, onClick }) => {
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
+      style={{ cursor: "pointer" }}
     >
       <div
         className="overflow-hidden rounded-lg p-2 laptop:p-4 first:ml-0 link"
