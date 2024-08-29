@@ -34,7 +34,7 @@
     {
       "id": "9",
       "title": "MCode - Cogindo",
-      "description": "Building reliable applications that are comfortable and safe for all Cogindo employees",
+      "description": "MCode is a hands-on application for Cogindo employee to easily track a document",
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/mcode.png",
       "url": "http://chetanverma.com/",
       "backend": 1,
@@ -93,6 +93,24 @@
       "url": "http://chetanverma.com/",
       "backend": 0,
       "frontend": 1
+    },
+    {
+      "id": "10",
+      "title": "Forum API",
+      "description": "Implementing clean architecture to create online forum using Node.js",
+      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/forum.png",
+      "url": "http://chetanverma.com/",
+      "backend": 1,
+      "frontend": 0
+    },
+    {
+      "id": "11",
+      "title": "OpenMusic API",
+      "description": "Online library to store your favourite music online",
+      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/openmusic.png",
+      "url": "http://chetanverma.com/",
+      "backend": 1,
+      "frontend": 0
     }
   ],
   "projectTabs": [
