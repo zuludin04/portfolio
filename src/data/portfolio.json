@@ -10,7 +10,11 @@
       "title": "LinkedIn",
       "link": "https://www.linkedin.com/in/zulfikar-mauludin-5982b3151/"
     },
-    { "id": "3", "title": "Email", "link": "mailto:zmauludin04@gmail.com" }
+    {
+      "id": "3",
+      "title": "Email",
+      "link": "mailto:zulfikar.mauludin29@gmail.com"
+    }
   ],
   "projects": [
     {
