@@ -4,10 +4,10 @@ import { RxDashboard } from "react-icons/rx";
 
 function HomePage() {
   return (
-    <div className="flex flex-col justify-between items-center h-screen p-12">
-      <div className="mt-5">
+    <div className="flex flex-col items-center h-screen p-12">
+      <div className="flex flex-col justify-center items-center w-full grow self-center">
         <h1
-          className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl text-bold"
+          className="text-3xl tablet:text-6xl laptop:text-6xl text-bold"
           style={{ lineHeight: 1.3 }}
         >
           Hallo 👋 <br />
@@ -22,7 +22,7 @@ function HomePage() {
         <div className="flex flex-col items-center link">
           <button
             type="button"
-            className="rounded-lg bg-slate-400 text-white tablet:first:ml-0 p-1"
+            className="rounded-lg bg-slate-400 text-white p-1"
           >
             <RxDashboard size={32} />
           </button>
