@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const ProjectCard = ({ id, img, name }) => {
   return (
-    <Link>
+    <Link to={`/project/${id}`}>
       <div>
         <div className="overflow-hidden rounded-lg p-2 laptop:p-4 first:ml-0 link">
           <motion.div
