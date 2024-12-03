@@ -5,7 +5,7 @@ import ProjectCard from "../ProjectCard";
 const Projects = ({ projects }) => {
   return (
     <div>
-      <motion.div className="mt-5 laptop:mt-10 grid grid-cols-1 laptop:grid-cols-4 gap-4">
+      <motion.div className="grid grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 gap-4">
         <AnimatePresence>
           {projects.map((project) => (
             <ProjectCard
