@@ -25,7 +25,15 @@
       "url": "https://play.google.com/store/apps/details?id=com.hallaw.hallaw_client_app&hl=en-ID",
       "backend": 0,
       "frontend": 1,
-      "stacks": ["Flutter", "Dart", "Android", "iOS"]
+      "stacks": ["Flutter", "Dart", "Android", "iOS"],
+      "screenshots": [
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw1.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw2.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw3.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw4.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw5.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw6.png"
+      ]
     },
     {
       "id": "7",
@@ -35,7 +43,14 @@
       "url": "https://play.google.com/store/apps/details?id=com.agtran.xcess",
       "backend": 0,
       "frontend": 1,
-      "stacks": ["Flutter", "Dart", "Android", "iOS"]
+      "stacks": ["Flutter", "Dart", "Android", "iOS"],
+      "screenshots": [
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran1.webp",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran2.webp",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran3.webp",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran4.webp",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran5.webp"
+      ]
     },
     {
       "id": "9",
@@ -45,17 +60,8 @@
       "url": "",
       "backend": 1,
       "frontend": 1,
-      "stacks": ["Flutter", "Dart", "Android", "iOS", "JavaScript", "NodeJS"]
-    },
-    {
-      "id": "4",
-      "title": "Bisa Berbagi",
-      "description": "An application by Amanah Corporation for every Muslim in the world",
-      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/bisaberbagi.jpg",
-      "url": "",
-      "backend": 0,
-      "frontend": 1,
-      "stacks": ["Java", "Android"]
+      "stacks": ["Flutter", "Dart", "Android", "iOS", "JavaScript", "NodeJS"],
+      "screenshots": []
     },
     {
       "id": "1",
@@ -65,7 +71,15 @@
       "url": "https://play.google.com/store/apps/details?id=id.bwa.bwa_wakif_app",
       "backend": 0,
       "frontend": 1,
-      "stacks": ["Flutter", "Dart", "Android", "iOS"]
+      "stacks": ["Flutter", "Dart", "Android", "iOS"],
+      "screenshots": [
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz1.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz2.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz3.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz4.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz5.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz6.png"
+      ]
     },
     {
       "id": "8",
@@ -75,17 +89,15 @@
       "url": "",
       "backend": 1,
       "frontend": 1,
-      "stacks": ["JavaScript", "ReactNative", "Android", "iOS"]
-    },
-    {
-      "id": "5",
-      "title": "Alita WMS",
-      "description": "Managed Alita Praya Mitra warehouse inventory and track item delivery status",
-      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/alita.png",
-      "url": "",
-      "backend": 0,
-      "frontend": 1,
-      "stacks": ["Flutter", "Dart", "Android", "iOS"]
+      "stacks": ["JavaScript", "ReactNative", "Android", "iOS"],
+      "screenshots": [
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/ezzhalal/ezzhalal1.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/ezzhalal/ezzhalal2.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/ezzhalal/ezzhalal3.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/ezzhalal/ezzhalal4.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/ezzhalal/ezzhalal5.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/ezzhalal/ezzhalal6.png"
+      ]
     },
     {
       "id": "2",
@@ -95,7 +107,13 @@
       "url": "https://github.com/zuludin04/nyarios",
       "backend": 0,
       "frontend": 1,
-      "stacks": ["Flutter", "Dart", "Android", "iOS"]
+      "stacks": ["Flutter", "Dart", "Android", "iOS"],
+      "screenshots": [
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/nyarios/nyarios_sc_1.webp",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/nyarios/nyarios_sc_3.webp",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/nyarios/nyarios_sc_5.webp",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/nyarios/nyarios_sc_6.webp"
+      ]
     },
     {
       "id": "3",
@@ -105,7 +123,35 @@
       "url": "https://github.com/zuludin04/during",
       "backend": 0,
       "frontend": 1,
-      "stacks": ["Flutter", "Dart", "Android"]
+      "stacks": ["Flutter", "Dart", "Android"],
+      "screenshots": [
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/during/during1.webp",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/during/during2.webp",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/during/during3.webp",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/during/during4.webp"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Bisa Berbagi",
+      "description": "An application by Amanah Corporation for every Muslim in the world",
+      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/bisaberbagi.jpg",
+      "url": "",
+      "backend": 0,
+      "frontend": 1,
+      "stacks": ["Java", "Android"],
+      "screenshots": []
+    },
+    {
+      "id": "5",
+      "title": "Alita WMS",
+      "description": "Managed Alita Praya Mitra warehouse inventory and track item delivery status",
+      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/alita.png",
+      "url": "",
+      "backend": 0,
+      "frontend": 1,
+      "stacks": ["Flutter", "Dart", "Android", "iOS"],
+      "screenshots": []
     },
     {
       "id": "10",
@@ -115,7 +161,8 @@
       "url": "https://github.com/zuludin04/forum-api",
       "backend": 1,
       "frontend": 0,
-      "stacks": ["JavaScript", "NodeJS"]
+      "stacks": ["JavaScript", "NodeJS"],
+      "screenshots": []
     },
     {
       "id": "11",
@@ -125,7 +172,8 @@
       "url": "https://github.com/zuludin04/openmusic",
       "backend": 1,
       "frontend": 0,
-      "stacks": ["JavaScript", "NodeJS"]
+      "stacks": ["JavaScript", "NodeJS"],
+      "screenshots": []
     }
   ],
   "projectTabs": [
