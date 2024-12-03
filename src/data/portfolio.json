@@ -24,7 +24,8 @@
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/hallaw.jpg",
       "url": "https://play.google.com/store/apps/details?id=com.hallaw.hallaw_client_app&hl=en-ID",
       "backend": 0,
-      "frontend": 1
+      "frontend": 1,
+      "stacks": ["Flutter", "Dart", "Android", "iOS"]
     },
     {
       "id": "7",
@@ -33,7 +34,8 @@
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/agtran.jpg",
       "url": "https://play.google.com/store/apps/details?id=com.agtran.xcess",
       "backend": 0,
-      "frontend": 1
+      "frontend": 1,
+      "stacks": ["Flutter", "Dart", "Android", "iOS"]
     },
     {
       "id": "9",
@@ -42,7 +44,8 @@
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/mcode.png",
       "url": "",
       "backend": 1,
-      "frontend": 1
+      "frontend": 1,
+      "stacks": ["Flutter", "Dart", "Android", "iOS", "JavaScript", "NodeJS"]
     },
     {
       "id": "4",
@@ -51,7 +54,8 @@
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/bisaberbagi.jpg",
       "url": "",
       "backend": 0,
-      "frontend": 1
+      "frontend": 1,
+      "stacks": ["Java", "Android"]
     },
     {
       "id": "1",
@@ -60,7 +64,8 @@
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/Mumtaaz.png",
       "url": "https://play.google.com/store/apps/details?id=id.bwa.bwa_wakif_app",
       "backend": 0,
-      "frontend": 1
+      "frontend": 1,
+      "stacks": ["Flutter", "Dart", "Android", "iOS"]
     },
     {
       "id": "8",
@@ -69,7 +74,8 @@
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/ezzhalal.png",
       "url": "",
       "backend": 1,
-      "frontend": 1
+      "frontend": 1,
+      "stacks": ["JavaScript", "ReactNative", "Android", "iOS"]
     },
     {
       "id": "5",
@@ -78,7 +84,8 @@
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/alita.png",
       "url": "",
       "backend": 0,
-      "frontend": 1
+      "frontend": 1,
+      "stacks": ["Flutter", "Dart", "Android", "iOS"]
     },
     {
       "id": "2",
@@ -87,7 +94,8 @@
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/nyarios.png",
       "url": "https://github.com/zuludin04/nyarios",
       "backend": 0,
-      "frontend": 1
+      "frontend": 1,
+      "stacks": ["Flutter", "Dart", "Android", "iOS"]
     },
     {
       "id": "3",
@@ -96,7 +104,8 @@
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/during.png",
       "url": "https://github.com/zuludin04/during",
       "backend": 0,
-      "frontend": 1
+      "frontend": 1,
+      "stacks": ["Flutter", "Dart", "Android"]
     },
     {
       "id": "10",
@@ -105,7 +114,8 @@
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/forum.png",
       "url": "https://github.com/zuludin04/forum-api",
       "backend": 1,
-      "frontend": 0
+      "frontend": 0,
+      "stacks": ["JavaScript", "NodeJS"]
     },
     {
       "id": "11",
@@ -114,7 +124,8 @@
       "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/openmusic.png",
       "url": "https://github.com/zuludin04/openmusic",
       "backend": 1,
-      "frontend": 0
+      "frontend": 0,
+      "stacks": ["JavaScript", "NodeJS"]
     }
   ],
   "projectTabs": [

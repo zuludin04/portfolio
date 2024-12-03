@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
 import portfolio from "../data/portfolio.json";
 import { useParams } from "react-router-dom";
-import Chips from "../components/Chips";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
+import Chips from "../components/Chips";
 
 function ProjectDetailPage() {
   const { id } = useParams();
   const [project, setProject] = useState({});
+  const [stacks, setStacks] = useState([]);
 
   useEffect(() => {
     const data = portfolio.projects.find((value) => value.id === id);
     setProject(data);
+    setStacks(data.stacks);
   }, []);
 
   return (
-    <div>
+    <div className="mx-20">
       <div className="flex">
         <img
           alt={project.title}
@@ -23,8 +25,12 @@ function ProjectDetailPage() {
         />
         <p className="text-2xl font-medium self-center ml-2">{project.title}</p>
       </div>
-      <div className="flex flex-wrap">
-        <Chips />
+      <div className="flex flex-wrap my-6">
+        {stacks.map((e) => (
+          <div className="p-1">
+            <Chips type={e} />
+          </div>
+        ))}
       </div>
       <p>{project.description}</p>
       <button type="button" onClick={() => {}}>
