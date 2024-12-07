@@ -5,18 +5,21 @@ import { IoLogoGooglePlaystore } from "react-icons/io5";
 import Chips from "../components/Chips";
 import CustomCarousel from "../components/Slider/custom.slider";
 import { IoIosArrowBack } from "react-icons/io";
+import { FaGithub } from "react-icons/fa";
 
 function ProjectDetailPage() {
   const { id } = useParams();
   const [project, setProject] = useState({});
   const [stacks, setStacks] = useState([]);
   const [screenshots, setScreenshots] = useState([]);
+  const [links, setLinks] = useState([]);
 
   useEffect(() => {
     const data = portfolio.projects.find((value) => value.id === id);
     setProject(data);
     setStacks(data.stacks);
     setScreenshots(data.screenshots);
+    setLinks(data.links);
   }, []);
 
   return (
@@ -63,12 +66,21 @@ function ProjectDetailPage() {
           ))}
         </div>
         <p>{project.description}</p>
-        <button type="button" onClick={() => {}}>
-          <div className="w-32 flex rounded-md bg-white text-black justify-center items-center py-2">
-            <IoLogoGooglePlaystore color="black" />
-            <p className="px-2">Download</p>
-          </div>
-        </button>
+        {links.length !== 0 &&
+          links.map((value) => {
+            return (
+              <button type="button" onClick={() => window.open(value.url)}>
+                <div className="w-32 flex rounded-md bg-white text-black justify-center items-center py-2 mt-4">
+                  {value.type === "GooglePlay" ? (
+                    <IoLogoGooglePlaystore color="black" />
+                  ) : (
+                    <FaGithub />
+                  )}
+                  <p className="px-2">Visit</p>
+                </div>
+              </button>
+            );
+          })}
       </div>
     </div>
   );

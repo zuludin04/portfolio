@@ -15,7 +15,7 @@ function HomePage() {
           Let's build great <br />
           Things together
         </h1>
-        <Socials className="mt-2 laptop:mt-2" />
+        <Socials />
       </div>
 
       <Link to={"/projects"}>
