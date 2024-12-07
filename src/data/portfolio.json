@@ -142,10 +142,12 @@
       "frontend": 1,
       "stacks": ["Flutter", "Dart", "Android"],
       "screenshots": [
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/during/during1.webp",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/during/during2.webp",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/during/during3.webp",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/during/during4.webp"
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/during/during1.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/during/during2.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/during/during3.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/during/during4.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/during/during5.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/during/during6.png"
       ],
       "links": [
         {
