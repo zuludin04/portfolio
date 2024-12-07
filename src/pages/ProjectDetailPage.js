@@ -6,6 +6,7 @@ import Chips from "../components/Chips";
 import CustomCarousel from "../components/Slider/custom.slider";
 import { IoIosArrowBack } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function ProjectDetailPage() {
   const { id } = useParams();
@@ -23,7 +24,16 @@ function ProjectDetailPage() {
   }, []);
 
   return (
-    <div className="mx-32">
+    <motion.div
+      initial={{ x: 300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 300, opacity: 0 }}
+      transition={{
+        stiffness: 260,
+        damping: 20,
+      }}
+      className="mx-32"
+    >
       <header className="flex py-5 z-50 bg-fixed top-0 w-full">
         <Link to={"/projects"}>
           <IoIosArrowBack size={28} />
@@ -82,7 +92,7 @@ function ProjectDetailPage() {
             );
           })}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
