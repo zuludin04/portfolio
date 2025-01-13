@@ -88,6 +88,45 @@ body {
   color: #61dafb;
 }
 
+.portfolio-app {
+  color: white;
+  background-color: black;
+  min-height: 100vh;
+  transition: all ease-in-out 0.5s;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid white;
+}
+
+header .navigation {
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+  margin: 0 8px;
+}
+
+header .navigation .menu-link {
+  cursor: pointer;
+  margin: 0 8px;
+  color: whitesmoke;
+}
+
+header .navigation .menu-link:hover {
+  color: white;
+  font-weight: 500;
+  transition: all ease-in-out 0.5s;
+}
+
+header img {
+  cursor: pointer;
+  margin-left: 16px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
