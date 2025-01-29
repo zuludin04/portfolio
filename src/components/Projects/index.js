@@ -9,7 +9,7 @@ const Projects = ({ projects }) => {
           Projects
         </p>
       </div>
-      <div className="grid grid-cols-2 phone:grid-cols-1 gap-4 mt-8">
+      <div className="grid grid-cols-1 laptop:grid-cols-2 gap-4 mt-8">
         {projects.map((project) => (
           <ProjectCard
             key={project.id}

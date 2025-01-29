@@ -9,7 +9,7 @@ const Contact = () => {
           Contact
         </p>
       </div>
-      <div className="flex flex-col justify-center" style={{ height: "80vh" }}>
+      <div className="contact-container flex flex-col justify-center">
         <div>
           <div>
             <div className="mt-10">
