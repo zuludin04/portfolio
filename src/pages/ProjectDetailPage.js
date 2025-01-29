@@ -6,7 +6,6 @@ import Chips from "../components/Chips";
 import CustomCarousel from "../components/Slider/custom.slider";
 import { IoIosArrowBack } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 function ProjectDetailPage() {
   const { id } = useParams();
@@ -24,69 +23,72 @@ function ProjectDetailPage() {
   }, []);
 
   return (
-    <motion.div
-      initial={{ x: 300, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      exit={{ x: 300, opacity: 0 }}
-      transition={{
-        stiffness: 260,
-        damping: 20,
-      }}
-      className="mx-32"
-    >
-      {screenshots.length !== 0 ? (
-        <CustomCarousel>
-          {screenshots.map((image, index) => {
-            return (
-              <img
-                key={index}
-                src={image}
-                alt={`${index}`}
-                style={{ height: 592, width: 273 }}
-              />
-            );
-          })}
-        </CustomCarousel>
-      ) : (
-        <img src={project.imageSrc} style={{ width: 1280, height: 480 }} />
-      )}
+    <div>
+      <header className="flex flex-row justify-center items-center">
+        <Link to={"/"}>
+          <IoIosArrowBack size={28} />
+        </Link>
+        <div className="navigation ml-6">
+          <p className="px-6">{project.title}</p>
+        </div>
+      </header>
+      <main className="portfolio-app">
+        <div>
+          {screenshots.length !== 0 ? (
+            <CustomCarousel>
+              {screenshots.map((image, index) => {
+                return (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`${index}`}
+                    style={{ height: 592, width: 273 }}
+                  />
+                );
+              })}
+            </CustomCarousel>
+          ) : (
+            <img src={project.imageSrc} style={{ width: 1280, height: 480 }} />
+          )}
 
-      <div className="py-5">
-        <div className="flex">
-          <img
-            alt={project.title}
-            className="object-center h-24 w-24 rounded"
-            src={project.imageSrc}
-          />
-          <p className="text-2xl font-medium self-center ml-2">
-            {project.title}
-          </p>
-        </div>
-        <div className="flex flex-wrap my-6">
-          {stacks.map((e) => (
-            <div className="p-1">
-              <Chips type={e} />
+          <div className="p-8">
+            <div className="flex">
+              <img
+                alt={project.title}
+                className="object-center h-24 w-24 rounded"
+                src={project.imageSrc}
+              />
+              <p className="text-2xl font-medium self-center ml-2">
+                {project.title}
+              </p>
             </div>
-          ))}
-        </div>
-        <p>{project.description}</p>
-        {links.length !== 0 &&
-          links.map((value) => {
-            return (
-              <button type="button" onClick={() => window.open(value.url)}>
-                <div className="w-32 flex rounded-md bg-white text-black justify-center items-center py-2 mt-4">
-                  {value.type === "GooglePlay" ? (
-                    <IoLogoGooglePlaystore color="black" />
-                  ) : (
-                    <FaGithub />
-                  )}
-                  <p className="px-2">Visit</p>
+            <div className="flex flex-wrap my-6">
+              {stacks.map((e) => (
+                <div className="p-1">
+                  <Chips type={e} />
                 </div>
-              </button>
-            );
-          })}
-      </div>
-    </motion.div>
+              ))}
+            </div>
+            <p>{project.description}</p>
+            {links.length !== 0 &&
+              links.map((value) => {
+                return (
+                  <button type="button" onClick={() => window.open(value.url)}>
+                    <div className="w-32 flex rounded-md bg-white text-black justify-center items-center py-2 mt-4">
+                      {value.type === "GooglePlay" ? (
+                        <IoLogoGooglePlaystore color="black" />
+                      ) : (
+                        <FaGithub />
+                      )}
+                      <p className="px-2">Visit</p>
+                    </div>
+                  </button>
+                );
+              })}
+          </div>
+        </div>
+      </main>
+    </div>
   );
 }
 
