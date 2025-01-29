@@ -57,6 +57,7 @@ function CustomCarousel({ children }) {
       className="container__slider"
       onMouseEnter={AutoPlayStop}
       onMouseLeave={AutoPlayStart}
+      style={{ background: "transparent", marginTop: "16px", padding: "16px" }}
     >
       {children.map((item, index) => {
         return (
@@ -94,6 +95,7 @@ function CustomCarousel({ children }) {
           e.preventDefault();
           slideNext();
         }}
+        style={{ color: "black" }}
       >
         {">"}
       </button>
@@ -103,6 +105,7 @@ function CustomCarousel({ children }) {
           e.preventDefault();
           slidePrev();
         }}
+        style={{ color: "black" }}
       >
         {"<"}
       </button>

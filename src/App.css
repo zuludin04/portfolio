@@ -3,135 +3,53 @@
 @tailwind utilities;
 
 body {
-  background-color: black;
-  color: white;
-}
-
-.gradient-circle {
-  position: absolute;
-  pointer-events: none;
-  z-index: 100;
-  top: -30px;
-  height: 40px;
-  width: 100vw;
-  opacity: 0.5;
-  filter: blur(40px);
-  background: radial-gradient(circle, #bec661 0%, #5a7eebdb 100%);
-}
-.gradient-circle-bottom {
-  position: absolute;
-  pointer-events: none;
-  z-index: 100;
-  bottom: -20px;
-  height: 30px;
-  width: 100vw;
-  opacity: 0.5;
-  filter: blur(40px);
-  background: radial-gradient(circle, #bec661 0%, #5a7eebdb 100%);
-}
-
-.gradient-shadow:hover::before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(-45deg, #45caff 0%, #ff1b6b 100%);
-  transform: translate3d(0px, 20px, 0) scale(0.95);
-  filter: blur(20px);
-  opacity: var(0.7);
-  transition: opacity 0.3s;
-  border-radius: inherit;
-}
-
-.gradient-shadow:hover::after {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: inherit;
-  border-radius: inherit;
-}
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #f8f1f6;
+  color: #1c1b1d;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 .portfolio-app {
-  color: white;
-  background-color: black;
-  min-height: 100vh;
-  transition: all ease-in-out 0.5s;
+  padding: 10vh 2vh 2vh 2vh;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0e7ec;
+  border: 1px solid #d5d5d5;
+  border-radius: 10px;
+  padding: 32px;
 }
 
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
-  border-bottom: 1px solid white;
+  position: fixed;
+  width: 100%;
+  padding: 2vh;
+  background: #f8f1f6;
+  z-index: 100;
 }
 
 header .navigation {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  font-size: 24px;
-  margin: 0 8px;
+  font-size: 20px;
+  justify-content: space-between;
+  background-color: #f0e7ec;
+  border: 1px solid #d5d5d5;
+  border-radius: 10px;
+  padding: 8px;
 }
 
 header .navigation .menu-link {
   cursor: pointer;
   margin: 0 8px;
-  color: whitesmoke;
+  text-transform: uppercase;
 }
 
 header .navigation .menu-link:hover {
-  color: white;
-  font-weight: 500;
-  transition: all ease-in-out 0.5s;
-}
-
-header img {
+  color: #c05621;
+  font-weight: bold;
   cursor: pointer;
-  margin-left: 16px;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  transition: all ease-in-out 0.5s;
 }

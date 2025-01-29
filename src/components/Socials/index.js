@@ -4,7 +4,7 @@ import Button from "../Button";
 
 const Socials = () => {
   return (
-    <div className={`flex flex-wrap justify-center mob:flex-nowrap link mt-5`}>
+    <div className={`flex flex-wrap mob:flex-nowrap link`}>
       {data.socials.map((social, index) => (
         <Button key={index} onClick={() => window.open(social.link)}>
           {social.title}

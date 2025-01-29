@@ -10,7 +10,6 @@ const ProjectCard = ({ id, img, name }) => {
           <motion.div
             layoutId={`/${id}`}
             className="relative rounded-lg overflow-hidden"
-            style={{ height: "150px" }}
           >
             <img
               alt={name}

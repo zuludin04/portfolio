@@ -34,12 +34,6 @@ function ProjectDetailPage() {
       }}
       className="mx-32"
     >
-      <header className="flex py-5 z-50 bg-fixed top-0 w-full">
-        <Link to={"/projects"}>
-          <IoIosArrowBack size={28} />
-        </Link>
-      </header>
-
       {screenshots.length !== 0 ? (
         <CustomCarousel>
           {screenshots.map((image, index) => {

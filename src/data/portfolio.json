@@ -18,117 +18,23 @@
   ],
   "projects": [
     {
-      "id": "6",
-      "title": "Hallaw - Legal Partner",
-      "description": "Online legal aid application that is ready to assist you in getting quick and easy access to the legal services you need",
-      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/hallaw.jpg",
-      "backend": 0,
-      "frontend": 1,
-      "stacks": ["Flutter", "Dart", "Android", "iOS"],
-      "screenshots": [
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw1.png",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw2.png",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw3.png",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw4.png",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw5.png",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw6.png"
-      ],
-      "links": []
-    },
-    {
-      "id": "7",
-      "title": "Xcess by Agtran",
-      "description": "Xcess is a car rental management app for the partners of Agtran",
-      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/agtran.jpg",
-      "backend": 0,
-      "frontend": 1,
-      "stacks": ["Flutter", "Dart", "Android", "iOS"],
-      "screenshots": [
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran1.webp",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran2.webp",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran3.webp",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran4.webp",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran5.webp"
-      ],
-      "links": [
-        {
-          "type": "GooglePlay",
-          "url": "https://play.google.com/store/apps/details?id=com.agtran.xcess"
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "title": "MCode - Cogindo",
-      "description": "MCode is a hands-on application for Cogindo employee to easily track a document",
-      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/mcode.png",
-      "backend": 1,
-      "frontend": 1,
-      "stacks": ["Flutter", "Dart", "Android", "iOS", "JavaScript", "NodeJS"],
-      "screenshots": [
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mcode/mcode1.jpg",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mcode/mcode2.jpg",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mcode/mcode3.jpg",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mcode/mcode4.jpg",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mcode/mcode5.jpg",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mcode/mcode6.jpg"
-      ],
-      "links": []
-    },
-    {
-      "id": "1",
-      "title": "Mumtaaz",
-      "description": "Muslim application for BWA's Wakif (user), so they can donate with ease",
-      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/Mumtaaz.png",
-      "backend": 0,
-      "frontend": 1,
-      "stacks": ["Flutter", "Dart", "Android", "iOS"],
-      "screenshots": [
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz1.png",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz2.png",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz3.png",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz4.png",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz5.png",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz6.png"
-      ],
-      "links": []
-    },
-    {
-      "id": "8",
-      "title": "EzzHalal E-Commerce",
-      "description": "Buy and sell goods for all Muslims in the world with a trusted halal certificate",
-      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/ezzhalal.png",
-      "backend": 1,
-      "frontend": 1,
-      "stacks": ["JavaScript", "ReactNative", "Android", "iOS"],
-      "screenshots": [
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/ezzhalal/ezzhalal1.png",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/ezzhalal/ezzhalal2.png",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/ezzhalal/ezzhalal3.png",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/ezzhalal/ezzhalal4.png",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/ezzhalal/ezzhalal5.png",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/ezzhalal/ezzhalal6.png"
-      ],
-      "links": []
-    },
-    {
       "id": "2",
-      "title": "Nyarios",
-      "description": "Real-time chatting app using Flutter and Firebase as database",
-      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/nyarios.png",
+      "title": "BuQu",
+      "description": "Share the best quotes you've ever read with the world. With BuQu you can save quotes from books or famous people. In addition, you can manage categories to separate quotes to make them more organized.",
+      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/buqu.png",
       "backend": 0,
       "frontend": 1,
-      "stacks": ["Flutter", "Dart", "Android", "iOS"],
+      "stacks": ["Kotlin", "Android"],
       "screenshots": [
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/nyarios/nyarios_sc_1.webp",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/nyarios/nyarios_sc_3.webp",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/nyarios/nyarios_sc_5.webp",
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/nyarios/nyarios_sc_6.webp"
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/buqu/buqu1.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/buqu/buqu2.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/buqu/buqu3.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/buqu/buqu4.png"
       ],
       "links": [
         {
           "type": "Github",
-          "url": "https://github.com/zuludin04/nyarios"
+          "url": "https://github.com/zuludin04/buqu"
         }
       ]
     },
@@ -157,62 +63,62 @@
       ]
     },
     {
-      "id": "4",
-      "title": "Bisa Berbagi",
-      "description": "An application by Amanah Corporation for every Muslim in the world",
-      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/bisaberbagi.jpg",
-      "url": "",
-      "backend": 0,
-      "frontend": 1,
-      "stacks": ["Java", "Android"],
-      "screenshots": [],
-      "links": []
-    },
-    {
-      "id": "5",
-      "title": "Alita WMS",
-      "description": "Managed Alita Praya Mitra warehouse inventory and track item delivery status",
-      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/alita.png",
-      "url": "",
+      "id": "7",
+      "title": "Xcess by Agtran",
+      "description": "Xcess is a car rental management app for the partners of Agtran",
+      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/agtran.jpg",
       "backend": 0,
       "frontend": 1,
       "stacks": ["Flutter", "Dart", "Android", "iOS"],
-      "screenshots": [],
+      "screenshots": [
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran1.webp",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran2.webp",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran3.webp",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran4.webp",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran5.webp"
+      ],
+      "links": [
+        {
+          "type": "GooglePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.agtran.xcess"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Hallaw - Legal Partner",
+      "description": "Online legal aid application that is ready to assist you in getting quick and easy access to the legal services you need",
+      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/hallaw.jpg",
+      "backend": 0,
+      "frontend": 1,
+      "stacks": ["Flutter", "Dart", "Android", "iOS"],
+      "screenshots": [
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw1.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw2.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw3.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw4.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw5.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/hallaw/hallaw6.png"
+      ],
       "links": []
     },
     {
-      "id": "10",
-      "title": "Forum API",
-      "description": "Implementing clean architecture to create online forum using Node.js",
-      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/forum.png",
-      "url": "https://github.com/zuludin04/forum-api",
-      "backend": 1,
-      "frontend": 0,
-      "stacks": ["JavaScript", "NodeJS"],
-      "screenshots": [],
-      "links": [
-        {
-          "type": "Github",
-          "url": "https://github.com/zuludin04/forum-api"
-        }
-      ]
-    },
-    {
-      "id": "11",
-      "title": "OpenMusic API",
-      "description": "Online library to store your favourite music online",
-      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/openmusic.png",
-      "url": "https://github.com/zuludin04/openmusic",
-      "backend": 1,
-      "frontend": 0,
-      "stacks": ["JavaScript", "NodeJS"],
-      "screenshots": [],
-      "links": [
-        {
-          "type": "Github",
-          "url": "https://github.com/zuludin04/openmusic"
-        }
-      ]
+      "id": "1",
+      "title": "Mumtaaz",
+      "description": "Muslim application for BWA's Wakif (user), so they can donate with ease",
+      "imageSrc": "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/project/Mumtaaz.png",
+      "backend": 0,
+      "frontend": 1,
+      "stacks": ["Flutter", "Dart", "Android", "iOS"],
+      "screenshots": [
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz1.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz2.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz3.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz4.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz5.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mumtaaz/mumtaaz6.png"
+      ],
+      "links": []
     }
   ],
   "projectTabs": [

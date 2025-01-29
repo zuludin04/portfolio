@@ -1,22 +1,24 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import ProjectCard from "../ProjectCard";
 
 const Projects = ({ projects }) => {
   return (
-    <div>
-      <motion.div className="grid grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 gap-4">
-        <AnimatePresence>
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              id={project.id}
-              img={project.imageSrc}
-              name={project.title}
-            />
-          ))}
-        </AnimatePresence>
-      </motion.div>
+    <div key={"project"} id="project" className="section-container mt-6">
+      <div className="w-full flex flex-col items-center">
+        <p className="border-b-4 border-[#f8f1f6] font-semibold text-2xl text-stone">
+          Projects
+        </p>
+      </div>
+      <div className="grid grid-cols-2 phone:grid-cols-1 gap-4 mt-8">
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            id={project.id}
+            img={project.imageSrc}
+            name={project.title}
+          />
+        ))}
+      </div>
     </div>
   );
 };

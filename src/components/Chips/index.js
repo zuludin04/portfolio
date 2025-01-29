@@ -6,6 +6,7 @@ import { RiJavascriptFill } from "react-icons/ri";
 import { FaNode } from "react-icons/fa6";
 import { FaJava } from "react-icons/fa6";
 import { FaReact } from "react-icons/fa6";
+import { SiKotlin } from "react-icons/si";
 
 const Chips = ({ type }) => {
   if (type === "Flutter") {
@@ -24,6 +25,8 @@ const Chips = ({ type }) => {
     return <JavaChip />;
   } else if (type === "ReactNative") {
     return <ReactNativeChip />;
+  } else if (type === "Kotlin") {
+    return <KotlinChip />;
   } else {
     return <div></div>;
   }
@@ -96,6 +99,15 @@ const ReactNativeChip = () => {
     <div className="rounded-full flex items-center bg-cyan-500 text-base px-3 py-1">
       <FaReact className="mx-1" />
       ReactNative
+    </div>
+  );
+};
+
+const KotlinChip = () => {
+  return (
+    <div className="rounded-full flex items-center bg-orange-300 text-base px-3 py-1">
+      <SiKotlin className="mx-1" />
+      Kotlin
     </div>
   );
 };
