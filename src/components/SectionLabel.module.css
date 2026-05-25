@@ -1,0 +1,19 @@
+.wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.line {
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: var(--accent);
+}
+.label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}

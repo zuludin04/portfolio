@@ -1,0 +1,205 @@
+.section {
+  padding: 7rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.visible { opacity: 1; transform: translateY(0); }
+
+.heading {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+
+.bio { display: flex; flex-direction: column; gap: 1rem; }
+
+.bio p {
+  color: var(--muted);
+  font-weight: 300;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+.bio strong { color: var(--text); font-weight: 500; }
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--border);
+  gap: 1px;
+}
+
+.statCard {
+  background: var(--bg2);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.statNum {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.statLabel {
+  font-size: 0.6875rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Marquee */
+.marqueeSection {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow: hidden;
+}
+
+.marqueeTrack {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marqueeRow {
+  display: flex;
+  gap: 0.75rem;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.marqueeReverse { animation-direction: reverse; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 7px 16px;
+  font-size: 0.875rem;
+  color: var(--muted);
+  background: var(--bg2);
+  white-space: nowrap;
+  transition: border-color 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+.chip:hover { border-color: var(--accent); color: var(--accent); }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .section { padding: 5rem 0; }
+}
+
+/* Tech stack split */
+.stackSection {
+  padding: 5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.stackContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.stackCard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.stackCard:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+}
+
+.stackHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stackDot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.stackTitle {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.stackDesc {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  line-height: 1.75;
+  font-weight: 300;
+  flex: 1;
+}
+
+.stackTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.stackTag {
+  background: var(--surface);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 4px 11px;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .stackContainer { grid-template-columns: 1fr; }
+  .stackSection { padding: 3.5rem 0; }
+}

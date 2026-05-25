@@ -1,0 +1,30 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 2.25rem 0;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--text);
+}
+
+.copy {
+  font-size: 0.875rem;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+@media (max-width: 480px) {
+  .inner { flex-direction: column; gap: 0.5rem; text-align: center; }
+}
