@@ -38,6 +38,39 @@ export const projects: Project[] = [
   {
     id: 0,
     slides: [
+      "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mcode/mcode1.jpg",
+      "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mcode/mcode2.jpg",
+      "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mcode/mcode3.jpg",
+      "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mcode/mcode4.jpg",
+      "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mcode/mcode5.jpg",
+    ],
+    category: "Productivity · Tracker · Android · iOS",
+    title: "MCode PLN Services",
+    desc: "A mobile application for tracking and managing company service requests, providing users with real-time updates and notifications.",
+    tags: [
+      "Flutter",
+      "Dart",
+      "Bloc/Cubit",
+      "Dio",
+      "Android",
+      "iOS",
+      "JavaScript",
+      "NodeJS",
+      "MySQL",
+    ],
+    features: [
+      "Scan and track invoice document using QR code",
+      "Push notification for invoice status updates",
+      "Generate PDF report for invoice history",
+      "Admin dashboard for managing invoice data",
+    ],
+    github: null,
+    playstore: null,
+    appstore: null,
+  },
+  {
+    id: 1,
+    slides: [
       "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/maxon/maxon1.webp",
       "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/maxon/maxon2.webp",
       "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/maxon/maxon3.webp",
@@ -59,7 +92,7 @@ export const projects: Project[] = [
     appstore: "https://apps.apple.com/us/app/maxon-pumpcalc/id6748975011",
   },
   {
-    id: 1,
+    id: 2,
     slides: [
       "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran1.webp",
       "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/agtran/agtran2.webp",
@@ -81,7 +114,7 @@ export const projects: Project[] = [
     appstore: "https://apps.apple.com/us/app/xcess-by-agtran/id1600419028",
   },
   {
-    id: 2,
+    id: 3,
     slides: [
       "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/buqu/buqu1.png",
       "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/buqu/buqu2.png",
@@ -106,11 +139,11 @@ export const projects: Project[] = [
       "Generate shareable quote images",
     ],
     github: "https://github.com/zuludin04/buqu",
-    playstore: null,
+    playstore: "https://apkpure.com/p/com.app.zuludin.buqu",
     appstore: null,
   },
   {
-    id: 3,
+    id: 4,
     slides: [
       "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/during/during1.png",
       "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/during/during2.png",
