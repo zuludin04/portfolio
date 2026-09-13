@@ -1,23 +1,14 @@
-import Navbar from "./sections/Navbar";
-import Hero from "./sections/Hero";
-import About from "./sections/About";
-import Projects from "./sections/Projects";
-import Experience from "./sections/Experience";
-import Contact from "./sections/Contact";
-import Footer from "./sections/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import CaseStudy from "./pages/CaseStudy";
 
 export default function App() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects/captionkilat" element={<CaseStudy />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
