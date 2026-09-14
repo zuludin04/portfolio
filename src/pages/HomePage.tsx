@@ -1,36 +1,10 @@
-const projects = [
-  {
-    number: "01",
-    name: "CaptionKilat",
-    type: "AI Content Assistant",
-    description:
-      "A mobile-first AI product for Indonesian small businesses to create captions, content ideas, promotions, and Reels scripts.",
-    tags: ["Flutter", "NestJS", "Supabase", "Google Gen AI"],
-    href: "/projects/captionkilat",
-    featured: true,
-    links: { web: "", google: "", apple: "", alternative: "" },
-  },
-  {
-    number: "02",
-    name: "BuQu",
-    type: "Reading & Quote App",
-    description:
-      "An Android app for saving quotes while reading, organizing ideas, and turning notes into visual boards.",
-    tags: ["Kotlin", "Jetpack Compose", "Room", "MVVM"],
-    href: "#",
-    links: { web: "", google: "", apple: "", alternative: "" },
-  },
-  {
-    number: "03",
-    name: "Maxon Filtration Pump",
-    type: "Engineering Calculator",
-    description:
-      "A Flutter app built from scratch to make water pump selection faster through complex filtering and engineering calculations.",
-    tags: ["Flutter", "Calculation Logic", "UX"],
-    href: "#",
-    links: { web: "", google: "", apple: "", alternative: "" },
-  },
-];
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Footer } from "../components/Footer";
+import { ProjectLinks } from "../components/ProjectLinks";
+import { ScreenshotGallery } from "../components/ScreenshotGallery";
+import { Navbar } from "../components/Navbar";
+import { projects } from "../data/projects";
 
 const experience = [
   {
@@ -61,68 +35,25 @@ const skills = [
   "Dart",
   "Kotlin",
   "Java",
+  "Jetpack Compose",
+  "Room",
+  "MVVM",
   "TypeScript",
   "JavaScript",
+  "ReactJS",
   "NestJS",
   "Supabase",
   "Firebase",
-  "Jetpack Compose",
-  "Room",
   "REST API",
   "AI Integration",
 ];
 
-function Arrow() {
-  return <span aria-hidden="true">↗</span>;
-}
-
-function ProjectLinks({
-  links,
-}: {
-  links: { web: string; google: string; apple: string; alternative: string };
-}) {
-  const items = [
-    ["Web", links.web],
-    ["Google Play", links.google],
-    ["App Store", links.apple],
-    ["Alternative Store", links.alternative],
-  ];
-
-  return (
-    <div className="project-links" aria-label="Project links">
-      {items.map(([label, href]) =>
-        href ? (
-          <a key={label} href={href} target="_blank" rel="noreferrer">
-            {label} <Arrow />
-          </a>
-        ) : (
-          <span key={label} className="project-link-disabled">
-            {label} <small>Coming soon</small>
-          </span>
-        ),
-      )}
-    </div>
-  );
-}
-
-export default function Home() {
+export function HomePage() {
+  useEffect(() => {
+    document.title = "Zulfikar Mauludin — Mobile Engineer";
+  }, []);
   return (
     <main>
-      <nav className="nav shell">
-        <div className="brand">
-          ZM<span>.</span>
-        </div>
-        <div className="nav-links">
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <a className="nav-cta" href="mailto:hello@zuludin.dev">
-          Let&apos;s talk <Arrow />
-        </a>
-      </nav>
-
       <section id="top" className="hero shell">
         <div className="hero-copy">
           <p className="eyebrow">MOBILE ENGINEER · FULL-STACK DEVELOPER</p>
@@ -136,7 +67,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="button button-dark" href="#work">
-              Explore my work <Arrow />
+              Explore my work <span>↗</span>
             </a>
             <a
               className="text-link"
@@ -144,7 +75,7 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              GitHub <Arrow />
+              GitHub <span>↗</span>
             </a>
           </div>
         </div>
@@ -153,9 +84,9 @@ export default function Home() {
             <span className="note-label">CURRENTLY BUILDING</span>
             <strong>CaptionKilat</strong>
             <p>AI content assistant for Indonesian small businesses.</p>
-            <a href="/projects/captionkilat">
-              View case study <Arrow />
-            </a>
+            <Link to="/projects/captionkilat">
+              View case study <span>↗</span>
+            </Link>
           </div>
           <div className="availability">
             <span className="dot" /> Open to mobile engineering opportunities
@@ -191,64 +122,28 @@ export default function Home() {
         </div>
         <div className="project-grid">
           {projects.map((project) => (
-            <article
-              className={`project-card ${project.featured ? "featured" : ""}`}
-              key={project.name}
-            >
-              <div className="project-top">
-                <span>{project.number}</span>
-                <span>{project.type}</span>
-              </div>
-              {project.featured ? (
-                <div className="caption-visual">
-                  <div className="phone-frame small">
-                    <img
-                      src="./src/assets/images/captionkilat-home.png"
-                      alt="CaptionKilat home screen"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
+            <a key={project.slug} href={`/projects/${project.slug}`}>
+              <article
+                className={`project-card ${project.featured ? "featured" : ""}`}
+                key={project.slug}
+              >
+                <div className="project-top">
+                  <span>{project.number}</span>
+                  <span>{project.type}</span>
+                </div>
+                <ScreenshotGallery screenshots={project.screenshots} compact />
+                <div className="project-body">
+                  <h3>{project.name}</h3>
+                  <p>{project.description}</p>
+                  <div className="tag-row">
+                    {project.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
                   </div>
-                  <div className="phone-frame small offset">
-                    <img
-                      src="./src/assets/images/captionkilat-result.png"
-                      alt="CaptionKilat generated caption screen"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </div>
+                  <ProjectLinks links={project.links} compact />
                 </div>
-              ) : (
-                <div className="project-placeholder">
-                  <span>{project.name.slice(0, 2).toUpperCase()}</span>
-                </div>
-              )}
-              <div className="project-body">
-                <h3>{project.name}</h3>
-                <p>{project.description}</p>
-                <div className="tag-row">
-                  {project.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
-                </div>
-                <ProjectLinks links={project.links} />
-                {project.featured ? (
-                  <a className="project-link" href={project.href}>
-                    Read the case study <Arrow />
-                  </a>
-                ) : (
-                  <span className="project-link muted">
-                    Case study coming soon
-                  </span>
-                )}
-              </div>
-            </article>
+              </article>
+            </a>
           ))}
         </div>
       </section>
@@ -325,7 +220,7 @@ export default function Home() {
         </div>
         <div className="contact-actions">
           <a className="button button-dark" href="mailto:hello@zuludin.dev">
-            Get in touch <Arrow />
+            Get in touch <span>↗</span>
           </a>
           <a
             className="text-link"
@@ -333,30 +228,20 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            LinkedIn <Arrow />
+            LinkedIn <span>↗</span>
           </a>
         </div>
       </section>
-
-      <footer className="footer shell">
-        <span>© {new Date().getFullYear()} Zulfikar Mauludin</span>
-        <div>
-          <a
-            href="https://github.com/zuludin04"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/zuludin/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn
-          </a>
-        </div>
-      </footer>
     </main>
+  );
+}
+
+export function HomePageWithFooter() {
+  return (
+    <>
+      <Navbar />
+      <HomePage />
+      <Footer />
+    </>
   );
 }
