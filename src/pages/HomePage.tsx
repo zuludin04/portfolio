@@ -8,25 +8,32 @@ import { projects } from "../data/projects";
 
 const experience = [
   {
+    period: "Apr 2025 — Dec 2025",
+    role: "Mobile Engineer",
+    company: "PT Maxon Prime Technology",
+    detail:
+      "Mobile engineer who designed and developed a production-ready Flutter application from scratch, handling the full lifecycle from architecture to deployment. Implemented complex filtering and engineering calculation logic to improve industrial pump selection accuracy for clients.",
+  },
+  {
     period: "Mar 2024 — Dec 2024",
     role: "Full-Stack Mobile Engineer",
     company: "PT Fusi Solusi Transformasi",
     detail:
-      "Built an internal invoice tracking application for 200+ employees, using clean architecture and more than 10,000 lines of production code.",
+      "Designed and developed internal enterprise applications used by 200+ employees for invoice tracking, using scalable Clean Architecture principles. Collaborated with cross-functional teams to deliver solutions aligned with business and operational goals.",
   },
   {
     period: "Jul 2020 — Sep 2023",
     role: "Mobile Engineer",
     company: "Badan Wakaf AlQuran",
     detail:
-      "Built and maintained mobile products used by thousands of users, including donation, attendance, scanning, and warehouse workflows.",
+      "Developed and deployed a donation campaign mobile application serving 10,000+ users while leading a team of 3 mobile engineers. Improved application stability by reducing bugs by 40% through architecture refactoring and enhanced internal operations by revamping an attendance system used by 300+ employees.",
   },
   {
     period: "Jan 2020 — Jun 2020",
     role: "Android Developer",
     company: "PT Amanah Karya Indonesia",
     detail:
-      "Developed Android applications for operational workflows and helped move manual processes into mobile experiences.",
+      "Introduced workflow improvements that increased employee efficiency by 20% and refactored 10,000+ lines of legacy code to improve maintainability by 25%. Also released a mobile application on the Google Play Store, achieving 1,000+ downloads.",
   },
 ];
 

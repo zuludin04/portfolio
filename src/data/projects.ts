@@ -59,11 +59,13 @@ export const projects: Project[] = [
       "A mobile-first AI product for Indonesian small businesses to create captions, content ideas, promotions, and Reels scripts.",
     tags: [
       "Flutter",
+      "Dart",
       "Riverpod",
+      "Android",
+      "iOS",
+      "TypeScript",
       "NextJS",
       "NestJS",
-      "Supabase",
-      "Google Gen AI",
     ],
     featured: true,
     screenshots: [
@@ -255,7 +257,15 @@ export const projects: Project[] = [
     type: "Engineering Calculator",
     description:
       "A cross-platform Flutter app that makes pump selection faster through filtering, technical details, offline-first access, and engineering calculations.",
-    tags: ["Flutter", "BLoC", "Offline-first", "Engineering Logic"],
+    tags: [
+      "Flutter",
+      "Dart",
+      "BLoC",
+      "Android",
+      "iOS",
+      "Offline-first",
+      "Engineering Logic",
+    ],
     screenshots: [
       screenshot(
         "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/maxon/maxon1.webp",
@@ -444,7 +454,16 @@ export const projects: Project[] = [
     type: "Internal Document Tracking",
     description:
       "An internal document tracking application for scanning invoices, validating documents, routing them, and notifying users about status changes.",
-    tags: ["Flutter", "BLoC", "Node.js", "MySQL"],
+    tags: [
+      "Flutter",
+      "Dart",
+      "BLoC",
+      "Android",
+      "iOS",
+      "JavaScript",
+      "Node.js",
+      "MySQL",
+    ],
     screenshots: [
       screenshot(
         "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/mcode/mcode2.jpg",
@@ -601,7 +620,7 @@ export const projects: Project[] = [
     shortName: "Xcess",
     type: "Vehicle Rental Management",
     description:
-      "A cross-platform car rental management app for Agtran partners, extended through bug fixes, new features, maintenance, and custom camera development.",
+      "Xcess is a car rental management app for the partners of Agtran.",
     tags: ["Flutter", "Provider", "Android", "iOS"],
     screenshots: [
       screenshot(
