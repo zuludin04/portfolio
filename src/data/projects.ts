@@ -340,12 +340,12 @@ export const projects: Project[] = [
       {
         id: "offline",
         eyebrow: "03 · OFFLINE-FIRST",
-        title: "The app should remain useful when connectivity disappears.",
+        title: "Keep the dashboard useful when connectivity disappears.",
         paragraphs: [
-          "I applied an offline-first approach so the core product experience does not depend on a constant internet connection. Product data and the workflows needed for selection are designed around local availability first.",
+          "I applied an offline-first approach specifically to the dashboard, where the primary pump-selection workflow needs to remain usable without a constant internet connection. Other areas of the app can still rely on network availability when required.",
         ],
         pipeline: [
-          "Local product data",
+          "Local dashboard data",
           "Filter & select",
           "Calculate specification",
           "View / export result",
