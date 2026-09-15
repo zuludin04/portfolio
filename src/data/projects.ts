@@ -81,10 +81,14 @@ export const projects: Project[] = [
       ),
     ],
     links: [
-      { label: "Web", status: "available" },
+      { label: "Web", status: "available", url: "https://captionkilat.my.id" },
       { label: "Google Play", status: "coming-soon" },
       { label: "App Store", status: "coming-soon" },
-      { label: "Alternative Store", status: "available" },
+      {
+        label: "Github",
+        status: "available",
+        url: "https://github.com/zuludin04/captionkilat",
+      },
     ],
     role: "Product Engineer / Mobile Engineer",
     platform: "Flutter · Web · Android",
