@@ -70,15 +70,15 @@ export const projects: Project[] = [
     featured: true,
     screenshots: [
       screenshot(
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/captionkilat/ck1.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/captionkilat/ck1.jpg",
         "CaptionKilat home screen",
       ),
       screenshot(
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/captionkilat/ck2.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/captionkilat/ck2.jpg",
         "CaptionKilat content generation screen",
       ),
       screenshot(
-        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/captionkilat/ck3.png",
+        "https://raw.githubusercontent.com/zuludin04/zuludin04/main/images/ss/captionkilat/ck3.jpg",
         "CaptionKilat generated content screen",
       ),
     ],
