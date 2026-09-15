@@ -94,7 +94,7 @@ export const projects: Project[] = [
     ],
     role: "Product Engineer / Mobile Engineer",
     platform: "Flutter · Web · Android",
-    stack: "NestJS · Supabase · Google Gen AI",
+    stack: "Flutter · NextJS · NestJS",
     caseEyebrow: "FEATURED CASE STUDY · 2026",
     caseTitle: "AI Content Assistant for Indonesian Small Businesses",
     caseLede:
@@ -294,7 +294,7 @@ export const projects: Project[] = [
     ],
     role: "Mobile Developer",
     platform: "Android · iOS",
-    stack: "Flutter · Dart · BLoC",
+    stack: "Flutter",
     caseEyebrow: "CASE STUDY · MOBILE ENGINEERING",
     caseTitle: "Filtration Pump Selection App",
     caseLede:
@@ -484,7 +484,7 @@ export const projects: Project[] = [
     ],
     role: "Full-Stack Mobile Engineer",
     platform: "Internal application",
-    stack: "Flutter · Dart · BLoC · Node.js · MySQL",
+    stack: "Flutter · Node.js · MySQL",
     caseEyebrow: "CASE STUDY · INTERNAL PRODUCT",
     caseTitle: "PLN Services Document Tracking",
     caseLede:
@@ -650,7 +650,7 @@ export const projects: Project[] = [
     ],
     role: "Mobile Developer",
     platform: "Android · iOS",
-    stack: "Flutter · Dart · Provider",
+    stack: "Flutter",
     caseEyebrow: "CASE STUDY · MOBILE MAINTENANCE",
     caseTitle: "Vehicle Rental Management for Agtran Partners",
     caseLede:
@@ -664,8 +664,7 @@ export const projects: Project[] = [
         eyebrow: "01 · THE PRODUCT",
         title: "Support the operational side of car rental.",
         paragraphs: [
-          "Xcess by Agtran is a car rental management application built for Agtran partners. The mobile experience supports the day-to-day operations involved in managing rental vehicles.",
-          "Unlike a greenfield product, the work here is shaped by an existing application, real user requirements, tickets, and the need to improve stability without disrupting current workflows.",
+          "Xcess by Agtran is a car rental management application built for Agtran partners. The work here is shaped by an existing application, real user requirements, tickets, and the need to improve stability without disrupting current workflows.",
         ],
       },
       {
@@ -684,11 +683,6 @@ export const projects: Project[] = [
               "Implement functionality based on user and product requirements.",
           },
           {
-            title: "Custom camera",
-            description:
-              "Build a camera package around requirements not fully covered by a generic solution.",
-          },
-          {
             title: "Maintenance",
             description:
               "Improve stability, usability, and the long-term health of the application.",
@@ -696,22 +690,8 @@ export const projects: Project[] = [
         ],
       },
       {
-        id: "camera",
-        eyebrow: "03 · CUSTOM CAMERA",
-        title: "Sometimes the right solution is a focused component.",
-        paragraphs: [
-          "I developed a custom camera package to satisfy specific application requirements. Instead of forcing the product into the constraints of a generic camera implementation, the camera behavior was shaped around the workflow that users actually needed.",
-        ],
-        pipeline: [
-          "User requirement",
-          "Camera behavior",
-          "Custom package",
-          "Integrated mobile workflow",
-        ],
-      },
-      {
         id: "maintenance",
-        eyebrow: "04 · MAINTENANCE",
+        eyebrow: "03 · MAINTENANCE",
         title: "Maintenance is product engineering.",
         paragraphs: [
           "Working on an existing application means understanding the current behavior before changing it. I worked through tickets, traced bugs, implemented new requirements, and improved the application while keeping the existing user experience in mind.",
@@ -740,7 +720,7 @@ export const projects: Project[] = [
       },
       {
         id: "challenges",
-        eyebrow: "05 · ENGINEERING CHALLENGES",
+        eyebrow: "04 · ENGINEERING CHALLENGES",
         title:
           "Existing software adds constraints that greenfield projects do not.",
         challenges: [
@@ -758,12 +738,6 @@ export const projects: Project[] = [
           },
           {
             number: "03",
-            title: "Platform consistency",
-            description:
-              "Camera behavior and mobile interactions need to remain coherent across Android and iOS.",
-          },
-          {
-            number: "04",
             title: "Maintainability",
             description:
               "Quick fixes should not become long-term technical debt.",
@@ -772,7 +746,7 @@ export const projects: Project[] = [
       },
       {
         id: "decisions",
-        eyebrow: "06 · ENGINEERING DECISIONS",
+        eyebrow: "05 · ENGINEERING DECISIONS",
         title: "Use the existing stack, improve the parts that matter.",
         decisions: [
           {
@@ -785,11 +759,6 @@ export const projects: Project[] = [
               "State management aligned with the existing application architecture.",
           },
           {
-            title: "Custom package",
-            description:
-              "Encapsulate camera-specific behavior instead of spreading platform details through feature code.",
-          },
-          {
             title: "Ticket-driven iteration",
             description:
               "Prioritize fixes and features based on concrete user and operational needs.",
@@ -798,11 +767,10 @@ export const projects: Project[] = [
       },
       {
         id: "learnings",
-        eyebrow: "07 · LEARNINGS",
+        eyebrow: "06 · LEARNINGS",
         title: "Shipping is only one part of mobile engineering.",
         paragraphs: [
           "Maintaining Xcess strengthened my ability to work inside an existing product, understand unfamiliar code, and make changes without treating the application as a blank canvas.",
-          "The custom camera work also reinforced a useful engineering principle: abstraction is valuable when it hides complexity that the rest of the product should not have to care about.",
         ],
       },
     ],
