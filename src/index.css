@@ -1153,7 +1153,9 @@ section[id],
   position: relative;
   width: 29%;
   max-width: 260px;
-  min-height: 370px;
+  aspect-ratio: 9 / 16;
+  min-height: 0;
+  height: auto;
   margin: 0;
   background: #fff;
   border: 7px solid #1b2a23;
@@ -1168,7 +1170,8 @@ section[id],
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #f7f5ef;
 }
 .screenshot-frame:nth-child(1) {
   transform: rotate(-5deg) translateY(28px);
@@ -1187,7 +1190,9 @@ section[id],
 }
 .screenshot-gallery.compact .screenshot-frame {
   width: 31%;
-  min-height: 260px;
+  min-height: 0;
+  height: auto;
+  aspect-ratio: 9 / 16;
   border-width: 5px;
   border-radius: 18px;
   box-shadow: 0 16px 28px #17251f20;
@@ -1217,20 +1222,18 @@ section[id],
   border-radius: 3px;
 }
 .case-gallery {
-  min-height: 650px;
   background: #e2e9df;
   position: relative;
   overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  padding: 0 42px;
+  padding: 42px 42px 0;
 }
 .case-gallery-copy {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  left: 42px;
-  top: 42px;
-  max-width: 350px;
+  left: auto;
+  top: auto;
+  max-width: 520px;
+  padding: 0 0 18px;
 }
 .case-gallery-copy h2 {
   font-family: "Space Grotesk";
@@ -1242,16 +1245,19 @@ section[id],
 .case-gallery-copy p {
   font-size: 13px;
   color: #637068;
+  margin: 0;
 }
 .case-gallery .screenshot-gallery {
   width: 100%;
   background: transparent;
-  padding-top: 150px;
+  padding: 80px 48px 45px;
+  min-height: 500px;
 }
 .case-gallery .screenshot-frame {
-  height: 500px;
+  height: auto;
   min-height: 0;
 }
+
 .pipeline-result {
   background: #dfeadf !important;
   color: var(--green) !important;
@@ -1274,11 +1280,11 @@ section[id],
 @media (max-width: 850px) {
   .screenshot-gallery {
     min-height: 460px;
-    padding: 110px 28px 35px;
+    padding: 90px 28px 35px;
     gap: 12px;
   }
   .screenshot-frame {
-    min-height: 330px;
+    width: 29%;
     border-width: 6px;
   }
   .screenshot-gallery.compact {
@@ -1287,21 +1293,16 @@ section[id],
     padding: 30px 16px 0;
   }
   .screenshot-gallery.compact .screenshot-frame {
-    min-height: 235px;
+    min-height: 0;
   }
   .case-gallery {
-    min-height: 620px;
-    padding: 0 24px;
+    padding: 32px 24px 0;
   }
   .case-gallery-copy {
-    left: 24px;
-    top: 25px;
+    max-width: 100%;
   }
   .case-gallery .screenshot-gallery {
-    padding-top: 120px;
-  }
-  .case-gallery .screenshot-frame {
-    height: 440px;
+    padding: 70px 28px 35px;
   }
 }
 @media (max-width: 520px) {
@@ -1313,15 +1314,14 @@ section[id],
     font-size: 11px;
   }
   .screenshot-gallery {
-    min-height: 560px;
-    padding: 115px 16px 35px;
+    min-height: 0;
+    padding: 70px 16px 35px;
     gap: 5px;
-    align-items: flex-end;
   }
   .screenshot-frame {
     width: 32% !important;
-    min-height: 370px;
-    height: 370px;
+    min-height: 0;
+    height: auto;
     border-width: 5px;
     border-radius: 16px;
   }
@@ -1331,8 +1331,8 @@ section[id],
     padding: 22px 8px 0;
   }
   .screenshot-gallery.compact .screenshot-frame {
-    min-height: 215px;
-    height: 215px;
+    min-height: 0;
+    height: auto;
     border-width: 4px;
     border-radius: 13px;
   }
@@ -1346,36 +1346,22 @@ section[id],
     padding: 4px;
   }
   .case-gallery {
-    min-height: 650px;
-    padding: 0 8px;
+    padding: 24px 8px 0;
   }
   .case-gallery-copy {
-    position: relative;
-    left: auto;
-    top: auto;
     width: 100%;
-    padding: 24px 17px;
-    order: -1;
-  }
-  .case-gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    padding: 0 17px 12px;
   }
   .case-gallery .screenshot-gallery {
-    padding: 0 8px 25px;
-    min-height: 450px;
-    height: 450px;
+    padding: 55px 8px 25px;
+    min-height: 0;
+    height: auto;
   }
   .case-gallery .screenshot-frame {
-    height: 345px;
-    min-height: 345px;
+    height: auto;
+    min-height: 0;
   }
   .case-gallery-copy h2 {
     font-size: 27px;
   }
-}
-.screenshot-frame img {
-  object-fit: contain;
-  background: #f7f5ef;
 }
